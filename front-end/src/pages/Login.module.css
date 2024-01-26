@@ -1,0 +1,111 @@
+/* Body */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+  
+.login_page {
+    height: 100%;
+    width: 100%;
+    background-color: #161A30;
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    
+}
+  
+  /* Page Name*/
+  
+.page_name {
+    text-align: center;
+    padding: 150px 100px 0;
+    color: #F9DB24;
+    font-size: 80px;
+    font-weight: 550;
+}
+  
+  /* Login Form */
+
+.text_box {
+    place-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+  
+.input_box {
+    margin-top: 30px;
+    height: 50px;
+    width: 400px;
+    outline: none;
+    font-size: 20px;
+    padding: 0 12px;
+    border-radius: 20px;
+    border: 3px solid #F9DB24;
+    background: transparent;
+    transition: 0.1s ease;
+    cursor: pointer;
+    color: #D6D6D6;
+}
+
+label {
+    display: none;
+}
+  
+  /* Button */
+
+.login_button {
+    position: relative;
+    margin: 50px 50px 10px 150px;
+    transition: color 1s;
+    padding: 15px 40px;
+    background-color: #F9DB24;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    box-shadow: inset 5px 5px -3px #ffffff;
+    cursor: pointer;
+}
+  
+.login_button:hover {
+    background-color:#ffffff;
+    color: #000000;
+}
+  
+  /* Forget Section */
+  
+.forget_password {
+    position: relative;
+    padding: 30px 50px 0 ;
+}
+
+.ftext {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+  
+.flink {
+    text-decoration: none;
+    color: #D6D6D6;
+}
+  
+  /* Sign Up Section */
+  
+.sign_up_text {
+    position: relative;
+    padding: 30px 30px;
+    color: #D6D6D6;
+}
+  
+.slink {
+    text-decoration: none;
+    color: #F9DB24;
+}

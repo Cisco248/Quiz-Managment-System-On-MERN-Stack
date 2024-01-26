@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+.register_box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #161A30;
+}
+
+.register_page_name {
+    padding: 50px 100px 0 100px;
+    text-align: center;
+    justify-content: center;
+    color: #F9DB24;
+    font-size: 80px;
+    font-weight: 550;
+}
+
+.reg_form {
+    place-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px 100px 100px;
+}
+
+.reg_input_box {
+    margin: 20px;
+}
+
+.reg_input {
+    gap: 50px;
+    position: relative;
+    height: 50px;
+    width: 300px;
+    padding: 0 30px;
+    border-radius: 30px;
+    box-shadow: none;
+    background-color: #161A30;
+    border: 3px solid #F9DB24;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
+.reg_input::placeholder {
+    top: 10px;
+    left: 2rem;
+    position: absolute;
+    color: #979797;
+    font-size: 20px;
+}
+
+.reg_lable {
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 400;
+    display: none;
+}
+
+/* Button */
+
+.register_button {
+    position: relative;
+    overflow: hidden;
+    transition: color .5s;
+    padding: 15px 40px;
+    margin: 50px;
+    background-color: #F9DB24;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    box-shadow: inset 5px 5px -3px #000000;
+    cursor: pointer;
+}
+
+.register_button:hover {
+    background-color:#FC5245;
+    border-color: #FC5245;
+}
+
+/* Login Path */
+
+.lselection {
+    width: 600px;
+    place-items: center;
+    position: relative;
+  }
+  
+  .ltext {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    justify-content: center;
+    color: #979797;
+  }
+  
+  .llink {
+    font-size: 18px;
+    text-decoration: none;
+    color: #F9DB24;
+  }
+
+.llink:hover {
+    color:#FC5245;
+}

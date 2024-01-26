@@ -1,0 +1,511 @@
+.tags {
+    position: relative;
+  }
+  .technologyFrame {
+    width: 100%;
+    position: absolute;
+    margin: 0 !important;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 33.65px;
+    background-color: var(--color-limegreen);
+  }
+  .biology1 {
+    height: 36px;
+    position: relative;
+    font-size: var(--font-size-3xl);
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--color-snow);
+    text-align: left;
+    display: inline-block;
+    z-index: 1;
+  }
+  .biology {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-6xs);
+    background-color: transparent;
+    width: 150px;
+    margin: 0 !important;
+    position: absolute;
+    top: 23px;
+    right: -33.5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .subjectsPanelChild {
+    height: 222px;
+    width: 963px;
+    position: relative;
+    background-color: var(--color-darkslategray);
+    display: none;
+    max-width: 100%;
+  }
+  .mathsChild {
+    width: 100%;
+    position: absolute;
+    margin: 0 !important;
+    height: 100%;
+    top: -0.5px;
+    right: 0;
+    bottom: 0.5px;
+    left: 0;
+    border-radius: 33.65px;
+    background-color: var(--color-black);
+  }
+  .maths1 {
+    height: 36px;
+    position: relative;
+    font-size: var(--font-size-3xl);
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--color-snow);
+    text-align: left;
+    display: inline-block;
+    z-index: 1;
+  }
+  .maths,
+  .mathsWrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .maths {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-6xs) var(--padding-36xl) var(--padding-6xs)
+      var(--padding-25xl);
+    background-color: transparent;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .mathsWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 var(--padding-7xs) var(--padding-6xs) 0;
+  }
+  .economicsChild {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    border-radius: var(--br-6xl);
+    background-color: var(--color-mediumblue);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .economics1 {
+    height: 35px;
+    position: relative;
+    font-size: var(--font-size-3xl);
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--color-snow);
+    text-align: left;
+    display: inline-block;
+    z-index: 1;
+    margin-left: -135px;
+  }
+  .economics {
+    cursor: pointer;
+    border: 0;
+    padding: 0 var(--padding-10xl) 0 0;
+    background-color: transparent;
+    height: 50px;
+    width: 163px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .musicChild {
+    width: 100%;
+    position: absolute;
+    margin: 0 !important;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 33.65px;
+    background-color: var(--color-tomato);
+  }
+  .music2 {
+    margin: 0;
+  }
+  .music,
+  .music1 {
+    position: relative;
+    z-index: 1;
+  }
+  .music1 {
+    height: 36px;
+    font-weight: 600;
+    display: inline-block;
+  }
+  .music {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-5xs) var(--padding-xl) var(--padding-7xs)
+      var(--padding-lg);
+  }
+  .musicWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-2xs) 0 0;
+  }
+  .technologyChild {
+    align-self: stretch;
+    width: 188.8px;
+    position: relative;
+    border-radius: 33.65px;
+    background-color: var(--color-dodgerblue);
+  }
+  .technology1 {
+    height: 36px;
+    position: relative;
+    font-size: var(--font-size-3xl);
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--color-snow);
+    text-align: left;
+    display: inline-block;
+    z-index: 1;
+    margin-left: -160px;
+  }
+  .technology {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    height: 50px;
+    width: 208px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1;
+  }
+  .scienceChild {
+    width: 100%;
+    position: absolute;
+    margin: 0 !important;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 33.65px;
+    background-color: var(--color-goldenrod);
+  }
+  .science,
+  .science1 {
+    position: relative;
+    z-index: 1;
+  }
+  .science1 {
+    height: 35px;
+    font-size: var(--font-size-3xl);
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--color-snow);
+    text-align: left;
+    display: inline-block;
+  }
+  .science {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-5xs) var(--padding-14xl) var(--padding-6xs)
+      var(--padding-12xl);
+    background-color: transparent;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .scienceWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-6xs) 0 0;
+  }
+  .scienceFrame,
+  .subjectsPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .subjectsPanel {
+    flex: 1;
+    background-color: var(--color-darkslategray);
+    align-items: center;
+    padding: var(--padding-base) var(--padding-lgi);
+    box-sizing: border-box;
+    min-height: 222px;
+    row-gap: 20px;
+  }
+  .scienceFrame {
+    align-self: stretch;
+    align-items: flex-start;
+    position: relative;
+  }
+  .mathsRectangle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .socialScienceChild {
+    width: 100%;
+    position: absolute;
+    margin: 0 !important;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 33.65px;
+    background-color: var(--color-darkturquoise);
+  }
+  .socialScience,
+  .socialStudies {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+  }
+  .socialStudies {
+    font-weight: 600;
+    z-index: 1;
+  }
+  .socialScience {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: var(--padding-7xl) var(--padding-7xs) var(--padding-lgi)
+      var(--padding-3xl);
+  }
+  .biologyFrame,
+  .socialScienceWrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .socialScienceWrapper {
+    height: 176px;
+    width: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 var(--padding-2xs);
+    box-sizing: border-box;
+  }
+  .biologyFrame {
+    width: 1225px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--gap-43xl);
+    max-width: 127%;
+    flex-shrink: 0;
+  }
+  .biologyFrameWrapper,
+  .userTags {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .biologyFrameWrapper {
+    height: 95px;
+    flex-direction: row;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: var(--font-size-3xl);
+    color: var(--color-snow);
+    font-family: var(--font-poppins);
+  }
+  .userTags {
+    overflow: hidden;
+    flex-direction: column;
+  }
+  .discover,
+  .discoverChild {
+    height: 34px;
+    position: relative;
+    display: inline-block;
+  }
+  .discoverChild {
+    height: 1086px;
+    width: 963px;
+    background-color: var(--color-darkslategray);
+    display: none;
+    max-width: 100%;
+  }
+  .frameIcon,
+  .frameIcon1 {
+    height: 245.5px;
+    width: 250px;
+    position: absolute;
+    margin: 0 !important;
+    top: -201px;
+  }
+  .frameIcon {
+    left: -0.4px;
+  }
+  .frameIcon1 {
+    right: 148.3px;
+  }
+  .frameIcon2,
+  .frameIcon3 {
+    height: 245.5px;
+    width: 250px;
+    position: relative;
+    min-height: 246px;
+  }
+  .frameIcon4,
+  .frameIcon5 {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    margin: 0 !important;
+    bottom: -201px;
+  }
+  .frameIcon4 {
+    left: -0.4px;
+  }
+  .frameIcon5 {
+    right: 148.3px;
+  }
+  .discover1,
+  .frameParent {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .frameParent {
+    width: 738px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-115xl) 0 var(--padding-119xl);
+    position: relative;
+    gap: var(--gap-71xl);
+    z-index: 1;
+  }
+  .discover1 {
+    align-self: stretch;
+    background-color: var(--color-darkslategray);
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-267xl) var(--padding-xl) var(--padding-264xl)
+      var(--padding-2xl);
+  }
+  .discoverTab,
+  .userTagsFrame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .discoverTab {
+    align-self: stretch;
+    height: 604px;
+    overflow-y: auto;
+    flex-shrink: 0;
+    gap: var(--gap-3xs);
+    max-width: 100%;
+  }
+  .userTagsFrame {
+    flex: 1;
+    gap: var(--gap-8xl);
+    max-width: calc(100% - 368px);
+    text-align: left;
+    font-size: var(--font-size-9xl);
+    color: var(--color-gold);
+    font-family: var(--font-inter);
+  }
+  @media screen and (max-width: 1025px) {
+    .biologyFrameWrapper {
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 975px) {
+    .subjectsPanel {
+      flex-wrap: wrap;
+    }
+    .discover1 {
+      padding-top: var(--padding-167xl);
+      padding-bottom: var(--padding-165xl);
+      box-sizing: border-box;
+    }
+    .userTagsFrame {
+      max-width: 100%;
+    }
+  }
+  @media screen and (max-width: 725px) {
+    .mathsRectangle {
+      min-width: 100%;
+    }
+    .biologyFrame {
+      gap: var(--gap-12xl);
+    }
+    .frameParent {
+      gap: var(--gap-26xl);
+      padding-top: var(--padding-68xl);
+      padding-bottom: var(--padding-71xl);
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .tags {
+      font-size: var(--font-size-3xl);
+    }
+    .biology1,
+    .economics1,
+    .maths1,
+    .music1,
+    .science1,
+    .socialStudies,
+    .technology1 {
+      font-size: var(--font-size-lg);
+    }
+    .biologyFrame {
+      gap: var(--gap-mini);
+    }
+    .discover {
+      font-size: var(--font-size-3xl);
+    }
+    .frameParent {
+      gap: var(--gap-3xl);
+    }
+    .discover1 {
+      padding-top: var(--padding-102xl);
+      padding-bottom: var(--padding-101xl);
+      box-sizing: border-box;
+    }
+  }
+  
