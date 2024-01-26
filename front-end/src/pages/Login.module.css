@@ -83,7 +83,7 @@ label {
   
 .forget_password {
     position: relative;
-    padding: 30px 50px 0 ;
+    padding: 40px 50px 0 ;
 }
 
 .ftext {
@@ -100,8 +100,9 @@ label {
   /* Sign Up Section */
   
 .sign_up_text {
+    text-align: center;
     position: relative;
-    padding: 30px 30px;
+    padding: 20px 0 140px 0;
     color: #D6D6D6;
 }
   

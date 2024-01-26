@@ -2,6 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import LoginCSS from './Login.module.css'
 import Navibar from '../component/Navibar'
+import Footer from '../component/Footer'
 
 export default function Login() {
 
@@ -44,7 +45,7 @@ export default function Login() {
               onChange={(e) => setData({...data, password: e.target.value})}/>
             </div>
               
-            <button type='submit' className={LoginCSS.login_button} a href='/Home'> Login </button>
+            <button type='submit' className={LoginCSS.login_button}> Login </button>
 
             <div className={LoginCSS.forget_password}>
               <h1 className={LoginCSS.ftext}> <a href="forget-password.html" className={LoginCSS.flink}>Forget Password ?</a></h1>
@@ -56,6 +57,7 @@ export default function Login() {
             
           </form>
         </div>
+        <Footer />
       </div>
 
   )

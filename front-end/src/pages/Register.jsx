@@ -4,6 +4,7 @@ import { toast } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import RegisterCSS from './Register.module.css'
 import Navibar from '../component/Navibar'
+import Footer from '../component/Footer'
 
 export default function Register() {
 
@@ -96,17 +97,15 @@ export default function Register() {
           onChange={(e) => setData({...data, password: e.target.value})}
           />
         </div> 
-
-        <button className={RegisterCSS.register_button} type='submit'>Register</button>
-
+          <button className={RegisterCSS.register_button} type='submit'>Register</button>
         <div className={RegisterCSS.lselection}>
           <p className={RegisterCSS.ltext}>If You Already Have an Account ? 
           <a href="./Login" className={RegisterCSS.llink}> Login Now! </a></p>
         </div>
-
       </form>
       </div>
     </div>
+    <Footer />
     </div>
     
   )

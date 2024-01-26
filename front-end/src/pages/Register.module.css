@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
     background-color: #161A30;
 }
 
@@ -69,7 +68,7 @@
     overflow: hidden;
     transition: color .5s;
     padding: 15px 40px;
-    margin: 50px;
+    margin: 30px;
     background-color: #F9DB24;
     color: #000000;
     font-size: 16px;
