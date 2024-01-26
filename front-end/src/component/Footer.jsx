@@ -4,8 +4,9 @@ function Footer() {
   return (
     <div>
       <div className={FooterCSS.footer_bar}>
-        <h1>Footer
-        </h1>
+        <div className={FooterCSS.text_align}>
+          <h1 className={FooterCSS.footer_text}>Quizzify - Quiz System Project © 2023. Design by Team 56</h1>
+        </div>
       </div>
     </div>
   )

@@ -1,0 +1,15 @@
+.footer_bar {
+    display: flex;
+    place-content: center;
+    padding: 10px;
+    background: #31304D;
+    box-shadow: 0px 1px 0px 0px #3D3D3D;
+}
+
+.footer_text {
+    text-align: end;
+    color: #ADB7BC;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 400;
+}

@@ -1,7 +1,11 @@
 import MainCSS from'./Welcome.module.css'
+import Navibar from '../component/Navibar'
+import Footer from '../component/Footer'
 
 export default function Welcome() {
   return (
+    <div>
+      <Navibar />
       <div className={MainCSS.background}>
         <div className={MainCSS.pmain}>
           <div className={MainCSS.text_box1}>
@@ -18,6 +22,9 @@ export default function Welcome() {
           <a className={MainCSS.btext} href="./Login"><button className={MainCSS.btn}>Login</button></a>
           <a className={MainCSS.btext} href="./Register"><button className={MainCSS.btn}>Sign Up</button></a>
         </div>   
-      </div> 
+      </div>
+      <Footer /> 
+    </div>
+      
   )
 }
