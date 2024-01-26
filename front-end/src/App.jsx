@@ -3,7 +3,7 @@ import { Toaster } from 'react-hot-toast'
 import axios from 'axios'
 
 import Navibar from '../src/component/Navibar'
-import Home from './pages/Home'
+import Navibar2 from './component/Navibar2'
 import Welcome from './pages/Welcome'
 import Register from './pages/Register'
 import Login from '../src/pages/Login'
@@ -16,7 +16,6 @@ function App() {
     <>
       <Routes>
         <Route path='/navibar' element={<Navibar />} />
-        <Route path='/home' element={<Home />} />
       </Routes>
       <Toaster position='bottom-right' toastOptions={{duration: 2000}} />
       <Routes>
@@ -24,6 +23,7 @@ function App() {
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path='/navibar2' element={<Navibar2 />} />
         
       </Routes>
     </>
