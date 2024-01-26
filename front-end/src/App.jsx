@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Welcome from './pages/Welcome'
 import Register from './pages/Register'
 import Login from '../src/pages/Login'
+import Profile from './pages/Profile'
 
 axios.defaults.baseURL = 'http://localhost:8000'
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/' element={<Welcome />} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/profile' element={<Profile />} />
         
       </Routes>
     </>
