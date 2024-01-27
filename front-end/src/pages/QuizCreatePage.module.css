@@ -1,0 +1,224 @@
+* {
+    font-family: "Poppins";
+}
+
+.quiz_create_page {
+    background-color: #161a30;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.quiz_page_align {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 200px;
+}
+
+.question_section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    gap: 10px;
+}
+
+.question_box {
+    height: 50px;
+    width: 200px;
+    background-color: #2a3157;
+    border-radius: 25px;
+}
+
+.button_container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.add_button {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid #ffc107;
+    background-color: #ffc107;
+    cursor: pointer;
+}
+
+.add_button:hover {
+    background-color: #ffff;
+    border: 2px solid #ffff;
+}
+
+.delete_button1 {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid #ffc107;
+    background-color: #ffc107;
+    cursor: pointer;
+}
+
+.delete_button1:hover {
+    background-color: #ffff;
+    border: 2px solid #ffff;
+}
+
+.create_quiz_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.create_quiz_title {
+    padding: 50px 50px 0px 50px;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    color: #ffc107;
+}
+
+.create_quiz_minititle {
+    padding: 10px 50px 50px 50px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400;
+    color: #ffc107;
+}
+
+.question_number {
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+    color: #ffff;
+}
+
+.image_tab {
+    height: 100px;
+    width: 200px;
+    border-radius: 30px;
+}
+
+.question_area {
+    align-items: center;
+}
+
+.q_box {
+    padding-left: 30px;
+    height: 100px;
+    width: 50rem;
+    border-radius: 30px;
+}
+
+.button_container2 {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+}
+
+.answer_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.answer_section {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.text_box {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    width: 500px;
+    border-radius: 10px;
+    border: 2px solid #161a30;
+}
+
+.text_box::placeholder {
+    padding: 10px;
+}
+
+.check_boxes {
+    height: 10px;
+    width: auto;
+}
+
+.right_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.time_set_section {
+    text-align: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.info {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffc107;
+}
+
+.time_box {
+    height: 20px;
+    width: 50px;
+}
+
+.time_text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffff;
+}
+
+.question_section {
+    align-items: center;
+}
+
+.no_question {
+    font-size: 22px;
+    font-weight: 500;
+    color: #ffc107;
+}
+
+.save_button {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid #ffc107;
+    background-color: #ffc107;
+    cursor: pointer;
+}
+
+.save_button:hover {
+    background-color: #ffff;
+    border: 2px solid #ffff;
+}
+
+.deleteIcon {
+    height: 25px;
+    width: auto;
+}
+
+.delete_button {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid #0000;
+    cursor: pointer;
+}
+
+.delete_button:hover {
+    background-color: #b40000;
+}

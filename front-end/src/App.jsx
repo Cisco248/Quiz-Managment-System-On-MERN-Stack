@@ -8,6 +8,7 @@ import Welcome from './pages/Welcome'
 import Register from './pages/Register'
 import Login from '../src/pages/Login'
 import Profile from './pages/Profile'
+import QuizCreatePage from './pages/QuizCreatePage'
 
 axios.defaults.baseURL = 'http://localhost:8000'
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/navibar2' element={<Navibar2 />} />
+        <Route path='/quiz create' element={<QuizCreatePage />} />
         
       </Routes>
     </>
