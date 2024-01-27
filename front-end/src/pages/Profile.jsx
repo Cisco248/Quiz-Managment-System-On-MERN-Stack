@@ -1,11 +1,11 @@
 import Style from './Profile.module.css'
-import Navibar from '../component/Navibar'
+import Navibar2 from '../component/Navibar2'
 import Footer from '../component/Footer'
 
 function Profile() {
   return (
     <div>
-        <Navibar />
+        <Navibar2 />
         <div className={Style.profile_page}>
             <div className={Style.page_name}>
                 <div className={Style.page_name_text}>

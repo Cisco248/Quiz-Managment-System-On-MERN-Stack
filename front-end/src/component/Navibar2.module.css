@@ -1,218 +1,40 @@
-.naviBarIcon {
-    margin: 0;
-    height: 25px;
-    width: 25.1px;
-    position: relative;
-  }
-  .logoVectetIcon {
-    align-self: stretch;
-    width: 60px;
-    position: relative;
-    max-height: 100%;
-    min-height: 50px;
-  }
-  .quizzify {
-    margin: 0;
-    height: 50px;
-    width: 171.9px;
-    position: relative;
-    font-size: inherit;
-    font-weight: 600;
-    font-family: inherit;
-    display: inline-block;
-    flex-shrink: 0;
-  }
-  .navLogo,
-  .navigationBar {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    box-sizing: border-box;
-  }
-  .navLogo {
-    width: 234px;
-    align-items: flex-start;
-    padding: 0;
-    gap: var(--gap-smi);
-  }
-  .navigationBar {
-    flex: 1;
-    background-color: var(--color-darkslategray);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-    align-items: center;
-    padding: var(--padding-4xl) var(--padding-17xl) var(--padding-8xl);
-    gap: var(--gap-21xl);
-    max-width: 100%;
-  }
-  .vectorIcon {
-    width: 50px;
-    height: 50px;
-    position: relative;
-  }
-  .slideFrame,
-  .vectorWrapper {
-    height: 45px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .slideFrame {
-    height: 40px;
-    flex: 1;
-    justify-content: flex-end;
-  }
-  .notificationIcon {
-    width: 40px;
-    height: 46px;
-    position: relative;
-  }
-  .notificationIconWrapper,
-  .slideFrame1 {
-    height: 43px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .slideFrame1 {
-    height: 40px;
-    justify-content: flex-end;
-  }
-  .userSvgrepoCom1Icon {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .userSvgrepoCom1Wrapper {
-    height: 45px;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 0;
-  }
-  .icon,
-  .slideFrame2,
-  .userSvgrepoCom1Wrapper {
-    display: flex;
-    align-items: flex-start;
-    box-sizing: border-box;
-  }
-  .slideFrame2 {
-    height: 40px;
-    width: 43px;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0;
-  }
-  .icon {
-    width: 235px;
-    margin: 0 !important;
-    position: absolute;
-    top: 5px;
-    right: 58.7px;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: var(--padding-xl) 0;
-    gap: var(--gap-xl);
-    z-index: 1;
-  }
-  .searchQuizes {
-    width: 176.2px;
-    border: 0;
-    outline: 0;
-    font-weight: 300;
-    font-family: var(--font-public-sans);
-    font-size: var(--font-size-lg);
-    background-color: transparent;
-    height: 23.8px;
-    position: relative;
-    color: var(--color-darkgray);
-    text-align: left;
-    display: inline-block;
-    white-space: nowrap;
-    z-index: 2;
-  }
-  .searchBarChild,
-  .vectorIcon1 {
-    position: absolute;
-    margin: 0 !important;
-  }
-  .searchBarChild {
-    width: 100%;
-    height: calc(100% - 40px);
-    top: 20px;
-    right: 0.1px;
-    bottom: 20px;
-    left: -0.1px;
-    border-radius: 48.42px;
-    border: 1.7px solid var(--color-black);
-    box-sizing: border-box;
-    z-index: 1;
-  }
-  .vectorIcon1 {
-    height: 24px;
-    width: 24.1px;
-    top: calc(50% - 12px);
-    right: 13.2px;
-    z-index: 2;
-  }
-  .searchBarItem {
-    align-self: stretch;
-    width: 50.3px;
-    position: relative;
-    border-radius: 50%;
-    background-color: var(--color-gold);
-  }
-  .searchBar {
-    height: 90px;
-    width: 404px;
-    margin: 0 !important;
-    position: absolute;
-    top: calc(50% - 45px);
-    left: calc(50% - 201px);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--padding-xl) 0 var(--padding-xl) var(--padding-15xl);
-    box-sizing: border-box;
-    gap: var(--gap-xl);
-    z-index: 1;
-  }
-  .navBar,
-  .navBarWrapper {
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
-  }
-  .navBar {
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  .navBarWrapper {
-    align-self: stretch;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 0;
-    box-sizing: border-box;
-    flex-shrink: 0;
-    text-align: left;
-    font-size: var(--font-size-11xl);
-    color: var(--color-gold);
-    font-family: var(--font-poppins);
-  }
-  @media screen and (max-width: 450px) {
-    .navigationBar {
-      gap: var(--gap-xl);
-    }
-  }
-  
+.navibar2_component {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+  font-family: "Poppins";
+  background-color: #31304D;
+}
+
+.navibar_align {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.collapse_icon {
+  height: 20px;
+  width: auto;
+}
+
+.navibar2_logo {
+  height: 30px;
+  width: auto;
+}
+
+.navibar2_icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 20px;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+}

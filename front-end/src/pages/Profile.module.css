@@ -37,8 +37,8 @@
 }
 
 .profile_img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 2px solid #000;
 }
@@ -67,6 +67,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    padding-bottom: 120px;
     gap: 20px;
 }
 
