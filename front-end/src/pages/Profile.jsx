@@ -14,8 +14,11 @@ function Profile() {
                 <div className={Style.profile_section}>
                     <div className={Style.profile_detail}>
                         <img className={Style.profile_img}  src="" alt="" />
-                        <h1>Name : </h1>
-                        <h2>Age : </h2>
+                        <div>
+                            <h1 className={Style.text_style}>Name : </h1>
+                            <h2 className={Style.text_style}>Age : </h2>
+                        </div>
+                        
                     </div>
                     <form className={Style.detail_box} action="get">
                         <input className={Style.input_box} type="text" placeholder='First Name'/>
