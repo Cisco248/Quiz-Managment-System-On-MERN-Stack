@@ -3,6 +3,9 @@ import Navibar2 from '../component/Navibar2'
 import Footer from '../component/Footer'
 
 function Profile() {
+
+    
+
   return (
     <div>
         <Navibar2 />
@@ -21,8 +24,8 @@ function Profile() {
                         
                     </div>
                     <form className={Style.detail_box} action="get">
-                        <input className={Style.input_box} type="text" placeholder='First Name'/>
-                        <input className={Style.input_box} type="text" placeholder='Last Name'/>
+                        <input className={Style.input_box} type="text" placeholder='Name'/>
+                        <input className={Style.input_box} type="text" placeholder='Mobile Number'/>
                         <input className={Style.input_box} type="email" placeholder='Email'/>
                         <input className={Style.input_box} type="password" placeholder='Password'/>
                     </form>
