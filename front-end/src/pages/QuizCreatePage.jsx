@@ -71,7 +71,7 @@ fetchQuizzes();
 
 const saveQuiz = async () => {
   try {
-    const response = await fetch('http://localhost:8000/quizzes', {
+    const res = await fetch('http://localhost:8000/quizzes', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ const saveQuiz = async () => {
       body: JSON.stringify({ questions, timeLimit }),
     });
 
-    const data = await response.json();
+    const data = await res.json();
     console.log('Quiz saved successfully:', data);
   } catch (error) {
     console.error('Error saving quiz:', error.message);

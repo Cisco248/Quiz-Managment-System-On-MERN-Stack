@@ -16,8 +16,8 @@ app.use(cors());
 // Routes
 app.use('/', require('./routes/authRoutes'));
 
-const quizRoutes = require('./routes/quizRoutes');
-app.use('/', quizRoutes);
+// Routes
+app.use('/', require('./routes/quizRoutes'));
 
 const PORT = process.env.PORT || 8000; // Use process.env.PORT for dynamic port binding
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
