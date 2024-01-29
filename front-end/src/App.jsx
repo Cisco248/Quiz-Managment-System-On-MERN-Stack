@@ -26,7 +26,6 @@ function App() {
         <Route path='/profile' element={<Profile />} />
         <Route path='/navibar2' element={<Navibar2 />} />
         <Route path='/quiz create' element={<QuizCreatePage />} />
-        
       </Routes>
     </>
   )
