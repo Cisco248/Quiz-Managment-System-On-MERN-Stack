@@ -1,0 +1,36 @@
+.maintaince_bg {
+    height: 100dvh;
+    background-color: #161A30;
+    font-family: "Poppins";
+}
+
+.style_align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px;
+    gap: 20px;
+}
+
+.img_style {
+    height: 200px;
+    width: 200px;
+}
+
+.text_box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.maintainece_title {
+    font-size: 80px;
+    font-weight: 600;
+    color: #F9DB24;
+}
+
+.maintaince_des {
+    font-size: 30px;
+    color: rgb(146, 146, 146);
+}
+

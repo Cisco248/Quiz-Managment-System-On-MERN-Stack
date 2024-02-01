@@ -10,6 +10,7 @@ import Login from '../src/pages/Login'
 import Profile from './pages/Profile'
 import QuizCreatePage from './pages/QuizCreatePage'
 import Help from './pages/Help'
+import Maintaince from './pages/Maintaince'
 
 axios.defaults.baseURL = 'http://localhost:8000'
 
@@ -28,9 +29,10 @@ function App() {
         <Route path='/navibar2' element={<Navibar2 />} />
         <Route path='/quiz create' element={<QuizCreatePage />} />
         <Route path='/help' element={<Help />} />
+        <Route path='/maintaince' element={<Maintaince />} />
       </Routes>
     </>
   )
 }
 
-export default App
+export default App;
