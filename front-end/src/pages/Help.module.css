@@ -1,0 +1,171 @@
+.main_style {
+    font-family: "Poppins";
+    background-color: #161A30;
+}
+
+.help_section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box_align {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.box_text {
+    width: 400px;
+}
+
+.main_align1 {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.box1 {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    border: 3px solid #F9DB24;
+}
+
+.box1:hover {
+    border: 3px solid whitesmoke;
+}
+
+.box2 {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    border: 3px solid #F9DB24;
+}
+
+.box2:hover {
+    border: 3px solid whitesmoke;
+}
+
+.box3 {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    border: 3px solid #F9DB24;
+}
+
+.box3:hover {
+    border: 3px solid whitesmoke;
+}
+
+.main_align2 {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+
+.box4 {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    border: 3px solid #F9DB24;
+}
+
+.box4:hover {
+    border: 3px solid whitesmoke;
+}
+
+.box5 {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    border: 3px solid #F9DB24;
+}
+
+.box5:hover {
+    border: 3px solid whitesmoke;
+}
+
+.box6 {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    border: 3px solid #F9DB24;
+}
+
+.box6:hover {
+    border: 3px solid whitesmoke;
+}
+
+.box_link {
+    text-decoration: none;
+    color: #F9DB24;
+}
+
+.box_link:hover {
+    color: whitesmoke;
+}
+
+.comment_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.input_box {
+    width: 300px;
+    height: 30px;
+    border: 2px solid #F9DB24;
+    background-color: #161A30;
+    border-radius: 10px;
+}
+
+.input_box::placeholder {
+    padding: 10px;
+}
+
+.comment_button {
+    height: 30px;
+    width: 70px;
+    border-radius: 10px;
+    background-color: #161A30;
+    border: 2px solid #F9DB24;
+    color: #F9DB24;
+}
+
+.comment_button:hover {
+    color: black;
+    font-weight: 500;
+    background-color: #F9DB24;
+    border: 2px solid #F9DB24;
+}
+
+.box_tile {
+    font-size: 30px;
+    color: #F9DB24;
+}
+
+.box_description {
+    font-size: 18px;
+    color: #F9DB24;
+}
+
+.Text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text_style {
+    font-size: 18px;
+    color: #777777;
+    font-weight: 400;
+}
