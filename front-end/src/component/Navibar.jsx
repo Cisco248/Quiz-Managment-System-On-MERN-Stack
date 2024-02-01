@@ -10,7 +10,7 @@ export default function Navibar() {
         <div className={Style.navibar_text}>
           <div className={Style.text_align}>
               <h1><a href='/help' className={Style.help_text}>Help <img src='./help.svg' alt="" /></a></h1>
-              <h1><a href='/contactUs' className={Style.contact_text}>Contact US <img src="./contact-us.svg" alt="" className={Style.help_icon} /></a></h1>
+              <h1><a href='/contact' className={Style.contact_text}>Contact US <img src="./contact-us.svg" alt="" className={Style.help_icon} /></a></h1>
           </div>
         </div>
       </div>
