@@ -4,9 +4,11 @@ export default function Navibar() {
   return (
     <div>
       <div className={Style.navibar_box}>
-        <a className={Style.navibar_logo} href="/">
-          <img className={Style.navibar_logo} src='./nav-logo.svg' alt="logo" />
-        </a>
+        <div className={Style.logo}>
+          <a className={Style.navibar_logo} href="/">
+            <img className={Style.navibar_logo} src='./nav-logo.svg' alt="logo" />
+          </a>
+        </div>
         <div className={Style.navibar_text}>
           <div className={Style.text_align}>
               <h1><a href='/help' className={Style.help_text}>Help <img src='./help.svg' alt="" /></a></h1>

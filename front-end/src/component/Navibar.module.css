@@ -1,10 +1,17 @@
 .navibar_box {
   display: flex;
   flex-direction: row;
-  padding: 10px 50px;
-  background-color: #31304D;
+  height: 8dvh;
+  padding: 0px 40px;
+  background-color: #0e1127;
   justify-content: space-between;
   font-family: "Poppins";
+}
+
+.logo {
+  display: flex;
+
+  align-items: center;
 }
 
 .navibar_logo {
