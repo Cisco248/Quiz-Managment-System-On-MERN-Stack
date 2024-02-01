@@ -4,6 +4,10 @@
     font-family: "Poppins";
 }
 
+.r_page {
+    height: 88dvh;
+}
+
 .register_box {
     display: flex;
     flex-direction: column;

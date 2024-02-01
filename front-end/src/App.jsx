@@ -7,6 +7,7 @@ import Navibar2 from './component/Navibar2'
 import Welcome from './pages/Welcome'
 import Register from './pages/Register'
 import Login from '../src/pages/Login'
+import Home from './pages/Home'
 import Profile from './pages/Profile'
 import QuizCreatePage from './pages/QuizCreatePage'
 import Help from './pages/Help'
@@ -26,6 +27,7 @@ function App() {
         <Route path='/' element={<Welcome />} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/home' element={<Home />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/navibar2' element={<Navibar2 />} />
         <Route path='/quiz create' element={<QuizCreatePage />} />
