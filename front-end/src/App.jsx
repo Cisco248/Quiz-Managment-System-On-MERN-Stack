@@ -34,6 +34,7 @@ function App() {
         <Route path='/help' element={<Help />} />
         <Route path='/maintaince' element={<Maintaince />} />
         <Route path='/contact' element={<Contact />} />
+        
       </Routes>
     </>
   )
