@@ -1,0 +1,567 @@
+.leader-board,
+.leader-board * {
+  box-sizing: border-box;
+}
+.leader-board {
+  background: #161a30;
+  padding: 10px;
+  height: 1036px;
+  position: relative;
+  overflow: hidden;
+}
+.copyright {
+  background: #31304d;
+  padding: 24px 0px 24px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0.1%;
+  top: 95.84%;
+  height: 4.05%;
+  box-shadow: inset 0px 1px 0px 0px rgba(61, 61, 61, 1);
+}
+.quizzify-quiz-system-project-2023-design-by-team-56 {
+  color: var(--gray-300, #adb7bc);
+  text-align: center;
+  font-family: "PublicSans-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 0px;
+  font-weight: 400;
+  position: relative;
+  width: 1320px;
+}
+.leaderboard {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-67 {
+  background: #31304d;
+  border-radius: 20px;
+  width: 1300px;
+  height: 800px;
+  position: absolute;
+  left: calc(50% - 650px);
+  top: 139px;
+}
+.leaderboard2 {
+  color: #f9db24;
+  text-align: left;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  position: absolute;
+  left: 196px;
+  top: 162px;
+}
+.frame-52 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: calc(50% - 550px);
+  top: 264px;
+}
+.row-1 {
+  flex-shrink: 0;
+  width: 1100px;
+  height: 80px;
+  position: static;
+}
+.rectangle-12 {
+  background: #fad338;
+  border-radius: 30px;
+  width: 1100px;
+  height: 80px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+._1 {
+  color: #000000;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 47.93px;
+  top: 16px;
+}
+.eshan-fernando {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  position: absolute;
+  left: 309.97px;
+  top: 16px;
+}
+._1098-points {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  left: 706px;
+  top: 16px;
+  width: 201px;
+  height: 29px;
+}
+.polygon-3 {
+  width: 35px;
+  height: 40px;
+  position: absolute;
+  left: 1006.3px;
+  top: 22px;
+  transform: translate(2.34px, 0px);
+  overflow: visible;
+}
+.profile-circle-svgrepo-com-2 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 176px;
+  top: 16px;
+  overflow: visible;
+}
+.row-2 {
+  flex-shrink: 0;
+  width: 1100px;
+  height: 80px;
+  position: static;
+}
+.rectangle-75 {
+  background: #e64771;
+  border-radius: 30px;
+  width: 1100px;
+  height: 80px;
+  position: absolute;
+  left: 0px;
+  top: 130px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+._2 {
+  color: #000000;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 45px;
+  top: 147px;
+}
+.naveen-mendis {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  position: absolute;
+  left: 309.97px;
+  top: 147px;
+}
+._1090-points {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  left: 706px;
+  top: 145px;
+  width: 201px;
+}
+.polygon-32 {
+  width: 35px;
+  height: 40px;
+  position: absolute;
+  left: 1006.3px;
+  top: 153px;
+  transform: translate(2.34px, 0px);
+  overflow: visible;
+}
+.profile-circle-svgrepo-com-22 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 176px;
+  top: 141px;
+  overflow: visible;
+}
+.row-3 {
+  flex-shrink: 0;
+  width: 1100px;
+  height: 80px;
+  position: static;
+}
+.rectangle-74 {
+  background: #259a08;
+  border-radius: 30px;
+  width: 1100px;
+  height: 80px;
+  position: absolute;
+  left: 0px;
+  top: 260px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+._3 {
+  color: #000000;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 44px;
+  top: 278px;
+}
+.pathum-kavinda {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  position: absolute;
+  left: 309.97px;
+  top: 276px;
+}
+._1085-points {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  left: 706px;
+  top: 279px;
+  width: 201px;
+  height: 29px;
+}
+.polygon-1 {
+  width: 35px;
+  height: 40px;
+  position: absolute;
+  left: 1041.3px;
+  top: 316px;
+  transform: translate(-32.66px, -30px);
+  overflow: visible;
+}
+.profile-circle-svgrepo-com-3 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 176px;
+  top: 275px;
+  overflow: visible;
+}
+.row-4 {
+  flex-shrink: 0;
+  width: 1100px;
+  height: 80px;
+  position: static;
+}
+.rectangle-77 {
+  background: #c837ab;
+  border-radius: 30px;
+  width: 1100px;
+  height: 80px;
+  position: absolute;
+  left: 0px;
+  top: 390px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+._4 {
+  color: #000000;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 42px;
+  top: 406px;
+}
+.shehan-perera {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  position: absolute;
+  left: 310px;
+  top: 406px;
+}
+._1080-points {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  left: 706px;
+  top: 408px;
+  width: 201px;
+  height: 29px;
+}
+.polygon-2 {
+  width: 35px;
+  height: 40px;
+  position: absolute;
+  left: 1006.3px;
+  top: 413px;
+  transform: translate(2.34px, 0px);
+  overflow: visible;
+}
+.profile-circle-svgrepo-com-23 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 176px;
+  top: 405px;
+  overflow: visible;
+}
+.row-5 {
+  flex-shrink: 0;
+  width: 1100px;
+  height: 80px;
+  position: static;
+}
+.rectangle-76 {
+  background: #6f6f6f;
+  border-radius: 30px;
+  width: 1100px;
+  height: 80px;
+  position: absolute;
+  left: 0px;
+  top: 520px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+._5 {
+  color: #000000;
+  text-align: left;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 41px;
+  top: 538px;
+  width: 23.85px;
+}
+.sahan-tharuka {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  position: absolute;
+  left: 310px;
+  top: 537px;
+  width: 243.12px;
+}
+._1060-points {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  left: 706px;
+  top: 538px;
+  width: 184.4px;
+  height: 29px;
+}
+.polygon-5 {
+  width: 35px;
+  height: 40px;
+  position: absolute;
+  left: 1006.3px;
+  top: 542px;
+  transform: translate(2.34px, 0px);
+  overflow: visible;
+}
+.profile-circle-svgrepo-com-4 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 176px;
+  top: 535px;
+  overflow: visible;
+}
+.nav-bar {
+  width: 1440px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.navigation-bar {
+  background: #31304d;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.nav-logo {
+  width: 234px;
+  height: 50px;
+  position: absolute;
+  left: 100px;
+  top: 23px;
+}
+.logo-vectet {
+  height: auto;
+  position: absolute;
+  right: 74.36%;
+  left: 0%;
+  width: 25.64%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  overflow: visible;
+}
+.quizzify {
+  color: #f9db24;
+  text-align: left;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  position: absolute;
+  right: -4.68%;
+  left: 31.2%;
+  width: 73.48%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+}
+.icon {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  right: 4.03%;
+  left: 79.86%;
+  width: 16.11%;
+  bottom: 35%;
+  top: 25%;
+  height: 40%;
+}
+.vector16 {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.notification-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 46px;
+  position: relative;
+  overflow: visible;
+}
+.user-svgrepo-com-1 {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  overflow: visible;
+}
+.search-bar {
+  position: absolute;
+  right: 36.11%;
+  left: 36.11%;
+  width: 27.78%;
+  bottom: 25%;
+  top: 25%;
+  height: 50%;
+}
+.ellipse-21 {
+  background: #f9db24;
+  border-radius: 50%;
+  position: absolute;
+  right: 0%;
+  left: 87.5%;
+  width: 12.5%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+}
+.rectangle-53 {
+  border-radius: 48.42px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.66px;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+}
+.vector20 {
+  height: auto;
+  position: absolute;
+  right: 3.25%;
+  left: 90.75%;
+  width: 6%;
+  bottom: 25.97%;
+  top: 26%;
+  height: 48.03%;
+  overflow: visible;
+}
+.search-quizes {
+  color: #a9a9a9;
+  text-align: left;
+  font-family: "PublicSans-Light", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  position: absolute;
+  right: 47.94%;
+  left: 8.25%;
+  width: 43.81%;
+  bottom: 26.44%;
+  top: 26%;
+  height: 47.56%;
+}
+.icons-8-web-64-1 {
+  width: 61px;
+  height: 58px;
+  position: absolute;
+  left: 1150px;
+  top: 16px;
+  overflow: hidden;
+}
+.group {
+  height: auto;
+  position: absolute;
+  right: 10.16%;
+  left: 10.12%;
+  width: 79.73%;
+  bottom: -70.04%;
+  top: 89.92%;
+  height: 80.11%;
+  transform: translate(0px, -46.47px);
+  overflow: visible;
+}
+.nav-bar-icon {
+  width: 30px;
+  height: 50px;
+  position: absolute;
+  left: 40px;
+  top: 25px;
+  overflow: visible;
+}
