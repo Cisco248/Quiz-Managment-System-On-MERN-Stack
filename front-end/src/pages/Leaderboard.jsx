@@ -1,4 +1,3 @@
-import React from 'react'
 import Navibar2 from '../component/Navibar2'
 import Footer from '../component/Footer'
 import Style from './LeaderBoard.module.css'
