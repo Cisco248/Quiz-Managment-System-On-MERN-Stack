@@ -14,6 +14,7 @@ import Maintaince from './pages/Maintaince'
 import Contact from './pages/Contact'
 import Leaderboard from './pages/LeaderBoard'
 import Library from './pages/Library'
+import Slider from './component/image slider/Slider'
 
 axios.defaults.baseURL = 'http://localhost:8000'
 
@@ -34,6 +35,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/leaderboard' element={<Leaderboard />} />
         <Route path='/library' element={<Library />} />
+        <Route path='slider' element={<Slider />} />
       </Routes>
     </>
   )
