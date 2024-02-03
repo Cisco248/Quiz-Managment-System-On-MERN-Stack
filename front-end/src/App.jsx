@@ -13,6 +13,7 @@ import Help from './pages/Help'
 import Maintaince from './pages/Maintaince'
 import Contact from './pages/Contact'
 import Leaderboard from './pages/LeaderBoard'
+import Library from './pages/Library'
 
 axios.defaults.baseURL = 'http://localhost:8000'
 
@@ -32,6 +33,7 @@ function App() {
         <Route path='/maintaince' element={<Maintaince />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/leaderboard' element={<Leaderboard />} />
+        <Route path='/library' element={<Library />} />
       </Routes>
     </>
   )
