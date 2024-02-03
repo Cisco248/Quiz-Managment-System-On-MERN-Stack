@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 import axios from 'axios'
 
-import Navibar from '../src/component/Navibar'
 import Navibar2 from './component/Navibar2'
 import Welcome from './pages/Welcome'
 import Register from './pages/Register'
@@ -13,15 +12,13 @@ import QuizCreatePage from './pages/QuizCreatePage'
 import Help from './pages/Help'
 import Maintaince from './pages/Maintaince'
 import Contact from './pages/Contact'
+import Leaderboard from './pages/LeaderBoard'
 
 axios.defaults.baseURL = 'http://localhost:8000'
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path='/navibar' element={<Navibar />} />
-      </Routes>
       <Toaster position='bottom-right' toastOptions={{duration: 2000}} />
       <Routes>
         <Route path='/' element={<Welcome />} />
@@ -34,6 +31,7 @@ function App() {
         <Route path='/help' element={<Help />} />
         <Route path='/maintaince' element={<Maintaince />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/leaderboard' element={<Leaderboard />} />
       </Routes>
     </>
   )

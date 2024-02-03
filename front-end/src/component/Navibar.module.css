@@ -40,15 +40,7 @@
 
 .help_text:hover {
   color: #F9DB24;
-}
-
-.contact_section {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(48%) saturate(6661%) hue-rotate(334deg) brightness(101%) contrast(95%);;
 }
 
 .contact_text {
@@ -59,5 +51,6 @@
 }
 
 .contact_text:hover {
-  color: #F9DB24
+  color: #F9DB24;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(48%) saturate(6661%) hue-rotate(334deg) brightness(101%) contrast(95%);;
 }

@@ -1,0 +1,95 @@
+.leaderboard_page {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    font-family: "Poppins";
+    background-color: #161A30;
+}
+
+.page_title {
+    padding: 5px;
+    background-color: #FDD017;
+    box-shadow: inset 0 0 10px #1f1f1f;
+    color: black;
+}
+
+.title_name {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.leaderboard_content {
+    padding: 50px 200px;
+    
+}
+
+.main_box {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+    border-radius: 45px;
+    background-color: #31304D;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: aqua;
+}
+
+.box2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: greenyellow;
+}
+
+.box3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: red;
+}
+
+.box4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: yellow;
+}
+
+.box5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: palegoldenrod;
+}
+
+.user_number {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.users_name {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.user_point {
+    font-size: 30px;
+    font-weight: 500;
+}

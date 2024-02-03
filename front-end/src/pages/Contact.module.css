@@ -1,6 +1,6 @@
 .contact_page {
     background-color: #161A30;
-    height: 88dvh;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
