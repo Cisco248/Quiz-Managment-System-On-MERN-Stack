@@ -1,0 +1,21 @@
+.slide-container {
+    place-items: center;
+    width: 90%;
+}
+.spanStyle {
+    padding: 10px 300px;
+    font-size: 30px;
+    font-weight: 600;
+    color: whitesmoke;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 45px;
+}
+
+.descriptionStyle {
+    padding: 10px 300px;
+    font-size: 24px;
+    font-weight: 400;
+    color: whitesmoke;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 45px;
+}
