@@ -1,21 +1,38 @@
 .home_page {
-
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #161A30;
 }
 
 .slider {
-
+    display: flex;
+    padding-top: 50px;
+    align-items: center;
+    justify-content: center;
 }
 
 .home_page_container {
-
+    display: flex;
+    flex-direction: row;
+    padding: 0px 50px;
 }
 
-.tab_button {
+.home_page_container_row1 {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.tag_button {
     display: flex;
     flex-direction: row;
     gap: 30px;
-    padding: 50px;
+    padding: 20px;
     justify-content: center;
+    align-items: center;
+    background-color: #31304D;
 }
 
 .box1 {
@@ -123,17 +140,6 @@
     background-color: #0007B9;
 }
 
-.leaderboar {
-
-}
-
-.user_leaderboard {
-}
-
-.discover {
-
-}
-
 .quiz_section_style {
     background-color: #31304D;
     border-radius: 30px;
@@ -183,12 +189,64 @@
     color: #444444;
 }
 
+.home_page_container_row2 {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
 
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px;
+    background-color: #31304D;
+    border-radius: 30px;
+}
+
+.leaderboard_title_box {
+    background-color: #D8A801;
+}
+
+.leaderboard_title {
+    font-size: 24px;
+    padding: 0px 30px;
+}
+
+.user_leaderboard_box {
+    text-align: center;
+}
+
+.user_leaderboard {
+    font-size: 18px;
+    color: #bebebe;
+    font-weight: 500;
+}
 
 .users {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px;
+    background-color: #31304D;
+    border-radius: 30px;
+}
 
+.user_title_box {
+    background-color: #D8A801;
+}
+
+.user_title {
+    text-align: center;
+}
+
+.users_name_box {
+    text-align: center;
 }
 
 .users_name {
-    
+    font-size: 18px;
+    color: #bebebe;
+    font-weight: 500;
 }
