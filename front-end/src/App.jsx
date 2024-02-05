@@ -20,7 +20,7 @@ axios.defaults.baseURL = 'http://localhost:8000'
 function App() {
   return (
     <>
-      <Toaster position='bottom-right' toastOptions={{duration: 2000}} />
+      <Toaster position='top-center' toastOptions={{duration: 3000}} />
       <Routes>
         <Route path='/' element={<Welcome />} />
         <Route path='/register' element={<Register />} />
