@@ -6,7 +6,7 @@ const Navibar2 = () => {
       <div className={Styles.navibar2_component}>
         <div className={Styles.navibar_align}>
           <a href=""><img className={Styles.collapse_icon} src="./Navi Bar Icon.svg" alt="icon" /></a>
-          <a href="/"><img className={Styles.navibar2_logo} src="./nav-logo.svg" alt="logo" /></a>
+          <a href="/home"><img className={Styles.navibar2_logo} src="./nav-logo.svg" alt="logo" /></a>
         </div>
         <div className={Styles.navibar2_icon}>
             <a className={Styles.icon_link} href="/maintaince"><img className={Styles.icon} src="./explore.svg" alt="" /></a>

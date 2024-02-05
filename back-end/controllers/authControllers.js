@@ -1,9 +1,12 @@
 const User = require('../models/user');
+const { hashPassword, comparePassword } = require('../middleware/passwordEncrypt');
+const jwt = require('jsonwebtoken');
 
 const test = (req, res) => {
     res.json('test is working');
 };
 
+// Register Endpoint 
 const registerUser = async (req, res) => {
     try {
         const { name, email, mobile, password } = req.body;
@@ -31,12 +34,14 @@ const registerUser = async (req, res) => {
             });
         }
 
+        const hashedPassword = await hashPassword(password)
+
         // Create a new user
         const newUser = await User.create({
             name,
             email,
             mobile,
-            password
+            password: hashedPassword,
         });
 
         // Return the new user object
@@ -49,7 +54,43 @@ const registerUser = async (req, res) => {
     }
 };
 
+// Login End Point
+const loginUser = async ( req, res ) => {
+    try {
+        const {email, password} = req.body;
+
+        // Check if the user exists
+        const user = await User.findOne({email})
+        if (!user) {
+            return res.json({
+                error: 'No User Found'
+            })
+        }
+
+        // Check password match
+        const match = await comparePassword(password, user.password)
+        if (match) {
+            jwt.sign({ 
+                id: user._id, 
+                email: user.email, 
+                name: user.name
+            }, process.env.JWT_SECRET, {}, (err, token) => {
+                if (err) throw err;
+                res.cookie('token', token).json(user)
+            })
+        }
+        if (!match) {
+            res.json ({
+                error: "Password Does Not Match"
+            })
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 module.exports = {
     test,
-    registerUser
+    registerUser,
+    loginUser
 };
