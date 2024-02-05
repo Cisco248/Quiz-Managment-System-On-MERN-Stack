@@ -12,61 +12,73 @@ function Home() {
             <Slider className={Style.slider}/>
         </div>
         <div className={Style.tag_button}>
-            <button className={Style.box1}>Science</button>
-            <button className={Style.box2}>Maths</button>
-            <button className={Style.box3}>Biology</button>
-            <button className={Style.box4}>Technology</button>
-            <button className={Style.box5}>Music</button>
-            <button className={Style.box6}>Social Studies</button>
-            <button className={Style.box7}>Economics</button>
+            <a className={Style.box1} href='/maintaince'>Science</a>
+            <a className={Style.box2} href='/maintaince'>Maths</a>
+            <a className={Style.box3} href='/maintaince'>Biology</a>
+            <a className={Style.box4} href='/maintaince'>Technology</a>
+            <a className={Style.box5} href='/maintaince'>Music</a>
+            <a className={Style.box6} href='/maintaince'>Social Studies</a>
+            <a className={Style.box7} href='/maintaince'>Economics</a>
         </div>
         <div className={Style.home_page_container}>
             <div className={Style.home_page_container_row1}>
                 <div className={Style.discover}>
                     <div className={Style.quiz_section_style}>
                         <div className={Style.quiz_section_wrap}>
-                            <div className={Style.quiz_box}>
-                                <img className={Style.quiz_img} src="/maths.png" alt="" />
-                                <div className={Style.quiz_box_text}>
-                                    <h4 className={Style.quiz_title}>Maths</h4>
-                                    <h6 className={Style.quiz_creator}>Create by : Adithya</h6>
+                            <a className={Style.quiz_box_link} href="/maintaince">
+                                <div className={Style.quiz_box}>
+                                    <img className={Style.quiz_img} src="/maths.png" alt="" />
+                                    <div className={Style.quiz_box_text}>
+                                        <h4 className={Style.quiz_title}>Maths</h4>
+                                        <h6 className={Style.quiz_creator}>Create by : Adithya</h6>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={Style.quiz_box}>
-                                <img className={Style.quiz_img} src="/biology.png" alt="" />
-                                <div className={Style.quiz_box_text}>
-                                    <h4 className={Style.quiz_title}>Biology</h4>
-                                    <h6 className={Style.quiz_creator}>Create by : Pasindu</h6>
+                            </a>
+                            <a className={Style.quiz_box_link} href="/maintaince">
+                                <div className={Style.quiz_box}>
+                                    <img className={Style.quiz_img} src="/biology.png" alt="" />
+                                    <div className={Style.quiz_box_text}>
+                                        <h4 className={Style.quiz_title}>Biology</h4>
+                                        <h6 className={Style.quiz_creator}>Create by : Pasindu</h6>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={Style.quiz_box}>
-                                <img className={Style.quiz_img} src="/technology.png" alt="" />
-                                <div className={Style.quiz_box_text}>
-                                    <h4 className={Style.quiz_title}>Malware</h4>
-                                    <h6 className={Style.quiz_creator}>Create by : Ishita</h6>
+                            </a>
+                            <a className={Style.quiz_box_link} href="/maintaince">
+                                <div className={Style.quiz_box}>
+                                    <img className={Style.quiz_img} src="/technology.png" alt="" />
+                                    <div className={Style.quiz_box_text}>
+                                        <h4 className={Style.quiz_title}>Malware</h4>
+                                        <h6 className={Style.quiz_creator}>Create by : Ishita</h6>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={Style.quiz_box}>
-                                <img className={Style.quiz_img} src="/music.png" alt="" />
-                                <div className={Style.quiz_box_text}>
-                                    <h4 className={Style.quiz_title}>Music</h4>
-                                    <h6 className={Style.quiz_creator}>Create by : Lahiru</h6>
+                            </a>
+                            <a className={Style.quiz_box_link} href="/maintaince">
+                                <div className={Style.quiz_box}>
+                                    <img className={Style.quiz_img} src="/music.png" alt="" />
+                                    <div className={Style.quiz_box_text}>
+                                        <h4 className={Style.quiz_title}>Music</h4>
+                                        <h6 className={Style.quiz_creator}>Create by : Lahiru</h6>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={Style.quiz_box}>
-                                <img className={Style.quiz_img} src="/science.png" alt="" />
-                                <div className={Style.quiz_box_text}>
-                                    <h4 className={Style.quiz_title}>Animals</h4>
-                                    <h6 className={Style.quiz_creator}>Create by : Lakshan</h6>
+                            </a>
+                            <a className={Style.quiz_box_link} href="/maintaince">
+                                <div className={Style.quiz_box}>
+                                    <img className={Style.quiz_img} src="/science.png" alt="" />
+                                    <div className={Style.quiz_box_text}>
+                                        <h4 className={Style.quiz_title}>Animals</h4>
+                                        <h6 className={Style.quiz_creator}>Create by : Lakshan</h6>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={Style.quiz_box}>
-                                <img className={Style.quiz_img} src="/economic.png" alt="" />
-                                <div className={Style.quiz_box_text}>
-                                    <h4 className={Style.quiz_title}>Trade Center</h4>
-                                    <h6 className={Style.quiz_creator}>Create by : xlk</h6>
+                            </a>
+                            <a className={Style.quiz_box_link} href="/maintaince">
+                                <div className={Style.quiz_box}>
+                                    <img className={Style.quiz_img} src="/economic.png" alt="" />
+                                    <div className={Style.quiz_box_text}>
+                                        <h4 className={Style.quiz_title}>Trade Center</h4>
+                                        <h6 className={Style.quiz_creator}>Create by : xlk</h6>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -86,7 +98,9 @@ function Home() {
                 </div>
                 <div className={Style.leaderboard}>
                     <div className={Style.leaderboard_title_box}>
-                        <h2 className={Style.leaderboard_title}>Leaderboard</h2>
+                        <a href='/leaderboard' className={Style.leaderboard_title_link}>
+                            <h2 className={Style.leaderboard_title}>Leaderboard</h2>
+                        </a>
                     </div>
                     <div className={Style.user_leaderboard_box}>
                         <h3 className={Style.user_leaderboard}>Eshan Fernando</h3>

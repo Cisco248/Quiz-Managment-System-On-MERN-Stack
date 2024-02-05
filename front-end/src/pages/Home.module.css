@@ -44,6 +44,7 @@
     border-radius: 45px;
     border: 3px solid #D8A801;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .box1:hover {
@@ -59,6 +60,7 @@
     border-radius: 45px;
     border: 3px solid #000000;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .box2:hover {
@@ -74,6 +76,7 @@
     border-radius: 45px;
     border: 3px solid #00AD11;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .box3:hover {
@@ -89,6 +92,7 @@
     border-radius: 45px;
     border: 3px solid #0094FF;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .box4:hover {
@@ -104,6 +108,7 @@
     border: 3px solid #FF5050;
     border-radius: 45px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .box5:hover {
@@ -119,6 +124,7 @@
     border-radius: 45px;
     border: 3px solid #10D7E3;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .box6:hover {
@@ -134,6 +140,7 @@
     border-radius: 45px;
     border: 3px solid #0007B9;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .box7:hover {
@@ -150,7 +157,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 100px;
+    gap: 80px;
+}
+
+.quiz_box_link {
+    border: 3px solid transparent;
+    outline: none;
+}
+
+.quiz_box_link:hover {
+    border-radius: 45px;
+    border: 3px solid #D8A801;
 }
 
 .quiz_box {
@@ -158,6 +175,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: end;
+    cursor: pointer;
 }
 
 .quiz_img {
@@ -205,11 +223,16 @@
     border-radius: 30px;
 }
 
+.leaderboard_title_link {
+    text-decoration: none;
+}
+
 .leaderboard_title_box {
     background-color: #D8A801;
 }
 
-.leaderboard_title {
+.leaderboard_title { 
+    color: #000;
     font-size: 24px;
     padding: 0px 30px;
 }
