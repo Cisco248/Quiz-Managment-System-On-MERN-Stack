@@ -28,6 +28,7 @@ export default function Login() {
     } else {
       setData({});
       navigate('/home')
+      toast.success('🎊Login Successful. Welcome Back!🎈');
     }
     } catch (error) {
       console.log(error)

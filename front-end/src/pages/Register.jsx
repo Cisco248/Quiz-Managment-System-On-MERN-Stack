@@ -36,7 +36,7 @@ export default function Register() {
           mobile: '',
           password: '',
         });
-        toast.success('Registration Successful. Welcome!');
+        toast.success('🎊Registration Successful. Welcome!🎈');
         navigate('/login');
       }
     } 

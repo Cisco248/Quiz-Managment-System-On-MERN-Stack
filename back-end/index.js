@@ -7,8 +7,8 @@ const app = express();
 
 // Database Connection
 mongoose.connect(process.env.MONGO_URL)
-    .then(() => console.log('Database Connected!'))
-    .catch((err) => console.log('Database Not Connected!', err));
+    .then(() => console.log('🙂 Database Connected!'))
+    .catch((err) => console.log('😞 Database Not Connected!', err));
 
 // Middleware
 app.use(express.json());
@@ -23,4 +23,4 @@ app.use('/', require('./routes/authRoutes'));
 app.use('/', require('./routes/quizRoutes'));
 
 const PORT = process.env.PORT || 8000; // Use process.env.PORT for dynamic port binding
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT} 🇱🇰`));
