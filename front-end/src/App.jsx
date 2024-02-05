@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 import axios from 'axios'
 
-import Navibar2 from './component/Navibar2'
 import Welcome from './pages/Welcome'
 import Register from './pages/Register'
 import Login from '../src/pages/Login'
@@ -27,7 +26,6 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/home' element={<Home />} />
         <Route path='/profile' element={<Profile />} />
-        <Route path='/navibar2' element={<Navibar2 />} />
         <Route path='/quiz create' element={<QuizCreatePage />} />
         <Route path='/help' element={<Help />} />
         <Route path='/maintaince' element={<Maintaince />} />
