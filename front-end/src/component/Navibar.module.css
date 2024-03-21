@@ -1,16 +1,15 @@
 .navibar_box {
   display: flex;
   flex-direction: row;
-  height: 8dvh;
+  height: 50px;
   padding: 0px 40px;
-  background-color: #0e1127;
+  background-color: rgb(255, 255, 255);
   justify-content: space-between;
   font-family: "Poppins";
 }
 
 .logo {
   display: flex;
-
   align-items: center;
 }
 
@@ -32,25 +31,77 @@
 }
 
 .help_text {
-  color: #ADB7BC;
+  color: #000000;
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
 }
 
 .help_text:hover {
-  color: #F9DB24;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(48%) saturate(6661%) hue-rotate(334deg) brightness(101%) contrast(95%);;
+  color: #f9db24;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(48%) saturate(6661%)
+    hue-rotate(334deg) brightness(101%) contrast(95%);
 }
 
 .contact_text {
-  color: #ADB7BC;
+  color: #000000;
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
 }
 
 .contact_text:hover {
-  color: #F9DB24;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(48%) saturate(6661%) hue-rotate(334deg) brightness(101%) contrast(95%);;
+  color: #f9db24;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(48%) saturate(6661%)
+    hue-rotate(334deg) brightness(101%) contrast(95%);
+}
+
+/* Media Responsive design for 768px */
+
+@media (max-width: 768px) {
+  .navibar_logo {
+    width: 150px;
+  }
+
+  .help_text {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .contact_text {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  svg {
+    width: 10px;
+    height: 15px;
+  }
+}
+
+/* Media Responsive design for 368px */
+
+@media (max-width: 450px) {
+  .navibar_box {
+    height: 40px;
+  }
+
+  .navibar_logo {
+    width: 80px;
+  }
+
+  .help_text {
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .contact_text {
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  svg {
+    width: 5px;
+    height: 10px;
+  }
 }
