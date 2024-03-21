@@ -8,26 +8,28 @@
   display: flex;
   flex-direction: column;
   place-content: center;
-  height: 88dvh;
-  background-color: #161A30;
+  gap: 30px;
+  height: 90vh;
+  background-color: #f1f1f1;
 }
 
 .text_box1 {
   padding: 100px 100px;
 }
-  
+
 .wtext {
   padding-top: 30px;
   text-align: center;
-  color: #fff;
+  color: #131313;
   font-family: "Poppins";
   font-size: 100px;
   font-style: normal;
   font-weight: 700;
 }
-  
+
 .yellow {
-  color: #F9DB24;
+  letter-spacing: 5px;
+  color: #f9db24;
 }
 
 .text_box2 {
@@ -37,93 +39,154 @@
   text-align: center;
   justify-content: center;
 }
-  
+
 .detail {
   font-family: "Poppins";
-  font-size: 22px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 300;
   line-height: 1.5;
-  color: #D6D6D6;
+  color: #131313;
   text-transform: capitalize;
 }
-  
+
 .container {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    place-content: center;
-    padding: 50px 150px 250px 150px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  place-content: center;
+  padding: 50px 150px 50px 150px;
+}
+
+.btext {
+  color: #fff;
+  font-family: "Poppins";
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 15px 40px;
+  background-color: #f9db24;
+  border: none;
+  border-radius: 10px;
+  color: #000000;
+  font-size: 16px;
+  box-shadow: inset 5px 5px -3px #246bce;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: ease;
+  color: #000;
+  background-color: #ffffff;
+}
+
+.about_us {
+  text-align: center;
+  place-content: center;
+  height: 50px;
+  background-color: #f9db24;
+  padding: 5px 0px;
+  letter-spacing: 2px;
+}
+
+.about_title {
+  font-size: 40px;
+}
+
+.mini_title {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+  align-items: center;
+  padding: 30px 0px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mtitle {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.block_p {
+  color: #8a8a8a;
+  width: 1200px;
+  text-align: justify;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* Screen size 768px */
+
+@media (max-width: 768px) {
+  .wtext {
+    font-size: 60px;
   }
-  
-  .btext {
-    color: #fff;
-    font-family: 'Poppins';
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    
+
+  .yellow {
+    font-size: 60px;
   }
-  
+
+  .detail {
+    font-size: 20px;
+    text-align: justify;
+  }
+
   .btn {
-    padding: 15px 40px;
-    background-color: #F9DB24;
-    border: none;
-    border-radius: 10px;
-    color: #000000;
-    font-size: 16px;
-    box-shadow: inset 5px 5px -3px #246BCE;
-    cursor: pointer;
+    padding: 10px 25px;
   }
-  
-  .btn:hover {
-    transition: ease;
-    color: #000;
-    background-color: #ffffff;
+}
+
+/* Screen size 450px */
+
+@media (max-width: 368px) {
+  .background {
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    height: auto;
+    background-color: #f1f1f1;
   }
-  
-  /* Screen size 900px */
-  
-  @media (max-width: 900px) {
-    
-    .wtext {
-      font-size: 60px;
-    }
-    
-    .yellow {
-      font-size: 60px;
-    }
-    
-    .detail {
-      font-size: 20px;
-      text-align: justify;
-    }
-    
-    .btn {
-      padding: 10px 25px;
-    }
+
+  .text_box1 {
+    padding: 50px;
   }
-  
-  /* Screen size 700px */
-  
-  @media (max-width: 900px) {
-  
-    .wtext {
-      font-size: 40px;
-    }
-    
-    .yellow {
-      font-size: 40px;
-    }
-    
-    .detail {
-      font-size: 14px;
-      text-align: justify;
-    }
-    
-    .btn {
-      padding: 5px 15px;
-    }
+
+  .text_box2 {
+    padding: auto;
   }
-  
+
+  .wtext {
+    font-size: 40px;
+  }
+
+  .yellow {
+    font-size: 40px;
+  }
+
+  .detail {
+    font-size: 10px;
+    text-align: justify;
+    width: 200px;
+  }
+
+  .container {
+    gap: 30px;
+    width: 200px;
+    padding: 50px 100px 100px 100px;
+  }
+
+  .btn {
+    font-size: 8px;
+    padding: 5px 15px;
+  }
+}
