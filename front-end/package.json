@@ -11,15 +11,15 @@
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "axios": "^1.6.5",
+    "axios": "^1.6.8",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.4.5",
     "jsonwebtoken": "^9.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
-    "react-router-dom": "^6.21.2",
-    "react-slideshow-image": "^4.3.0",
+    "react-router-dom": "^6.22.3",
+    "react-slideshow-image": "^4.3.1",
     "uuidv4": "^6.2.13"
   },
   "devDependencies": {
