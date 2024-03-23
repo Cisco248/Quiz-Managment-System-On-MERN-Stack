@@ -1,6 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+import { useState, useEffect } from "react";
+import RiseLoader from "react-spinners/RiseLoader";
 import axios from "axios";
+
+import "./App.css";
 
 import Welcome from "./pages/Welcome";
 import Register from "./pages/Register";
@@ -17,23 +21,44 @@ import Library from "./pages/Library";
 axios.defaults.baseURL = "http://localhost:8000";
 
 function App() {
+  const [loading, setloading] = useState(false);
+  useEffect(() => {
+    setloading(true);
+    setTimeout(() => {
+      setloading(false);
+    }, 5000);
+  }, []);
+
   return (
-    <>
-      <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
-      <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/quiz create" element={<QuizCreatePage />} />
-        <Route path="/help" element={<Help />} />
-        <Route path="/maintaince" element={<Maintaince />} />
-        <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/leaderboard" element={<Leaderboard />} /> */}
-        <Route path="/library" element={<Library />} />
-      </Routes>
-    </>
+    <div className="App">
+      {loading ? (
+        <RiseLoader
+          color={"#f4b62b"}
+          loading={loading}
+          size={30}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+          speedMultiplier={0.7}
+        />
+      ) : (
+        <>
+          <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
+          <Routes>
+            <Route path="/" element={<Welcome />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/quiz create" element={<QuizCreatePage />} />
+            <Route path="/help" element={<Help />} />
+            <Route path="/maintaince" element={<Maintaince />} />
+            <Route path="/contact" element={<Contact />} />
+            {/* <Route path="/leaderboard" element={<Leaderboard />} /> */}
+            <Route path="/library" element={<Library />} />
+          </Routes>
+        </>
+      )}
+    </div>
   );
 }
 
