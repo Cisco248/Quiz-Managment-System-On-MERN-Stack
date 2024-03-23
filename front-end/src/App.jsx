@@ -6,6 +6,8 @@ import axios from "axios";
 
 import "./App.css";
 
+import Slidebar from "./component/Slidebar";
+
 import Welcome from "./pages/Welcome";
 import Register from "./pages/Register";
 import Login from "../src/pages/Login";
@@ -33,6 +35,7 @@ function App() {
     <div className="App">
       {loading ? (
         <RiseLoader
+          className="loader"
           color={"#f4b62b"}
           loading={loading}
           size={30}
@@ -55,6 +58,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             {/* <Route path="/leaderboard" element={<Leaderboard />} /> */}
             <Route path="/library" element={<Library />} />
+            <Route path="slidebar" element={<Slidebar />} />
           </Routes>
         </>
       )}
