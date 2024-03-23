@@ -1,9 +1,9 @@
-import HomeIcon from "mui/icons-material/Home";
-import NotificationsIcon from "mui/icons-material/Notifications";
-import PlaylistPlayIcon from "mui/icons-material/PlaylistPlay";
-import MenuBookIcon from "mui/icons-material/MenuBook";
-import TravelExploreIcon from "mui/icons-material/TravelExplore";
-import ExitToAppIcon from "mui/icons-material/ExitToApp";
+import HomeIcon from "@mui/icons-material/Home";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import PlaylistPlayIcon from "@mui/icons-material/PlaylistPlay";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
+import TravelExploreIcon from "@mui/icons-material/TravelExplore";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
 export const SidebarData = [
   {
