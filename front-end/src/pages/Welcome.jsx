@@ -6,7 +6,7 @@ export default function Welcome() {
   return (
     <div>
       <Navibar />
-      <div className={MainCSS.background}>
+      <div className={MainCSS.w_background}>
         <div className={MainCSS.pmain}>
           <div className={MainCSS.text_box1}>
             <h1 className={MainCSS.wtext}>

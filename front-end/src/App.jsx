@@ -36,7 +36,7 @@ function App() {
       {loading ? (
         <RiseLoader
           className="loader"
-          color={"#f4b62b"}
+          color={"#fff"}
           loading={loading}
           size={30}
           aria-label="Loading Spinner"

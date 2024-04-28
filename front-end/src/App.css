@@ -1,5 +1,11 @@
 .App {
   display: flex;
+  background: linear-gradient(225deg,#011163,#6f00ff,#fc466b);
+  background-size: 180% 180%;
+  animation: App 18s ease infinite;
+  background: rgba( transparent );
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(80px);
 }
 
 .loader {
@@ -8,4 +14,16 @@
   align-items: center;
   width: 100%;
   height: 100vh;
+}
+
+@keyframes App {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
