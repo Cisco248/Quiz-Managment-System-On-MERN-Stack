@@ -16,11 +16,7 @@ function Profile() {
                 </div>
                 <div className={Style.profile_section}>
                     <div className={Style.profile_detail}>
-                        <img className={Style.profile_img}  src="" alt="" />
-                        <div>
-                            <h1 className={Style.text_style}>Name : </h1>
-                            <h2 className={Style.text_style}>Age : </h2>
-                        </div>
+                        <img className={Style.profile_img} type="upload" src="" alt="" />
                         
                     </div>
                     <form className={Style.detail_box} action="get">
