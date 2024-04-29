@@ -133,25 +133,24 @@ const CreateAndPlay = () => {
           
           {isModalOpen && (
             <div className={Styles.modal}>
+              <button className={Styles.popup_close_button1} onClick={() => setIsPlayModalOpen(false)}>X</button>
               <div className={Styles.modal_content}>
-                <button1 className={Styles.Button1} onClick={() => setIsModalOpen(false)}>X</button1>
-                <h2>{selectedQuiz.title}</h2>
-                <button className={Styles.Button} onClick={() => handleHostQuiz(selectedQuiz._id)}> Host Quiz </button>
-                <button className={Styles.Button} onClick={() => handlePlayQuiz(selectedQuiz._id)}> Play Quiz </button>
-                <button className={Styles.Button} onClick={() => console.log("Edit Quiz")}> Edit Quiz </button>
-                <button className={Styles.Button} onClick={() => setIsDeleteModalOpen(true)}> Delete Quiz </button>{" "}
-                {/* Open delete confirmation modal */}
+                <h2 className={Styles.popup_text}>{selectedQuiz.title}</h2>
+                <button className={Styles.popup_button} onClick={() => handleHostQuiz(selectedQuiz._id)}> Host Quiz </button>
+                <button className={Styles.popup_button} onClick={() => handlePlayQuiz(selectedQuiz._id)}> Play Quiz </button>
+                <button className={Styles.popup_button} onClick={() => console.log("Edit Quiz")}> Edit Quiz </button>
+                <button className={Styles.popup_button} onClick={() => setIsDeleteModalOpen(true)}> Delete Quiz </button>{" "}
               </div>
             </div>
           )}
 
           {isPlayModalOpen && (
             <div className={Styles.p_modal}>
+              <button className={Styles.popup_close_button2} onClick={() => setIsPlayModalOpen(false)}>X</button>
               <div className={Styles.p_modal_content}>
-                <button1 className={Styles.Button1} onClick={() => setIsPlayModalOpen(false)}>X</button1>
-                <h2>Enter Game Pin to Join Quiz</h2>
-                <input className={Styles.Input1} type="text" placeholder="Enter game pin" id="gamePinInput" />
-                <button onClick={() => handleJoinQuiz( document.getElementById("gamePinInput").value )}> Join Quiz </button>
+                <h2 className={Styles.popup_text}>Enter Game Pin to Join Quiz</h2>
+                <input className={Styles.popup_input} type="text" placeholder="Enter Game Pin" id="gamePinInput" />
+                <button className={Styles.popup_button} onClick={() => handleJoinQuiz( document.getElementById("gamePinInput").value )}> Join Quiz </button>
               </div>
             </div>
           )}

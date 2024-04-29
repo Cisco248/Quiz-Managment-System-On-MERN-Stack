@@ -1,19 +1,20 @@
 //HostLandingPage.js
-import React, { useState, useEffect } from "react";
-import "./HostLandingPage.css";
+import { useState, useEffect } from "react";
+import Styles from "./HostLandingPage.module.css";
 import Navibar2 from "../component/Navibar2";
-//import io from "socket.io-client";
+import Footer from "../component/Footer";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import socket from "./socket"; // Import the socket instance
 
 const HostLandingPage = () => {
+  // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate();
   const { quizId, gamePin } = useParams();
-  const [quiz, setQuiz] = useState(null);
-  const [gameUrl, setGameUrl] = useState("");
-  const [numPlayers, setNumPlayers] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(120);
+  const [ quiz, setQuiz ] = useState(null);
+  const [ gameUrl, setGameUrl ] = useState("");
+  const [ numPlayers, setNumPlayers ] = useState(0);
+  const [ timeLeft ] = useState(120);
 
   useEffect(() => {
     const fetchQuiz = async () => {
@@ -112,7 +113,7 @@ const HostLandingPage = () => {
     };
 
     postSession();
-  }, [gamePin]);
+  }, [gamePin, quizId]);
 
   // Convert timeLeft to minutes and seconds
   const minutes = Math.floor(timeLeft / 60);
@@ -131,86 +132,55 @@ const HostLandingPage = () => {
   return (
     <div>
       <Navibar2 />
-      <div className="main-div">
-        <div className="div">
-          <div className="players-joined-div">
-            <div className="players-joined-text">Players Joined</div>
-            <div className="numjoined-players">{numPlayers}</div>
-          </div>
-
-          <div className="game-pin-div">
-            <div className="game-pin-text">Game Pin</div>
-            <div className="game-pin-no-div">
-              <img
-                className="img"
-                alt="Vector"
-                src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/vector-7@2x.png"
-              />
-              <div className="game-pin">{gamePin}</div>
+      <div className={Styles.landing_page}>
+        <div className={Styles.landing_page_aligment}>
+          
+          <div className={Styles.landing_page_row_1}>
+            <div className={Styles.players_joined_div}>
+              <div className={Styles.players_joined_text}>Players Joined</div>
+              <div className={Styles.num_joined_players}>{numPlayers}</div>
             </div>
-          </div>
 
-          <div className="time-countdown-div">
-            <div className="countdown-no-div">
-              <div className="time-left-numbers">{`${minutes} min ${
-                seconds < 10 ? `0${seconds}` : seconds
-              } sec`}</div>
-            </div>
-            <div className="starts-in-text">Starts In</div>
-          </div>
-
-          <div className="link-game-pin-div">
-            <div className="overlap-2">
-              <div className="link-pin-button">
-                <img
-                  className="line"
-                  alt="Line"
-                  src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/line-13-1.svg"
-                />
-                <button
-                  className="link-copy-button"
-                  onClick={copyGameUrlToClipboard} // Attach the function here
-                >
-                  <img
-                    className="link-copy-button-icon"
-                    src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/link-copy-button@2x.png"
-                    alt="Link copy button"
-                  />
-                </button>
+            <div className={Styles.game_pin_div}>
+              <div className={Styles.game_pin_text}>Game Pin</div>
+              <div className={Styles.game_pin_no_div}>
+                <div className={Styles.game_pin}>{gamePin}</div>
+                <img className={Styles.img} alt="img" src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/vector-7@2x.png"/>
               </div>
-              <button
-                className="link-game-pin-button"
-                onClick={copyGameUrlToClipboard}
-              >
-                {" "}
-                {gameUrl}
-              </button>
+            </div>
+
+            <div className={Styles.time_countdown_div}>
+              <div className={Styles.time_left_numbers}>{`${minutes} min ${ seconds < 10 ? `0${seconds}` : seconds } sec`}</div>
+              <div className={Styles.starts_in_text}>Starts In</div>
             </div>
           </div>
 
-          <div className="quiz-title-div">
-            <div className="quiz-title-text">{quiz?.title}</div>
-          </div>
-          <div className="no-questions-div">
-            <p className="no-of-questions-text">
-              <span className="span">No. of </span>
-              <span className="span">questions</span>
-            </p>
-            <div className="no-questions-number">{quiz?.questions.length}</div>
-          </div>
-          <div>
-            <button className="start-now-button" onClick={handleStartNowClick}>
-              <div className="start-now-text">Start Now</div>
-            </button>
+          <div className={Styles.landing_page_row_2}>
+            <div className={Styles.link_game_pin_div}>
+              <div className={Styles.overlap_2}>
+                <div className={Styles.link_pin_button}>
+                  <img className={Styles.line} alt="Line" src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/line-13-1.svg" />
+                  <button className={Styles.link_copy_button} onClick={copyGameUrlToClipboard} ><img className={Styles.link_copy_button_icon} src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/link-copy-button@2x.png" alt="Link copy button" /></button>
+                </div>
+                <button className={Styles.link_game_pin_button} onClick={copyGameUrlToClipboard}> {" "} {gameUrl} </button>
+              </div>
+            </div>
+            <div className={Styles.quiz_title_div}>
+              <div className={Styles.quiz_title_text}>{quiz?.title}</div>
+            </div>
+            <div className={Styles.no_questions_div}>
+              <p className={Styles.no_of_questions_text}>No. of <span className={Styles.span}>questions</span></p>
+              <div className={Styles.no_questions_number}>{quiz?.questions.length}</div>
+            </div>
           </div>
 
-          <div className="copyright">
-            <p className="quizzify-quiz-system">
-              Quizzify - Quiz System Project © 2023. Design by Team 56
-            </p>
+          <div className={Styles.landing_page_row_3}>
+            <button className={Styles.start_now_button} onClick={handleStartNowClick}><div className={Styles.start_now_text}>Start Now</div></button>
           </div>
+
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -138,32 +138,12 @@
   font-weight: 400;
 }
 
-
-.quizzify_quiz_system {
-  color: var(--gray-300);
-  font-family: "Public Sans", Helvetica;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 0.1px;
-  margin-bottom: -6px;
-  margin-top: -1px;
-  position: relative;
-  text-align: center;
-  width: 1320px;
-}
-
-.nav_bar_instance {
-  left: 0 !important;
-  position: relative !important;
-  top: 0 !important;
-}
-
 .modal {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
   position: fixed;
   z-index: 1;
   /* Sit on top */
@@ -180,17 +160,29 @@
   padding: 20px;
 }
 
+.popup_close_button1 {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #fff;
+  font-size: 30px;
+  font-family: "Poppins", Helvetica;
+  font-style: normal;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.popup_close_button1:hover {
+  background-color: #ff3a3a;
+}
+
 .modal_content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f9db24;
-  margin: auto;
-  padding: 40px;
+  background-color: #fff;
+  padding: 100px;
   border-radius: 25px;
-  width: 450px;
-  height: 320px;
   /* You can set a max-width */
 }
 
@@ -209,62 +201,12 @@
   margin-top: -20px; /* Add space between paragraph and buttons */
 }
 
-.modal_content button {
-  font-family: Helvetica;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px 20px;
-  margin-bottom: 18px;
-  border-radius: 8px;
-  border-width: 1px;
-  background-color: #d7d7d7;
-  color: #000000;
-  cursor: pointer;
-}
-
-.modal_content button:hover {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-.Button1 {
-  font-family: sans-serif;
-  font-size: 25px;
-  font-weight: bolder;
-  padding: 8px 12px;
-  position: relative;
-  top: 0;
-  right: 0;
-  margin-left: 470px;
-  margin-right: 10px; /* Add space between h2 and button1 */
-  margin-top: -10px;
-  border-radius: 8px;
-  border-width: 1px;
-  background-color: transparent;
-  color: #000000;
-  cursor: pointer;
-}
-
-.Button1:hover {
-  background-color: #ff0000;
-  color: #ffffff;
-}
-
-.Input1 {
-  margin-bottom: 35px;
-  height: 32px;
-  padding-left: 8px;
-  font-size: 20px;
-  font-family: Helvetica;
-  border-radius: 8px;
-  margin-right: 10px;
-}
-
 .p_modal {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
   position: fixed;
   z-index: 1;
   /* Sit on top */
@@ -286,73 +228,63 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f9db24;
-  margin: auto;
-  padding: 40px;
+  gap: 30px;
+  background-color: #fff;
+  padding: 200px;
   border-radius: 25px;
-  width: 450px;
-  height: 320px;
   /* You can set a max-width */
 }
 
-.p_modal_content h2 {
+.popup_close_button2 {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #fff;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.popup_close_button2:hover {
+  background-color: #ff3a3a;
+}
+
+.popup_text {
   text-align: center;
   font-family: "Poppins", Helvetica;
-  font-size: 27px;
+  font-size: 30px;
   margin-top: 15px; /* Add space between heading and buttons */
 }
 
-.p_modal_content p {
-  font-family: "Poppins", Helvetica;
-  font-size: 18px;
-  margin-bottom: 20px; /* Add space between paragraph and buttons */
+.popup_input {
+  padding: 10px 40px;
+  text-align: center;
+  font-size: 20px;
+  font-family: Helvetica;
+  border: 3px solid #000000;
+  border-radius: 8px;
 }
 
-.p_modal_content button {
+.popup_input::placeholder {
+  text-align: center;
+}
+
+.popup_button {
   font-family: Helvetica;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
   padding: 10px 20px;
   margin-bottom: 18px;
   border-radius: 8px;
   border-width: 1px;
-  background-color: #d7d7d7;
+  background-color: #a7a5a5;
   color: #000000;
   cursor: pointer;
+  border: none;
 }
 
-.p_modal_content button:hover {
+.popup_button:hover {
   background-color: #000000;
   color: #ffffff;
-}
-
-.Button1 {
-  font-family: sans-serif;
-  font-size: 25px;
-  font-weight: bolder;
-  padding: 8px 12px;
-  position: absolute;
-  margin-left: 470px;
-  margin-right: 15px; /* Add space between h2 and button1 */
-  margin-top: -325px;
-  border-radius: 8px;
-  border-width: 1px;
-  background-color: transparent;
-  color: #000000;
-  cursor: pointer;
-}
-
-.Button1:hover {
-  background-color: #ff0000;
-  color: #ffffff;
-}
-
-.Input1 {
-  margin-top: 90px;
-  margin-bottom: 25px;
-  height: 32px;
-  padding-left: 8px;
-  font-size: 20px;
-  font-family: Helvetica;
-  border-radius: 8px;
 }

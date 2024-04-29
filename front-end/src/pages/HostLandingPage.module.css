@@ -1,0 +1,268 @@
+/* Page Aligment */
+
+.landing_page {
+  height: 100dvh;
+  width: 100dvw;
+}
+
+.landing_page_aligment{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing_page_row_1 {
+  padding: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Player Joiner Display */
+
+.players_joined_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid;
+  border: 5px solid #c1c1c1;
+  border-radius: 20px;
+  height: 150px;
+  width: 350px;
+}
+
+.players_joined_text {
+  color: #ffffff;
+  font-family: "Public Sans", Helvetica;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.num_joined_players {
+  color: #ffffff;
+  font-family: "Public Sans", Helvetica;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Game Pin Display */
+
+.game_pin_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid;
+  border: 5px solid #c1c1c1;
+  border-radius: 20px;
+  height: 150px;
+  width: 400px;
+}
+
+.game_pin_text {
+  color: #f9db24;
+  font-family: "Public Sans", Helvetica;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.game_pin_no_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.img {
+  height: 37px;
+  width: 41px;
+}
+
+.game_pin {
+  color: #ffffff;
+  font-family: "Public Sans", Helvetica;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+/* Time Count Display */
+
+.time_countdown_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid;
+  border: 5px solid #c1c1c1;
+  border-radius: 20px;
+  height: 150px;
+  width: 400px;
+}
+
+.countdown_no_div {
+  height: 72px;
+  width: 231px;
+}
+
+.time_left_numbers {
+  color: #ffffff;
+  font-family: "Public Sans", Helvetica;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.starts_in_text {
+  color: #f9db24;
+  font-family: "Public Sans", Helvetica;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Game Link Display */
+
+.link_game_pin_div {
+  height: 74px;
+  width: 509px;
+}
+
+.overlap_2 {
+  border-radius: 30px;
+  height: 74px;
+  width: 507px;
+}
+
+.link_pin_button {
+  background-color: #f9db24;
+  border: 1.66px solid;
+  border-color: #000000;
+  border-radius: 30px;
+  height: 74px;
+  width: 507px;
+}
+
+.line {
+  height: 74px;
+  width: 2px;
+}
+
+.link_copy_button_icon {
+  height: 45px;
+  width: 42px;
+}
+
+.link_copy_button {
+  background-color: #f9db24;
+  border: none;
+}
+
+.link_game_pin_button {
+  background-color: #f9db24;
+  font-family: "Inter", Helvetica;
+  font-size: 30px;
+  border: none;
+  font-weight: 500;
+  width: 423px;
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Display an ellipsis (...) to indicate overflow */
+}
+
+/* Quiz Title Display */
+
+.quiz_title_div {
+  height: 112px;
+  left: 64px;
+  top: 50px;
+  width: 1031px;
+}
+
+.quiz_title_text {
+  color: #f9db24;
+  font-family: "Public Sans", Helvetica;
+  font-size: 35px;
+  font-weight: 600;
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 0.1px;
+  text-align: center;
+  top: 30px;
+}
+
+.no_questions_div {
+  height: 83px;
+  left: 1131px;
+  top: 70px;
+  width: 229px;
+}
+
+/* Number Of Questions */
+
+.no_of_questions_text {
+  color: #f9db24;
+  font-family: "Inter", Helvetica;
+  font-size: 27.7px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  width: 229px;
+}
+
+.span {
+  color: #f9db24;
+  font-family: "Inter", Helvetica;
+  font-size: 27.7px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.no_questions_number {
+  background-color: #47475c;
+  font-family: "Inter", Helvetica;
+  border-radius: 6.76px;
+  color: aliceblue;
+  font-size: 35px;
+  font-weight: bold;
+  padding: 5px 12px 5px 12px;
+}
+
+/* Start Now Button */
+
+.start_now_button {
+  background-color: #f9db24;
+  border-radius: 63.07px;
+  box-shadow: 0px 5.05px 5.05px #00000040;
+  height: 63px;
+  width: 222px;
+}
+
+.start_now_text {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 31.5px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.start_session_button {
+  background-color: #f9db24;
+  border-radius: 63.07px;
+  box-shadow: 0px 5.05px 5.05px #00000040;
+  height: 57px;
+  width: 260px;
+}
+
+.start_session_text {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 31.5px;
+  font-weight: bold;
+  padding-left: 30px;
+  padding-top: 10px;
+}
