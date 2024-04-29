@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navibar2 from "../component/Navibar2"
+import Footer from "../component/Footer"
 import Styles from "./CreateAndPlay.module.css";
 
 const CreateAndPlay = () => {
@@ -105,10 +106,14 @@ const CreateAndPlay = () => {
   return (
     <div>
       <Navibar2 />
-        <div className={Styles.main_div}>
-        <div className={Styles.div_2}>
-          <div className={Styles.created_quizzes}>
-            <div className={Styles.created_quizzes_text}>Created Quizzes</div>
+        <div className={Styles.create_and_play_page}>
+        <div className={Styles.page_aligement}>
+          <div className={Styles.button_container}>
+            <button className={Styles.play_button} onClick={() => handlePlayQuiz()}> Play </button>
+            <button className={Styles.create_button} onClick={navigateToQuizCreatePage}> Create </button>
+          </div>
+          <div className={Styles.created_quizzes_title_bar}>
+            <div className={Styles.created_quizzes_title_text}>Created Quizzes</div>
           </div>
 
           <div className={Styles.quiz_card_container}>
@@ -125,19 +130,7 @@ const CreateAndPlay = () => {
               </div>
             ))}
           </div>
-          <div className={Styles.button_container}>
-            <div className={Styles.play_button_container}>
-              <button className={Styles.play_button} onClick={() => handlePlayQuiz()}>
-                <div className={Styles.play_button_text}>Play</div>
-              </button>
-            </div>
-            <div className={Styles.create_button_container}>
-              <button className={Styles.create_button} onClick={navigateToQuizCreatePage}>
-                <div className={Styles.create_text}>Create</div>
-              </button>
-            </div>
-          </div>
-
+          
           {isModalOpen && (
             <div className={Styles.modal}>
               <div className={Styles.modal_content}>
@@ -173,14 +166,9 @@ const CreateAndPlay = () => {
               </div>
             </div>
           )}
-
-          <div className={Styles.copyright}>
-            <p className={Styles.quizzify_quiz_system}>
-              Quizzify - Quiz System Project © 2023. Design by Team 56
-            </p>
-          </div>
         </div>
       </div>
+      <Footer /> 
     </div>
   );
 };

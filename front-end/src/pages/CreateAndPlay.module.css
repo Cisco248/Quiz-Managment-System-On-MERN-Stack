@@ -1,123 +1,84 @@
-.main_div {
+.create_and_play_page {
+  background: rgba( 60, 60, 60, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 80px );
+  -webkit-backdrop-filter: blur( 80px );
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  width: 100dvw;
 }
 
-.created_quizzes {
+.page_aligement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  display: inline-flex;
-  gap: 50px;
-  left: 238px;
-  position: absolute;
-  top: 292px;
+  place-items: center;
 }
 
 .button_container {
+  padding: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-
-.play_button_container {
-  height: 560px;
-  left: 160px;
-  position: absolute;
-  top: 220px;
-  width: 1114px;
+  gap: 20px;
 }
 
 .play_button {
-  all: unset;
-  background-color: #f9db24;
-  border-radius: 50px;
-  box-shadow: 0px 4px 4px #00000040;
-  box-sizing: border-box;
-  height: 50px;
-  overflow: hidden;
-  position: absolute;
-  top: -170px;
-  width: 150px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  box-shadow: none;
+  border-radius: 20px;
+  padding: 15px 50px;
 }
 
-.play_button_text {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 25px;
-  font-weight: bold;
-  left: 49px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 12px;
-}
-
-.create_button_container {
-  height: 560px;
-  left: 160px;
-  position: absolute;
-  top: 220px;
-  width: 1114px;
+.play_button:hover {
+  background-color: #ff3a3a;
 }
 
 .create_button {
-  all: unset;
-  background-color: #f9db24;
-  border-radius: 50px;
-  box-shadow: 0px 4px 4px #00000040;
-  box-sizing: border-box;
-  height: 50px;
-  left: 190px;
-  overflow: hidden;
-  position: absolute;
-  top: -170px;
-  width: 150px;
-}
-
-.create_text {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 25px;
-  font-weight: bold;
-  left: 38px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 12px;
-}
-
-.created_quizzes_text {
-  color: #ffffff;
-  font-family: "Public Sans", Helvetica;
-  font-size: 28px;
+  background-color: #fff;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -250px;
-  position: absolute;
-  white-space: nowrap;
-  right: -145px;
-  width: fit-content;
+  border: none;
+  box-shadow: none;
+  border-radius: 20px;
+  padding: 15px 50px;
+}
+
+.create_button:hover {
+  background-color: #ff3a3a;
+}
+
+.created_quizzes_title_bar {
+  width: 100dvw;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.created_quizzes_title_text {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 30px;
+  padding: 5px;
+  text-align: center;
 }
 
 .quiz_card_container {
+  padding: 100px;
   display: flex;
+  row-gap: 40px;
   flex-wrap: wrap;
-  row-gap: 30px;
-  column-gap: 60px;
-  flex-direction: row;
-  left: 150px;
-  position: relative;
-  top: 220px;
-  z-index: 1;
+  justify-content: space-between;
 }
 
 .quiz_card {
   display: flex;
   flex-wrap: wrap;
-  margin-right: 50px;
-  background-position: 50% 50%;
   background-size: cover;
   border-radius: 30px 30px 30px 30px;
   height: 300px;
@@ -135,13 +96,18 @@
 }
 
 .text_bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
   background-color: #d9d9d9;
   border-radius: 0px 0px 30px 30px;
   height: 100px;
-  left: 0;
   position: relative;
   top: 200px;
   width: 300px;
+  cursor: pointer;
 }
 
 .text_bar:hover {
@@ -152,13 +118,8 @@
   color: #000000;
   font-weight: 500;
   font-family: Helvetica;
-  font-size: 22px;
-  left: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 15px;
-  white-space: nowrap;
+  justify-content: center;
+  font-size: 18px;
 }
 
 .questionCount {
@@ -166,42 +127,17 @@
   font-family: Helvetica;
   font-size: 15px;
   font-weight: 500;
-  left: 17px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 55px;
-  white-space: nowrap;
-  width: 130px;
 }
 
 .timeSet {
   color: #000000;
-  font-family: "Public Sans", Helvetica;
-  font-size: 15px;
+  font-family: Helvetica;
+  font-size: 12px;
   font-weight: 400;
-  left: 165px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 55px;
-  width: 130px;
 }
 
-.copyright {
-  align-items: flex-start;
-  background-color: #31304d;
-  box-shadow: inset 0px 1px 0px #3c3c3c;
-  display: flex;
-  gap: 10px;
-  height: 42px;
-  justify-content: space-around;
-  left: 0;
-  padding: 24px 0px;
-  position: absolute;
-  top: 1296px;
-  width: 1440px;
-}
 
 .quizzify_quiz_system {
   color: var(--gray-300);
