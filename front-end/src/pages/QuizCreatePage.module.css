@@ -3,8 +3,13 @@
 }
 
 .quiz_create_page {
-    background-color: #161a30;
+    background: rgba( 60, 60, 60, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 80px );
+    -webkit-backdrop-filter: blur( 80px );
     display: flex;
+    width: 100dvw;
+    height: 87dvh;
     flex-direction: row;
     justify-content: center;
 }
@@ -13,7 +18,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 200px;
+    gap: 400px;
 }
 
 .question_section {
@@ -28,6 +33,7 @@
     width: 200px;
     background-color: #2a3157;
     border-radius: 25px;
+    border: none;
 }
 
 .button_container1 {
@@ -43,14 +49,14 @@
     height: 30px;
     text-align: center;
     border-radius: 20px;
-    border: 2px solid #ffc107;
-    background-color: #ffc107;
+    border: 2px solid #fff;
+    background-color: #fff;
     cursor: pointer;
 }
 
 .add_button:hover {
-    background-color: #ffff;
-    border: 2px solid #ffff;
+    background-color: #e40c0c;
+    border: 2px solid #e40c0c;
 }
 
 .delete_button1 {
@@ -111,6 +117,7 @@
     height: 100px;
     width: 50rem;
     border-radius: 30px;
+    border: none;
 }
 
 .button_container2 {
@@ -141,7 +148,7 @@
     height: 40px;
     width: 500px;
     border-radius: 10px;
-    border: 2px solid #161a30;
+    border: none;
 }
 
 .text_box::placeholder {
@@ -167,12 +174,13 @@
 .info {
     font-size: 24px;
     font-weight: 500;
-    color: #ffc107;
+    color: #fff;
 }
 
 .time_box {
-    height: 20px;
+    height: 10px;
     width: 50px;
+    padding: 5px 10px;
 }
 
 .time_text {
@@ -188,7 +196,11 @@
 .no_question {
     font-size: 22px;
     font-weight: 500;
-    color: #ffc107;
+    color: #fff;
+}
+
+.qn_style {
+    padding: 5px 10px;
 }
 
 .save_button {
@@ -196,14 +208,16 @@
     height: 30px;
     text-align: center;
     border-radius: 20px;
-    border: 2px solid #ffc107;
-    background-color: #ffc107;
+    border: 2px solid #fff;
+    background-color: #fff;
     cursor: pointer;
+    font-size: 14px;
+    font-weight: 550;
 }
 
 .save_button:hover {
-    background-color: #ffff;
-    border: 2px solid #ffff;
+    background-color: #e40c0c;
+    border: 2px solid #e40c0c;
 }
 
 .deleteIcon {
@@ -220,5 +234,5 @@
 }
 
 .delete_button:hover {
-    background-color: #b40000;
+    background-color: #e40c0c;
 }

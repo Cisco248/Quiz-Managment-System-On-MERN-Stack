@@ -49,7 +49,6 @@
 .profile_img {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
     border: 2px solid #fff;
 }
 
@@ -72,12 +71,12 @@
     border-radius: 10px;
     border: 2px solid #ffffff;
     color: #fff;
+    left: 2rem;
     background-color: transparent;
 }
 
 .input_box::placeholder {
     padding: 0px 10px;
-    left: 2rem;
     color: #ffffff;
     background-color: transparent;
     font-size: 14px;

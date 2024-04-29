@@ -16,8 +16,7 @@ function Profile() {
                 </div>
                 <div className={Style.profile_section}>
                     <div className={Style.profile_detail}>
-                        <img className={Style.profile_img} type="upload" src="" alt="" />
-                        
+                        <input className={Style.profile_img} type="file" src="" alt="" />
                     </div>
                     <form className={Style.detail_box} action="get">
                         <input className={Style.input_box} type="text" placeholder='Name'/>
