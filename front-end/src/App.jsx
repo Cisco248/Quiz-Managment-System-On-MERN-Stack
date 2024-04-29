@@ -13,7 +13,7 @@ import Register from "./pages/Register";
 import Login from "../src/pages/Login";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-import QuizCreatePage from "./pages/QuizCreatePage";
+// import QuizCreatePage from "./pages/QuizCreatePage";
 import Help from "./pages/Help";
 import Maintaince from "./pages/Maintaince";
 import Contact from "./pages/Contact";
@@ -56,7 +56,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/quiz create" element={<QuizCreatePage />} />
+            {/* {<Route path="/quiz create" element={<QuizCreatePage />} />} */}
             <Route path="/help" element={<Help />} />
             <Route path="/maintaince" element={<Maintaince />} />
             <Route path="/contact" element={<Contact />} />

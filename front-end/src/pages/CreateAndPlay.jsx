@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navibar2 from "../component/Navibar2"
-import "./CreateAndPlay.css";
+import Styles from "./CreateAndPlay.module.css";
 
 const CreateAndPlay = () => {
   const [createdQuizzes, setCreatedQuizzes] = useState([]);
@@ -105,111 +105,77 @@ const CreateAndPlay = () => {
   return (
     <div>
       <Navibar2 />
-      <div className="main-div">
-        <div className="div-2">
-          <div className="created-quizzes">
-            <div className="created-quizzes-text">Created Quizzes</div>
+        <div className={Styles.main_div}>
+        <div className={Styles.div_2}>
+          <div className={Styles.created_quizzes}>
+            <div className={Styles.created_quizzes_text}>Created Quizzes</div>
           </div>
 
-          <div className="quiz-card-container">
+          <div className={Styles.quiz_card_container}>
             {createdQuizzes.map((quiz) => (
               <div key={quiz._id}>
-                <div
-                  className="quiz-card"
-                  onClick={() => handleQuizCardClick(quiz)}
-                >
-                  <img
-                    className="img"
-                    alt="Quiz card tab"
-                    src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bb542e83276fd4dbb2291a/img/quiz-card-tab@2x.png"
-                  />
-                  <div className="text-bar">
-                    <div className="title">{quiz.title}</div>
-                    <div className="questionCount">{`${quiz.questions.length} Questions`}</div>
-                    <div className="timeSet">{`Time Limit: ${quiz.timeLimit.minutes}m ${quiz.timeLimit.seconds}s`}</div>
+                <div className={Styles.quiz_card} onClick={() => handleQuizCardClick(quiz)}>
+                  <img className={Styles.img} alt="Quiz card tab" src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bb542e83276fd4dbb2291a/img/quiz-card-tab@2x.png"/>
+                  <div className={Styles.text_bar}>
+                    <div className={Styles.title}>{quiz.title}</div>
+                    <div className={Styles.questionCount}>{`${quiz.questions.length} Questions`}</div>
+                    <div className={Styles.timeSet}>{`Time Limit: ${quiz.timeLimit.minutes}m ${quiz.timeLimit.seconds}s`}</div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-
-          <div className="play-button-container">
-            <button className="play-button" onClick={() => handlePlayQuiz()}>
-              <div className="play-button-text">Play</div>
-            </button>
-          </div>
-
-          <div className="create-button-container">
-            <button
-              className="create-button"
-              onClick={navigateToQuizCreatePage}
-            >
-              <div className="create-text">Create</div>
-            </button>
+          <div className={Styles.button_container}>
+            <div className={Styles.play_button_container}>
+              <button className={Styles.play_button} onClick={() => handlePlayQuiz()}>
+                <div className={Styles.play_button_text}>Play</div>
+              </button>
+            </div>
+            <div className={Styles.create_button_container}>
+              <button className={Styles.create_button} onClick={navigateToQuizCreatePage}>
+                <div className={Styles.create_text}>Create</div>
+              </button>
+            </div>
           </div>
 
           {isModalOpen && (
-            <div className="modal">
-              <div className="modal-content">
-                <button1 onClick={() => setIsModalOpen(false)}>X</button1>
+            <div className={Styles.modal}>
+              <div className={Styles.modal_content}>
+                <button1 className={Styles.Button1} onClick={() => setIsModalOpen(false)}>X</button1>
                 <h2>{selectedQuiz.title}</h2>
-                <button onClick={() => handleHostQuiz(selectedQuiz._id)}>
-                  Host Quiz
-                </button>
-                <button onClick={() => handlePlayQuiz(selectedQuiz._id)}>
-                  Play Quiz
-                </button>
-                <button onClick={() => console.log("Edit Quiz")}>
-                  Edit Quiz
-                </button>
-                <button onClick={() => setIsDeleteModalOpen(true)}>
-                  Delete Quiz
-                </button>{" "}
+                <button className={Styles.Button} onClick={() => handleHostQuiz(selectedQuiz._id)}> Host Quiz </button>
+                <button className={Styles.Button} onClick={() => handlePlayQuiz(selectedQuiz._id)}> Play Quiz </button>
+                <button className={Styles.Button} onClick={() => console.log("Edit Quiz")}> Edit Quiz </button>
+                <button className={Styles.Button} onClick={() => setIsDeleteModalOpen(true)}> Delete Quiz </button>{" "}
                 {/* Open delete confirmation modal */}
               </div>
             </div>
           )}
 
           {isPlayModalOpen && (
-            <div className="p-modal">
-              <div className="p-modal-content">
-                <button1 onClick={() => setIsPlayModalOpen(false)}>X</button1>
+            <div className={Styles.p_modal}>
+              <div className={Styles.p_modal_content}>
+                <button1 className={Styles.Button1} onClick={() => setIsPlayModalOpen(false)}>X</button1>
                 <h2>Enter Game Pin to Join Quiz</h2>
-                <input
-                  type="text"
-                  placeholder="Enter game pin"
-                  id="gamePinInput"
-                />
-                <button
-                  onClick={() =>
-                    handleJoinQuiz(
-                      document.getElementById("gamePinInput").value
-                    )
-                  }
-                >
-                  Join Quiz
-                </button>
+                <input className={Styles.Input1} type="text" placeholder="Enter game pin" id="gamePinInput" />
+                <button onClick={() => handleJoinQuiz( document.getElementById("gamePinInput").value )}> Join Quiz </button>
               </div>
             </div>
           )}
 
           {isDeleteModalOpen && (
-            <div className="modal">
-              <div className="modal-content">
+            <div className={Styles.modal}>
+              <div className={Styles.modal_content}>
                 <h2>Confirm Delete</h2>
                 <p>Are you sure you want to delete this quiz?</p>
-                <button onClick={() => handleDeleteQuiz(selectedQuiz._id)}>
-                  Yes, Delete
-                </button>
-                <button onClick={() => setIsDeleteModalOpen(false)}>
-                  No, Go Back
-                </button>
+                <button onClick={() => handleDeleteQuiz(selectedQuiz._id)}> Yes, Delete </button>
+                <button onClick={() => setIsDeleteModalOpen(false)}> No, Go Back </button>
               </div>
             </div>
           )}
 
-          <div className="copyright">
-            <p className="quizzify-quiz-system">
+          <div className={Styles.copyright}>
+            <p className={Styles.quizzify_quiz_system}>
               Quizzify - Quiz System Project © 2023. Design by Team 56
             </p>
           </div>
