@@ -9,6 +9,7 @@ const CreateAndPlay = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isPlayModalOpen, setIsPlayModalOpen] = useState(false);
   const [selectedQuiz, setSelectedQuiz] = useState(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -80,6 +81,24 @@ const CreateAndPlay = () => {
     navigate(`/hostlanding/${quizId}/${gamePin}`);
   };
 
+  const handleEditQuiz = async (quizId) => {
+    try {
+      const response = await fetch(`http://localhost:8000/quizzes/${quizId}`, {
+        method: "EDIT",
+      });
+      const data = await response.json();
+      console.log(data.message);
+      setIsEditModalOpen(false);
+      setIsModalOpen(false);
+      const updatedQuizzes = selectedQuiz.filter(
+        (quiz) => quiz._id !== quizId
+      );
+      setSelectedQuiz(updatedQuizzes);
+    } catch (error) {
+      console.error("Error! Editing quiz:", error.message)
+    }
+  };
+
   const handleDeleteQuiz = async (quizId) => {
     try {
       const response = await fetch(`http://localhost:8000/quizzes/${quizId}`, {
@@ -94,7 +113,7 @@ const CreateAndPlay = () => {
       );
       setCreatedQuizzes(updatedQuizzes);
     } catch (error) {
-      console.error("Error deleting quiz:", error.message);
+      console.error("Error! deleting quiz:", error.message);
     }
   };
 
@@ -133,7 +152,7 @@ const CreateAndPlay = () => {
           
           {isModalOpen && (
             <div className={Styles.modal}>
-              <button className={Styles.popup_close_button1} onClick={() => setIsPlayModalOpen(false)}>X</button>
+              <button className={Styles.popup_close_button1} onClick={() => setIsModalOpen(false)}>X</button>
               <div className={Styles.modal_content}>
                 <h2 className={Styles.popup_text}>{selectedQuiz.title}</h2>
                 <button className={Styles.popup_button} onClick={() => handleHostQuiz(selectedQuiz._id)}> Host Quiz </button>
@@ -155,13 +174,26 @@ const CreateAndPlay = () => {
             </div>
           )}
 
+          {isEditModalOpen && (
+            <div className={Styles.modal}>
+              <button className={Styles.popup_close_button2} onClick={() => setIsEditModalOpen(false)}>X</button>
+              <div className={Styles.modal_content}>
+                <h2 className={Styles.popup_text}>Confirm Edit?</h2>
+                <p className={Styles.popup_text}>Are you sure you want to Edit this quiz?</p>
+                <button className={Styles.popup_button} onClick={() => handleEditQuiz(selectedQuiz._id)}> Yes!, Edit </button>
+                <button className={Styles.popup_button} onClick={() => setIsEditModalOpen(false)}> No!, Go Back </button>
+              </div>
+            </div>
+          )}
+
           {isDeleteModalOpen && (
             <div className={Styles.modal}>
+              <button className={Styles.popup_close_button2} onClick={() => setIsDeleteModalOpen(false)}>X</button>
               <div className={Styles.modal_content}>
-                <h2>Confirm Delete</h2>
-                <p>Are you sure you want to delete this quiz?</p>
-                <button onClick={() => handleDeleteQuiz(selectedQuiz._id)}> Yes, Delete </button>
-                <button onClick={() => setIsDeleteModalOpen(false)}> No, Go Back </button>
+                <h2 className={Styles.popup_text}>Confirm Delete?</h2>
+                <p className={Styles.popup_text}>Are you sure you want to Delete this quiz?</p>
+                <button className={Styles.popup_button} onClick={() => handleDeleteQuiz(selectedQuiz._id)}> Yes!, Delete </button>
+                <button className={Styles.popup_button} onClick={() => setIsDeleteModalOpen(false)}> No!, Go Back </button>
               </div>
             </div>
           )}
