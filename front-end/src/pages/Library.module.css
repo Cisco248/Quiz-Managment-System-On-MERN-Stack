@@ -2,13 +2,15 @@
     display: flex;
     flex-direction: column;
     font-family: "Poppins";
-    background-color: #161A30;
+    background: rgba( 60, 60, 60, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 80px );
+    -webkit-backdrop-filter: blur( 80px );
 }
 
 .page_title {
     padding: 5px;
-    background-color: #FDD017;
-    box-shadow: inset 0 0 10px #1f1f1f;
+    background-color: #fff;
     color: black;
 }
 
@@ -144,6 +146,7 @@
 .search_section {
     display: flex;
     flex-direction: row;
+    gap: 10px;
 }
 
 .search_text {
@@ -154,8 +157,8 @@
 
 .search_box {
     border-radius: 10px;
-    background-color: #161A30;
-    border: 2px solid #FDD017;
+    background-color: transparent;
+    border: 2px solid #000;
     width: 300px;
 }
 
@@ -169,14 +172,14 @@
     border-radius: 10px;
     font-size: 16px;
     font-weight: 500;
-    background-color: #161A30;
-    border: 2px solid #FDD017;
+    background-color: transparent;
+    border: 2px solid #fff;
     color: #ffff;
     cursor: pointer;
 }
 
 .search_button:hover {
-    background-color: #FDD017;
+    background-color: #fff;
     color: #000000;
 }
 
@@ -187,7 +190,7 @@
 
 .title {
     padding: 10px;
-    background-color: #FDD017;
+    background-color: #fff;
 }
 
 .title_style {
