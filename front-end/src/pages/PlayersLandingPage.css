@@ -1,0 +1,449 @@
+.main-div {
+  background-color: #161a30;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-div .div {
+  background-color: #161a30;
+  height: 1024px;
+  position: relative;
+  width: 1440px;
+}
+
+.main-div .copyright {
+  align-items: flex-start;
+  background-color: #31304d;
+  box-shadow: inset 0px 1px 0px #3c3c3c;
+  display: flex;
+  gap: 10px;
+  height: 43px;
+  justify-content: space-around;
+  left: 0;
+  padding: 24px 0px;
+  position: absolute;
+  top: 981px;
+  width: 1440px;
+}
+
+.main-div .quizzify-quiz-system {
+  color: var(--gray-300);
+  font-family: "Public Sans", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.1px;
+  margin-bottom: -5px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: 1320px;
+}
+
+.main-div .nav-bar-instance {
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.main-div .players-joined-div {
+  border: 2px solid;
+  border-color: #c1c1c1;
+  border-radius: 10px;
+  height: 193px;
+  left: 81px;
+  overflow: hidden;
+  position: absolute;
+  top: 230px;
+  width: 322px;
+}
+
+.main-div .players-joined-text {
+  color: #f9db24;
+  font-family: "Public Sans", Helvetica;
+  font-size: 40px;
+  font-weight: 600;
+  left: 27px;
+  letter-spacing: 0;
+  line-height: 0.1px;
+  position: absolute;
+  text-align: center;
+  top: 45px;
+  transform: rotate(0.12deg);
+}
+
+.main-div .numjoined-players {
+  color: #ffffff;
+  font-family: "Public Sans", Helvetica;
+  font-size: 50px;
+  font-weight: 500;
+  left: 140px;
+  letter-spacing: 0;
+  line-height: 0.1px;
+  position: absolute;
+  text-align: center;
+  top: 113px;
+}
+
+.main-div .game-pin-div {
+  border: 2px solid;
+  border-color: #c1c1c1;
+  border-radius: 10px;
+  height: 262px;
+  left: 583px;
+  overflow: hidden;
+  position: absolute;
+  top: 230px;
+  width: 324px;
+}
+
+.main-div .game-pin-text {
+  color: #f9db24;
+  font-family: "Public Sans", Helvetica;
+  font-size: 40px;
+  font-weight: 600;
+  left: 74px;
+  letter-spacing: 0;
+  line-height: 0.1px;
+  position: absolute;
+  text-align: center;
+  top: 80px;
+  transform: rotate(0.12deg);
+}
+
+.main-div .game-pin-no-div {
+  height: 72px;
+  left: 74px;
+  position: absolute;
+  top: 111px;
+  width: 231px;
+}
+
+.main-div .img {
+  height: 37px;
+  left: 147px;
+  position: absolute;
+  top: 18px;
+  width: 41px;
+}
+
+.main-div .game-pin {
+  color: #ffffff;
+  font-family: "Public Sans", Helvetica;
+  font-size: 40px;
+  font-weight: 600;
+  left: 15px;
+  letter-spacing: 0;
+  line-height: 0.1px;
+  position: absolute;
+  text-align: center;
+  top: 35px;
+  transform: rotate(0.12deg);
+}
+
+.main-div .time-countdown-div {
+  border: 2px solid;
+  border-color: #c1c1c1;
+  border-radius: 10px;
+  height: 201px;
+  left: 1095px;
+  overflow: hidden;
+  position: absolute;
+  top: 230px;
+  width: 295px;
+}
+
+.main-div .countdown-no-div {
+  height: 72px;
+  left: 26px;
+  position: absolute;
+  top: 81px;
+  width: 231px;
+}
+
+.main-div .time-left-numbers {
+  color: #ffffff;
+  font-family: "Public Sans", Helvetica;
+  font-size: 30px;
+  font-weight: 600;
+  left: 22px;
+  letter-spacing: 0;
+  line-height: 0.1px;
+  position: absolute;
+  text-align: center;
+  top: 21px;
+  transform: rotate(0.12deg);
+}
+
+.main-div .starts-in-text {
+  color: #f9db24;
+  font-family: "Public Sans", Helvetica;
+  font-size: 40px;
+  font-weight: 600;
+  left: 68px;
+  letter-spacing: 0;
+  line-height: 0.1px;
+  position: absolute;
+  text-align: center;
+  top: 46px;
+  transform: rotate(0.12deg);
+}
+
+.main-div .p-link-game-pin-div {
+  height: 74px;
+  left: 465px;
+  position: absolute;
+  top: 600px;
+  width: 509px;
+}
+
+.main-div .p-overlap-2 {
+  border-radius: 30px;
+  height: 74px;
+  position: relative;
+  width: 507px;
+  margin-left: 35px;
+}
+
+.main-div .p-link-pin-button {
+  background-color: #f9db24;
+  border: 1.66px solid;
+  border-color: #000000;
+  border-radius: 30px;
+  height: 74px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 507px;
+}
+
+.main-div .p-line {
+  height: 74px;
+  left: 445px;
+  position: absolute;
+  top: -2px;
+  width: 2px;
+}
+
+.main-div .p-link-copy-button-icon {
+  height: 45px;
+  left: 454px;
+  position: absolute;
+  top: 12px;
+  width: 42px;
+}
+
+.main-div .p-link-copy-button {
+  margin-left: 450px;
+  background-color: #f9db24;
+  border: none;
+}
+
+.main-div .p-link-game-pin-button {
+  background-color: #f9db24;
+  font-family: "Inter", Helvetica;
+  font-size: 30px;
+  border: none;
+  font-weight: 500;
+  left: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 19px;
+  white-space: nowrap;
+  width: 423px;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Display an ellipsis (...) to indicate overflow */
+}
+
+.main-div .quiz-title-div {
+  height: 112px;
+  left: 64px;
+  position: absolute;
+  top: 50px;
+  width: 1031px;
+}
+
+.main-div .quiz-title-text {
+  color: #f9db24;
+  font-family: "Public Sans", Helvetica;
+  font-size: 35px;
+  font-weight: 600;
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 0.1px;
+  position: absolute;
+  text-align: center;
+  top: 30px;
+}
+
+.main-div .no-questions-div {
+  height: 83px;
+  left: 1131px;
+  position: absolute;
+  top: 70px;
+  width: 229px;
+}
+
+.main-div .no-of-questions-text {
+  color: #f9db24;
+  font-family: "Inter", Helvetica;
+  font-size: 27.7px;
+  font-weight: 600;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -1px;
+  white-space: nowrap;
+  width: 229px;
+}
+
+.main-div .span {
+  color: #f9db24;
+  font-family: "Inter", Helvetica;
+  font-size: 27.7px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.main-div .no-questions-number {
+  background-color: #47475c;
+  font-family: "Inter", Helvetica;
+  border-radius: 6.76px;
+  color: aliceblue;
+  font-size: 35px;
+  font-weight: bold;
+  padding: 5px 12px 5px 12px;
+  left: 0;
+  position: absolute;
+  top: 43px;
+}
+
+.main-div .start-now-button {
+  background-color: #f9db24;
+  border-radius: 63.07px;
+  box-shadow: 0px 5.05px 5.05px #00000040;
+  height: 63px;
+  left: 631px;
+  overflow: hidden;
+  position: absolute;
+  top: 750px;
+  width: 222px;
+}
+
+.main-div .start-now-text {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 31.5px;
+  font-weight: bold;
+  left: 675px;
+  letter-spacing: 0;
+  line-height: normal;
+  top: 833px;
+}
+
+.main-div .start-session-button {
+  background-color: #f9db24;
+  border-radius: 63.07px;
+  box-shadow: 0px 5.05px 5.05px #00000040;
+  height: 57px;
+  left: 620px;
+  overflow: hidden;
+  position: absolute;
+  top: 130px;
+  width: 260px;
+}
+
+.main-div .start-session-text {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 31.5px;
+  font-weight: bold;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+.n-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.n-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9db24;
+  margin: auto;
+  border-radius: 25px;
+  width: 450px;
+  height: 320px;
+  /* You can set a max-width */
+}
+
+.n-modal-content h2 {
+  text-align: center;
+  font-family: "Poppins", Helvetica;
+  font-size: 27px;
+  margin-top: -30px; /* Add space between heading and buttons */
+  margin-bottom: 50px;
+}
+
+.n-modal-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.n-modal-content input {
+  align-self: center;
+  margin-bottom: 25px; /* Adjust as needed */
+  height: 32px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-family: Helvetica;
+  border-radius: 8px;
+}
+
+.modal-content p {
+  font-family: "Poppins", Helvetica;
+  font-size: 18px;
+  margin-bottom: 20px; /* Add space between paragraph and buttons */
+}
+
+.n-modal-content button {
+  align-self: center;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border-width: 1px;
+  background-color: #d7d7d7;
+  color: #000000;
+  cursor: pointer;
+}
+
+.n-modal-content button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}

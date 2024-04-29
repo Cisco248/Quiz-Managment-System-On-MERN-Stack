@@ -17,8 +17,12 @@ import QuizCreatePage from "./pages/QuizCreatePage";
 import Help from "./pages/Help";
 import Maintaince from "./pages/Maintaince";
 import Contact from "./pages/Contact";
-// import Leaderboard from './pages/LeaderBoard'
+import LeaderboardPage from './pages/LeaderboardPage'
 import Library from "./pages/Library";
+import CreateAndPlay from "./pages/CreateAndPlay";
+import HostLandingPage from "./pages/HostLandingPage";
+import PlayersLandingPage from "./pages/PlayersLandingPage";
+import QuizPage from "./pages/QuizPage";
 
 axios.defaults.baseURL = "http://localhost:8000";
 
@@ -56,9 +60,14 @@ function App() {
             <Route path="/help" element={<Help />} />
             <Route path="/maintaince" element={<Maintaince />} />
             <Route path="/contact" element={<Contact />} />
-            {/* <Route path="/leaderboard" element={<Leaderboard />} /> */}
             <Route path="/library" element={<Library />} />
-            <Route path="slidebar" element={<Slidebar />} />
+            <Route path="/slidebar" element={<Slidebar />} />
+            <Route path="/createandplay" element={<CreateAndPlay />} />
+            <Route path="/hostlanding/:quizId/:gamePin" element={<HostLandingPage />}/>
+            <Route path="/playerslanding/:quizId/:gamePin" element={<PlayersLandingPage />}/>
+            <Route path="/playerslanding/:gamePin" element={<PlayersLandingPage />}/>
+            <Route path="/quizpage/:quizId/:gamePin" element={<QuizPage />} />
+            <Route path="/leaderboard" element={<LeaderboardPage />} />
           </Routes>
         </>
       )}

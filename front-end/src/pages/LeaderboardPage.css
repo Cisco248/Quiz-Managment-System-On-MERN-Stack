@@ -1,0 +1,115 @@
+.main-div {
+  background-color: #161a30;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-div .div {
+  background-color: #161a30;
+  height: 1135px;
+  position: relative;
+  width: 1440px;
+}
+
+.main-div .leaderboard-box-div {
+  height: 635px;
+  position: absolute;
+  width: 1154px;
+}
+
+.main-div .leaderboard-box-background {
+  background-color: #31304d;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 649px;
+  left: 150px;
+  position: relative;
+  top: 130px;
+  width: 1152px;
+}
+
+.main-div .leaderboard-text {
+  color: #f9db24;
+  font-family: Helvetica;
+  font-size: 35px;
+  font-weight: 600;
+  left: 95px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 30px;
+  white-space: nowrap;
+}
+
+.main-div .score-boxes {
+  margin-top: -29px;
+  position: absolute;
+}
+
+.main-div .score-box-0,
+.main-div .score-box-1,
+.main-div .score-box-2,
+.main-div .score-box-3,
+.main-div .score-boxes > div {
+  border-radius: 20px;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  height: 77px;
+  justify-content: center;
+  position: absolute;
+  width: 980px;
+  left: 90px;
+}
+
+.main-div .score-box-0 {
+  background-color: #0008ff;
+}
+
+.main-div .score-box-1 {
+  background-color: #ffd900;
+}
+
+.main-div .score-box-2 {
+  background-color: #ff005d;
+}
+
+.main-div .score-box-3 {
+  background-color: #00ff6e;
+}
+
+.player-rank {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 25px;
+  font-weight: bold;
+  left: 55px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+}
+
+.player-name {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  margin-right: 50px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+}
+
+.player-score {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  right: 85px;
+  word-spacing: 10px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+}

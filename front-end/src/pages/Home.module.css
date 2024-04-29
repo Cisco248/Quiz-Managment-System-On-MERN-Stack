@@ -171,7 +171,7 @@
 
 .quiz_box_link:hover {
     border-radius: 45px;
-    border: 3px solid #D8A801;
+    border: 3px solid #fff;
 }
 
 .quiz_box {
@@ -225,6 +225,7 @@
     padding: 50px;
     background-color: #27272c;
     border-radius: 30px;
+    text-align: center;
 }
 
 .leaderboard_title_link {
@@ -232,7 +233,7 @@
 }
 
 .leaderboard_title_box {
-    background-color: #D8A801;
+    background-color: #fff;
 }
 
 .leaderboard_title { 
@@ -242,6 +243,7 @@
 }
 
 .user_leaderboard_box {
+    justify-content: center;
     text-align: center;
 }
 
@@ -261,7 +263,7 @@
 }
 
 .user_title_box {
-    background-color: #D8A801;
+    background-color: #fff;
 }
 
 .user_title {
@@ -277,3 +279,23 @@
     color: #bebebe;
     font-weight: 500;
 }
+
+/* Screen size 768px
+
+@media (max-width: 768px) {
+   .home_page_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   }
+  }
+  
+  /* Screen size 450px 
+  
+  @media (max-width: 368px) {
+    .home_page_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+       }
+  } */
