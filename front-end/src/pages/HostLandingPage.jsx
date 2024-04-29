@@ -134,7 +134,7 @@ const HostLandingPage = () => {
       <Navibar2 />
       <div className={Styles.landing_page}>
         <div className={Styles.landing_page_aligment}>
-          
+
           <div className={Styles.landing_page_row_1}>
             <div className={Styles.players_joined_div}>
               <div className={Styles.players_joined_text}>Players Joined</div>
@@ -156,21 +156,22 @@ const HostLandingPage = () => {
           </div>
 
           <div className={Styles.landing_page_row_2}>
-            <div className={Styles.link_game_pin_div}>
-              <div className={Styles.overlap_2}>
-                <div className={Styles.link_pin_button}>
-                  <img className={Styles.line} alt="Line" src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/line-13-1.svg" />
-                  <button className={Styles.link_copy_button} onClick={copyGameUrlToClipboard} ><img className={Styles.link_copy_button_icon} src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/link-copy-button@2x.png" alt="Link copy button" /></button>
-                </div>
+            <div className={Styles.pin_link_container}>
+              <div className={Styles.link_pin_container}>
+                <button className={Styles.link_copy_button} onClick={copyGameUrlToClipboard} ><img className={Styles.link_copy_button_icon} src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/link-copy-button@2x.png" alt="Link copy button" /></button>
+                <img className={Styles.line} alt="Line" src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/line-13-1.svg" />
                 <button className={Styles.link_game_pin_button} onClick={copyGameUrlToClipboard}> {" "} {gameUrl} </button>
               </div>
             </div>
+
             <div className={Styles.quiz_title_div}>
               <div className={Styles.quiz_title_text}>{quiz?.title}</div>
             </div>
-            <div className={Styles.no_questions_div}>
-              <p className={Styles.no_of_questions_text}>No. of <span className={Styles.span}>questions</span></p>
-              <div className={Styles.no_questions_number}>{quiz?.questions.length}</div>
+            <div className={Styles.no_questions_container}>
+              <div className={Styles.no_questions_div}>
+                <p className={Styles.no_of_questions_text}>No. of <span className={Styles.span}> Questions </span></p>
+                <div className={Styles.no_questions_number}>{quiz?.questions.length}</div>
+              </div>
             </div>
           </div>
 
