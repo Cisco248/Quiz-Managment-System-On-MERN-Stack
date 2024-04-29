@@ -32,7 +32,7 @@
 
 .yellow {
   letter-spacing: 5px;
-  color: #f9db24;
+  color: #fff;
 }
 
 .text_box2 {
@@ -72,7 +72,7 @@
 
 .btn {
   padding: 15px 40px;
-  background-color: #f9db24;
+  background-color: #fff;
   border: none;
   border-radius: 10px;
   color: #000000;
@@ -84,7 +84,7 @@
 .btn:hover {
   transition: ease;
   color: #000;
-  background-color: #ffffff;
+  background-color: #8a8a8a;
 }
 
 .about_us {
