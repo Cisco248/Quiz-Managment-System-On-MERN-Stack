@@ -23,6 +23,7 @@ import CreateAndPlay from "./pages/CreateAndPlay";
 import HostLandingPage from "./pages/HostLandingPage";
 import PlayersLandingPage from "./pages/PlayersLandingPage";
 import QuizPage from "./pages/QuizPage";
+import QuizCreatePage from "./pages/QuizCreatePage";
 
 axios.defaults.baseURL = "http://localhost:8000";
 
@@ -68,6 +69,7 @@ function App() {
             <Route path="/playerslanding/:gamePin" element={<PlayersLandingPage />}/>
             <Route path="/quizpage/:quizId/:gamePin" element={<QuizPage />} />
             <Route path="/leaderboard" element={<LeaderboardPage />} />
+            <Route path="/quizcreatepage" element={<QuizCreatePage/>} />
           </Routes>
         </>
       )}

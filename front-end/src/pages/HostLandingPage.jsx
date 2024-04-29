@@ -145,7 +145,6 @@ const HostLandingPage = () => {
               <div className={Styles.game_pin_text}>Game Pin</div>
               <div className={Styles.game_pin_no_div}>
                 <div className={Styles.game_pin}>{gamePin}</div>
-                <img className={Styles.img} alt="img" src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/vector-7@2x.png"/>
               </div>
             </div>
 
