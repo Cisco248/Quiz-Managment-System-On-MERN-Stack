@@ -48,7 +48,7 @@ io.on("connection", (socket) => {
 
     socket.on("joinQuiz", ({ gamePin, playerId }) => {
         socket.join(gamePin);
-        io.io(gamePin).emit("playerJoined", playerId);
+        io.to(gamePin).emit("playerJoined", playerId);
     });
 
     socket.on("checkGamePin", (gamePin) => {
@@ -61,7 +61,7 @@ io.on("connection", (socket) => {
 
     socket.on("startQuiz", (gamePin) => {
         console.log(`startQuiz event emitted with gamePin: ${gamePin}`);
-        io.io(gamePin).emit("startQuiz");
+        io.to(gamePin).emit("startQuiz");
     });
 
     socket.on("disconnect", () => {

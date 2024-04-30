@@ -1,7 +1,11 @@
 .main_style {
     font-family: "Poppins";
-    background-color: #161A30;
-    height: 88dvh;
+    background: rgba( 60, 60, 60, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 80px );
+    -webkit-backdrop-filter: blur( 80px );
+    height: 90dvh;
+    width: 100dvw;
 }
 
 .help_section {
@@ -32,33 +36,33 @@
     display: flex;
     gap: 20px;
     padding: 30px;
-    border: 3px solid #F9DB24;
+    border: 3px solid #fff;
 }
 
 .box1:hover {
-    border: 3px solid whitesmoke;
+    border: 3px solid rgb(255, 62, 62);
 }
 
 .box2 {
     display: flex;
     gap: 20px;
     padding: 30px;
-    border: 3px solid #F9DB24;
+    border: 3px solid #fff;
 }
 
 .box2:hover {
-    border: 3px solid whitesmoke;
+    border: 3px solid rgb(255, 62, 62);
 }
 
 .box3 {
     display: flex;
     gap: 20px;
     padding: 30px;
-    border: 3px solid #F9DB24;
+    border: 3px solid #fff;
 }
 
 .box3:hover {
-    border: 3px solid whitesmoke;
+    border: 3px solid rgb(255, 62, 62);
 }
 
 .main_align2 {
@@ -72,42 +76,43 @@
     display: flex;
     gap: 20px;
     padding: 30px;
-    border: 3px solid #F9DB24;
+    border: 3px solid #fff;
 }
 
 .box4:hover {
-    border: 3px solid whitesmoke;
+    border: 3px solid rgb(255, 62, 62);
 }
 
 .box5 {
     display: flex;
     gap: 20px;
     padding: 30px;
-    border: 3px solid #F9DB24;
+    border: 3px solid #fff;
 }
 
 .box5:hover {
-    border: 3px solid whitesmoke;
+    border: 3px solid rgb(255, 62, 62);
 }
 
 .box6 {
     display: flex;
     gap: 20px;
     padding: 30px;
-    border: 3px solid #F9DB24;
+    border: 3px solid #fff;
 }
 
 .box6:hover {
-    border: 3px solid whitesmoke;
+    border: 3px solid rgb(255, 62, 62);
 }
 
 .box_link {
     text-decoration: none;
-    color: #F9DB24;
+    color: #fff;
+    background-color: transparent;
 }
 
 .box_link:hover {
-    color: whitesmoke;
+    color: rgb(255, 62, 62);
 }
 
 .comment_form {
@@ -122,29 +127,35 @@
 .input_box {
     width: 300px;
     height: 30px;
-    border: 2px solid #F9DB24;
-    background-color: #161A30;
+    border: 2px solid #fff;
+    background-color: transparent;
     border-radius: 10px;
 }
 
 .input_box::placeholder {
     padding: 10px;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .comment_button {
     height: 30px;
     width: 70px;
     border-radius: 10px;
-    background-color: #161A30;
-    border: 2px solid #F9DB24;
-    color: #F9DB24;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .comment_button:hover {
     color: black;
-    font-weight: 500;
-    background-color: #F9DB24;
-    border: 2px solid #F9DB24;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: rgb(255, 62, 62);
+    border: 2px solid rgb(255, 62, 62);
 }
 
 .box_tile {
@@ -166,6 +177,7 @@
 
 .text_style {
     font-size: 18px;
-    color: #777777;
-    font-weight: 400;
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 3;
 }
