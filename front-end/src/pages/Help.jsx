@@ -1,12 +1,8 @@
-import Navibar from '../component/Navibar'
-import Footer from '../component/Footer'
 import Style from './Help.module.css'
-
 
 function Help() {
   return (
     <div>
-    <Navibar />
       <div className={Style.main_style}>
         <div className={Style.help_section}>
             <div className={Style.box_align}>
@@ -75,7 +71,6 @@ function Help() {
             <h5 className={Style.text_style}>No:120, Infront of Juwelary, Maharagama</h5>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

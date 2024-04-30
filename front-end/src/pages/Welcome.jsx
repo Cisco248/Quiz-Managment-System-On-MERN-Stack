@@ -1,11 +1,8 @@
 import MainCSS from "./Welcome.module.css";
-import Navibar from "../component/Navibar";
-import Footer from "../component/Footer";
 
 export default function Welcome() {
   return (
     <div>
-      <Navibar />
       <div className={MainCSS.w_background}>
         <div className={MainCSS.pmain}>
           <div className={MainCSS.text_box1}>
@@ -106,7 +103,6 @@ export default function Welcome() {
           </div>
         </div> */}
       </div>
-      <Footer />
     </div>
   );
 }

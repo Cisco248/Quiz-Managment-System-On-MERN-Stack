@@ -3,8 +3,6 @@ import {useState} from 'react'
 import { toast } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import RegisterCSS from './Register.module.css'
-import Navibar from '../component/Navibar'
-import Footer from '../component/Footer'
 
 export default function Register() {
 
@@ -48,7 +46,6 @@ export default function Register() {
 
   return (
     <div>
-    <Navibar />
     <div className={RegisterCSS.r_page}>
       <div className={RegisterCSS.register_box}>
         <h1 className={RegisterCSS.register_page_name}>SIGN</h1>
@@ -105,7 +102,6 @@ export default function Register() {
       </form>
       </div>
     </div>
-    <Footer />
     </div>
     
   )

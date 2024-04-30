@@ -24,6 +24,8 @@ import HostLandingPage from "./pages/HostLandingPage";
 import PlayersLandingPage from "./pages/PlayersLandingPage";
 import QuizPage from "./pages/QuizPage";
 import QuizCreatePage from "./pages/QuizCreatePage";
+import Navibar from "./component/Navibar";
+import Footer from "./component/Footer";
 
 axios.defaults.baseURL = "http://localhost:8000";
 
@@ -51,16 +53,17 @@ function App() {
       ) : (
         <>
           <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
+          <Navibar />
           <Routes>
             <Route path="/" element={<Welcome />} />
+            <Route path="/help" element={<Help />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
             {/* {<Route path="/quiz create" element={<QuizCreatePage />} />} */}
-            <Route path="/help" element={<Help />} />
             <Route path="/maintaince" element={<Maintaince />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/library" element={<Library />} />
             <Route path="/slidebar" element={<Slidebar />} />
             <Route path="/createandplay" element={<CreateAndPlay />} />
@@ -71,6 +74,7 @@ function App() {
             <Route path="/leaderboard" element={<LeaderboardPage />} />
             <Route path="/quizcreatepage" element={<QuizCreatePage/>} />
           </Routes>
+          <Footer/>
         </>
       )}
     </div>

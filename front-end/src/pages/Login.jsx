@@ -3,8 +3,6 @@ import { toast } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import LoginCSS from './Login.module.css'
-import Navibar from '../component/Navibar'
-import Footer from '../component/Footer'
 
 export default function Login() {
 
@@ -37,7 +35,6 @@ export default function Login() {
 
   return (
     <div>
-      <Navibar />
       <div className={LoginCSS.login_page}>
           <h1 className={LoginCSS.page_name}>LOGIN</h1>
           <form onSubmit={loginUser} className={LoginCSS.login_form}>
@@ -72,10 +69,8 @@ export default function Login() {
             <div className={LoginCSS.sign_up_text}>
               <p className={LoginCSS.stext}>If You haven’t Register yet? <a href="./Register" className={LoginCSS.slink}>Register Now!</a></p>
             </div> 
-            
           </form>
         </div>
-        <Footer />
       </div>
   )
 }

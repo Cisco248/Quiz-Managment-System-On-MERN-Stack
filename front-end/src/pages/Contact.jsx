@@ -1,11 +1,8 @@
-import Navibar from '../component/Navibar'
-import Footer from '../component/Footer'
 import Style from './Contact.module.css'
 
 function Contact() {
   return (
     <div>
-        <Navibar />
         <div className={Style.contact_page}>
             <div className={Style.page_title}>
                 <h1 className={Style.title_name}>Contact US</h1>
@@ -38,7 +35,6 @@ function Contact() {
                 </div>
             </div>
         </div>
-        <Footer />
     </div>
   )
 }
