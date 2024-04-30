@@ -60,7 +60,9 @@ export default function Login() {
               onChange={(e) => setData({...data, password: e.target.value})}/>
             </div>
               
-            <button type='submit' className={LoginCSS.login_button}> Login </button>
+            <div className={LoginCSS.login_button_container}>
+              <button type='submit' className={LoginCSS.login_button1}> Login </button>
+            </div>
 
             <div className={LoginCSS.forget_password}>
               <h1 className={LoginCSS.ftext}> <a href="forget-password.html" className={LoginCSS.flink}>Forget Password ?</a></h1>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import MainCSS from "./Welcome.module.css";
 
 export default function Welcome() {
@@ -21,12 +22,12 @@ export default function Welcome() {
           </div>
         </div>
         <div className={MainCSS.container}>
-          <a className={MainCSS.btext} href="./Login">
-            <button className={MainCSS.btn}>Login</button>
-          </a>
-          <a className={MainCSS.btext} href="./Register">
-            <button className={MainCSS.btn}>Sign Up</button>
-          </a>
+          <Link className={MainCSS.btext} to={"./Login"}>
+            <button className={MainCSS.btn}>LOGIN</button>
+          </Link>
+          <Link className={MainCSS.btext} to={"./Register"}>
+            <button className={MainCSS.btn}>SIGN UP</button>
+          </Link>
         </div>
 
         {/* <div className={MainCSS.wel_about}>
