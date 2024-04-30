@@ -12,8 +12,9 @@
 
 .page_title {
     padding: 5px;
-    background-color: #fff;
-    color: black;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
 }
 
 .title_name {
