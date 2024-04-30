@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Navibar2 from "../component/Navibar2"
-import Footer from "../component/Footer"
 import Styles from "./CreateAndPlay.module.css";
 
 const CreateAndPlay = () => {
@@ -124,7 +122,6 @@ const CreateAndPlay = () => {
 
   return (
     <div>
-      <Navibar2 />
         <div className={Styles.create_and_play_page}>
         <div className={Styles.page_aligement}>
           <div className={Styles.button_container}>
@@ -199,7 +196,6 @@ const CreateAndPlay = () => {
           )}
         </div>
       </div>
-      <Footer /> 
     </div>
   );
 };

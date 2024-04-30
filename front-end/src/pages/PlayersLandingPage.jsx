@@ -1,7 +1,5 @@
-//PlayersLandingPage.js
 import { useState, useEffect } from "react";
 import "./PlayersLandingPage.css";
-import Navibar2 from "../component/Navibar2";
 import { useNavigate } from "react-router-dom";
 import socket from "./socket";
 
@@ -116,7 +114,6 @@ const PlayersLandingPage = () => {
 
   return (
     <div>
-      <Navibar2 />
       <div className="main-div">
         <div className="div">
           <div className="players-joined-div">

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Styles from './Navibar2.module.css';
 
 const Navibar2 = () => {
@@ -5,14 +6,14 @@ const Navibar2 = () => {
     <div>
       <div className={Styles.navibar2_component}>
         <div className={Styles.navibar_align}>
-          <a href=""><img className={Styles.collapse_icon} src="./Navi Bar Icon.svg" alt="icon" /></a>
-          <a href="/home"><img className={Styles.navibar2_logo} src="./nav-logo.svg" alt="logo" /></a>
+          <Link to={""}><img className={Styles.collapse_icon} src="./Navi Bar Icon.svg" alt="icon" /></Link>
+          <Link to={"/home"}><img className={Styles.navibar2_logo} src="./nav-logo.svg" alt="logo" /></Link>
         </div>
         <div className={Styles.navibar2_icon}>
-          <a className={Styles.quiz_button} href="/createandplay"><button className={Styles.qb_style}> Create Quiz </button></a>
-          <a className={Styles.icon_link} href="/maintaince"><img className={Styles.icon} src="./explore.svg" alt="" /></a>
-          <a className={Styles.icon_link} href="/maintaince"><img className={Styles.icon} src="notification.svg" alt="" /></a>
-          <a className={Styles.icon_link} href="/profile"><img className={Styles.icon} src="./user.svg" alt="icon" /></a>
+          <Link className={Styles.quiz_button} to={"/createandplay"}><button className={Styles.qb_style}> Create Quiz </button></Link>
+          <Link className={Styles.icon_link} to={"/maintaince"}><img className={Styles.icon} src="./explore.svg" alt="" /></Link>
+          <Link className={Styles.icon_link} to={"/maintaince"}><img className={Styles.icon} src="notification.svg" alt="" /></Link>
+          <Link className={Styles.icon_link} to={"/profile"}><img className={Styles.icon} src="./user.svg" alt="icon" /></Link>
         </div>
       </div>
     </div>

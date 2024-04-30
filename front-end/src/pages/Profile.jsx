@@ -1,6 +1,4 @@
 import Style from './Profile.module.css'
-import Navibar2 from '../component/Navibar2'
-import Footer from '../component/Footer'
 
 function Profile() {
 
@@ -8,7 +6,6 @@ function Profile() {
 
   return (
     <div>
-        <Navibar2 />
         <div className={Style.profile_page}>
             <div className={Style.page_name}>
                 <div className={Style.page_name_text}>
@@ -31,7 +28,6 @@ function Profile() {
                 </div>
             </div>
         </div>
-        <Footer />
     </div>
   )
 }

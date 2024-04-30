@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./LeaderboardPage.css";
-import Navibar2 from "../component/Navibar2";
 
 const LeaderboardPage = () => {
   const { gamePin } = useParams();
@@ -52,7 +51,6 @@ const LeaderboardPage = () => {
 
   return (
     <div>
-      <Navibar2 />
       <div className="main-div">
         <div className="div">
           <div className="leaderboard-box-div">

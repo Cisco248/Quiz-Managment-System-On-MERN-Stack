@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { useState, useEffect } from "react";
 import RiseLoader from "react-spinners/RiseLoader";
@@ -26,10 +26,18 @@ import QuizPage from "./pages/QuizPage";
 import QuizCreatePage from "./pages/QuizCreatePage";
 import Navibar from "./component/Navibar";
 import Footer from "./component/Footer";
+import Navibar2 from "./component/Navibar2";
 
 axios.defaults.baseURL = "http://localhost:8000";
 
 function App() {
+  
+  // Navigation Bar Switching Function
+  const location = useLocation();
+  const isWelcomeIn = [ '/', '/help', '/contact', '/Login', '/Register' ].includes(location.pathname);
+  const isLoggedIn = location.pathname !== '/' && [ '/home', '/profile', '/maintaince', '/library', '/createandplay', '/hostlanding', '/playerslanding', '/quizpage', '/leaderboard', '/quizcreatepage' ].includes(location.pathname);
+
+  // Loading Screen Function
   const [loading, setloading] = useState(false);
   useEffect(() => {
     setloading(true);
@@ -39,6 +47,7 @@ function App() {
   }, []);
 
   return (
+    // Custumize the Loading Screen Function
     <div className="App">
       {loading ? (
         <RiseLoader
@@ -52,15 +61,17 @@ function App() {
         />
       ) : (
         <>
+          {/* Navigation Bar Switching Argument */}
+          {isWelcomeIn ? <Navibar /> : isLoggedIn ? <Navibar2 /> : null}
+
           <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
-          <Navibar />
           <Routes>
-            <Route path="/" element={<Welcome />} />
+            <Route path="/" element={<Welcome />}  />
             <Route path="/help" element={<Help />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/home" element={<Home />}  />
             <Route path="/profile" element={<Profile />} />
             {/* {<Route path="/quiz create" element={<QuizCreatePage />} />} */}
             <Route path="/maintaince" element={<Maintaince />} />

@@ -1,11 +1,8 @@
-import Navibar2 from '../component/Navibar2'
-import Footer from '../component/Footer'
 import Style from './Library.module.css'
 
 function Library() {
   return (
     <div>
-        <Navibar2 />
         <div className={Style.library_page}>
             <div className={Style.page_title}>
                 <h1 className={Style.title_name}>Explore Your Interest</h1>
@@ -80,7 +77,6 @@ function Library() {
                 </div>
             </div>
         </div>
-        <Footer />
     </div>
   )
 }

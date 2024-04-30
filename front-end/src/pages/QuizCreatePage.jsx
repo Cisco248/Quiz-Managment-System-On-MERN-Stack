@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-import Navibar2 from '../component/Navibar2'
-import Footer from '../component/Footer'
 import Style from "./QuizCreatePage.module.css";
 
 const QuizCreatePage = () => {
@@ -89,7 +87,6 @@ const saveQuiz = async () => {
   return (
 
     <div>
-      <Navibar2 />
       <div className={Style.quiz_create_page}>
       <div className={Style.quiz_page_align}>
         <div className={Style.create_quiz_section}>
@@ -156,7 +153,6 @@ const saveQuiz = async () => {
         </div>
       </div>
     </div>
-    <Footer />
     </div>
     
   );

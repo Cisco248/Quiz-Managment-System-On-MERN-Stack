@@ -1,8 +1,6 @@
 //HostLandingPage.js
 import { useState, useEffect } from "react";
 import Styles from "./HostLandingPage.module.css";
-import Navibar2 from "../component/Navibar2";
-import Footer from "../component/Footer";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import socket from "./socket"; // Import the socket instance
@@ -131,7 +129,6 @@ const HostLandingPage = () => {
 
   return (
     <div>
-      <Navibar2 />
       <div className={Styles.landing_page}>
         <div className={Styles.landing_page_aligment}>
 
@@ -180,7 +177,6 @@ const HostLandingPage = () => {
 
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

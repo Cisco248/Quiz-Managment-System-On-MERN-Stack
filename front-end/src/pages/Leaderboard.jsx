@@ -1,11 +1,8 @@
-import Navibar2 from "../component/Navibar2";
-import Footer from "../component/Footer";
 import Style from "./Leaderboard.module.css";
 
 function Leaderboard() {
   return (
     <div>
-      <Navibar2 />
       <div className={Style.leaderboard_page}>
         <div className={Style.page_title}>
           <h1 className={Style.title_name}>Leaderboard</h1>
@@ -40,7 +37,6 @@ function Leaderboard() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

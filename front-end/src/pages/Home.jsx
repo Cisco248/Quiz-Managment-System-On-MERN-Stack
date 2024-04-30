@@ -1,12 +1,9 @@
-import Footer from '../component/Footer'
-import Navibar2 from '../component/Navibar2'
 import Slider from '../component/image_slider/Slider'
 import Style from './Home.module.css'
 
 function Home() {
   return (
     <div>
-      <Navibar2 />
       <div className={Style.home_page}>
         <div className={Style.slider}>
             <Slider className={Style.slider}/>
@@ -113,7 +110,6 @@ function Home() {
             </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

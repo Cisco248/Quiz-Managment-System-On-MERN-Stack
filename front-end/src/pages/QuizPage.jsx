@@ -1,13 +1,12 @@
-//QuizPage.jsx
 import { useParams, useNavigate } from "react-router-dom";
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import "./QuizPage.css";
-import socket from "./socket";
 
 const QuizPage = () => {
   const { quizId, gamePin } = useParams();
   console.log("Quiz ID:", quizId);
   const [quiz, setQuiz] = useState(null);
+  // eslint-disable-next-line no-unused-vars
   const [session, setSession] = useState(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -99,7 +98,7 @@ const QuizPage = () => {
       updatePlayerScore();
       navigate(`/leaderboard/${gamePin}`);
     }
-  }, [currentQuestionIndex]);
+  }, [currentQuestionIndex, gamePin, navigate, playerId, quiz, score]);
 
   useEffect(() => {
     setSelectedAnswer(null);
@@ -119,7 +118,7 @@ const QuizPage = () => {
       }, 1000);
       setTimerId(id);
     }
-  }, [currentQuestionIndex, quiz]);
+  }, [currentQuestionIndex, quiz, timerId]);
 
   useEffect(() => {
     // When timeLeft reaches 0, move to the next question
