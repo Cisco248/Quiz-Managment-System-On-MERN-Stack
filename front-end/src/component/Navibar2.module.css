@@ -20,42 +20,22 @@
   align-items: center;
 }
 
-.collapse_icon {
-  height: 20px;
-  width: auto;
-}
-
 .navibar2_logo {
   height: 30px;
   width: auto;
+  filter: saturate(100%) invert(40%) sepia(30%) saturate(9000%) hue-rotate(300deg) brightness(200%) contrast(100%);
 }
 
-.navibar2_icon {
+.navibar2_list {
   display: flex;
   flex-direction: row;
   justify-content: end;
   gap: 30px;
 }
 
-.qb_style {
-  padding: 5px 10px;
-  color: #000;
-  background-color: rgb(255, 81, 18);
-  box-shadow: none;
-  border: none;
-  cursor: pointer;
-}
-
-.qb_style:hover {
-  background-color: #fff;
-}
-
-.icon {
-  filter: invert(99%) sepia(5%) saturate(1031%) hue-rotate(137deg) brightness(121%) contrast(100%);
-  height: 25px;
-  width: 25px;
-}
-
-.icon:hover {
-  filter: invert(37%) sepia(52%) saturate(2730%) hue-rotate(338deg) brightness(103%) contrast(103%);
+.link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
 }

@@ -13,7 +13,6 @@ import Register from "./pages/Register";
 import Login from "../src/pages/Login";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-// import QuizCreatePage from "./pages/QuizCreatePage";
 import Help from "./pages/Help";
 import Maintaince from "./pages/Maintaince";
 import Contact from "./pages/Contact";
