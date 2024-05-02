@@ -19,14 +19,12 @@ const CreateAndPlay = () => {
             Authorization: `Bearer ${localStorage.getItem("token")}`, // Assuming 'token' is the key for the JWT token in local storage
           },
         });
-
         const data = await response.json();
         setCreatedQuizzes(data);
       } catch (error) {
-        console.error("Error fetching quizzes:", error.message);
+        console.error("Error Fetching Quizzes: ", error.message);
       }
     };
-
     fetchQuizzes();
   }, []);
 
