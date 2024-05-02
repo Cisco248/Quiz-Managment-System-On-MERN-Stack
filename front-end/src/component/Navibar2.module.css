@@ -33,9 +33,25 @@
   gap: 30px;
 }
 
-.link {
+.navi_bar_link_list {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  list-style: none;
   text-decoration: none;
-  color: #fff;
+}
+
+.link {
   font-size: 16px;
   font-weight: bold;
+  color: white;
+}
+
+.link_list {
+  text-decoration: none;
+  color: white;
+}
+
+.link_list:hover {
+  color: black;
 }
