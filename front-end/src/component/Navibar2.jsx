@@ -11,7 +11,7 @@ const Navibar2 = () => {
         <div className={Styles.navibar2_list}>
           <ul className={Styles.navi_bar_link_list}>
             <li className={Styles.link}><NavLink to={"/home"} className={Styles.link_list}>Home</NavLink></li>
-            <li className={Styles.link}><NavLink to={"/createandplay"} className={Styles.link_list}>Create Quiz</NavLink></li>
+            <li className={Styles.link}><NavLink to={"/create-and-play"} className={Styles.link_list}>Create Quiz</NavLink></li>
             <li className={Styles.link}><NavLink to={"/library"} className={Styles.link_list}>Library</NavLink></li>
             <li className={Styles.link}><NavLink to={"/maintaince"} className={Styles.link_list}>Discover</NavLink></li>
             <li className={Styles.link}><NavLink to={"/leaderboard"} className={Styles.link_list}>Leaderbord</NavLink></li>

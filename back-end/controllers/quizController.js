@@ -1,26 +1,69 @@
-const mongoose = require("mongoose");
+const Quiz = require('../models/quizModel');
 
-const quizSchema = new mongoose.Schema({
-  title: String,
-  category: String, 
-  questions: [
-    {
-      question: String,
-      answers: [String],
-      correct: String,
-    },
-  ],
-  timeLimit: {
-    minutes: Number,
-    seconds: Number,
+const quizController = {
+  getAllQuizzes: async (req, res) => {
+    try {
+      // Extract User ID from Request Object (Provide by Authentication Token Middleware)
+      const userId = req.user.id;
+      // Fetch Quizzes Created by the Logged-In User
+      const quizzes = await Quiz.find({ createQuiz: userId });
+      res.json(quizzes);
+    } catch (error) {
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
   },
-  createdBy: {
-    // New field to store the user ID
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User", // Reference to the User model
+
+  getQuizById: async (req, res) => {
+    try {
+      const { quizId } = req.params;
+      const quiz = await Quiz.findById(quizId);
+      if ( quiz ) {
+        res.json( quiz );
+      } else {
+        res.status(404).json({ error: "Quiz Not Found!" });
+      }
+    } catch (error) {
+      res.status(500).json({ error: "Internal Sever Error!" })
+    }
   },
-});
 
-const Quiz = mongoose.model("Quiz", quizSchema);
+  // Replace the Old Create Quiz Function with the Modified One
+  createQuiz: async (req, res) => {
+    try {
+      // Extract User ID from request Object
+      const userId = req.user.id;
 
-module.exports = Quiz;
+      // ADD a console.log Statement to Check the User ID
+      console.log("User ID: ", userId);
+
+      // Extract Quiz Data from Request Body
+      const { title, questions, timeLimit, category } = req.body;
+      console.log("Quiz Title: ", title);
+
+      // Create New Quiz Objects With User ID
+      const quiz = new Quiz ({
+        title, questions, timeLimit, category, createdBy: userId,
+      });
+
+      // Save the Quiz to the Database
+      const savedQuiz = await quiz.save();
+
+      res.status(201).json(savedQuiz);
+    } catch (error) {
+      console.error("Error Saving Quiz: ", error.message);
+      res.status(500).json({ error: "Internal Server Error" });
+    }
+  },
+
+  deleteQuiz: async (req, res) => {
+    try {
+      const { quizId } = req.params;
+      await Quiz.findByIdAndDelete(quizId);
+      res.json({ message: "Quiz Deleted Successfully" });
+    } catch (error) {
+      res.status(500).json({ error: "Internal Server Error" });
+    }
+  },
+};
+
+module.exports = quizController;

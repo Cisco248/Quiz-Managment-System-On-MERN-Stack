@@ -1,8 +1,8 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const quizSchema = new mongoose.Schema({
   title: String,
-  category: String, 
+  category: String,
   questions: [
     {
       question: String,
@@ -11,16 +11,17 @@ const quizSchema = new mongoose.Schema({
     },
   ],
   timeLimit: {
+    hours: Number,
     minutes: Number,
     seconds: Number,
   },
-  createdBy: {
-    // New field to store the user ID
+  createBy: {
+    // New Field to Store the User ID
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User", // Reference to the User model
-  },
+    ref: "User", // Reference to the User Model
+  }
 });
 
-const Quiz = mongoose.model("Quiz", quizSchema);
+const Quiz = mongoose.model('Quiz', quizSchema);
 
 module.exports = Quiz;

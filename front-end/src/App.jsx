@@ -36,7 +36,7 @@ function App() {
   // Navigation Bar Switching Function
   const location = useLocation();
   const isWelcomeIn = [ '/', '/help', '/contact', '/Login', '/Register' ].includes(location.pathname);
-  const isLoggedIn = location.pathname !== '/' && [ '/home', '/profile', '/maintaince', '/library', '/createandplay', '/hostlanding', '/playerslanding', '/quizpage', '/leaderboard', '/quizcreatepage', '/help2', '/contact2' ].includes(location.pathname);
+  const isLoggedIn = location.pathname !== '/' && [ '/home', '/profile', '/maintaince', '/library', '/create-and-play', '/host-landing', '/players-landing', '/quiz-page', '/leaderboard', '/quiz-create-page', '/help2', '/contact2' ].includes(location.pathname);
 
   // Loading Screen Function
   const [loading, setloading] = useState(false);
@@ -80,13 +80,13 @@ function App() {
             <Route path="/maintaince" element={<Maintaince />} />
             <Route path="/library" element={<Library />} />
             <Route path="/slidebar" element={<Slidebar />} />
-            <Route path="/createandplay" element={<CreateAndPlay />} />
-            <Route path="/hostlanding/:quizId/:gamePin" element={<HostLandingPage />}/>
-            <Route path="/playerslanding/:quizId/:gamePin" element={<PlayersLandingPage />}/>
-            <Route path="/playerslanding/:gamePin" element={<PlayersLandingPage />}/>
-            <Route path="/quizpage/:quizId/:gamePin" element={<QuizPage />} />
+            <Route path="/create-and-play" element={<CreateAndPlay />} />
+            <Route path="/host-landing/:quizId/:gamePin" element={<HostLandingPage />}/>
+            <Route path="/players-landing/:quizId/:gamePin" element={<PlayersLandingPage />}/>
+            <Route path="/players-landing/:gamePin" element={<PlayersLandingPage />}/>
+            <Route path="/quiz-page/:quizId/:gamePin" element={<QuizPage />} />
             <Route path="/leaderboard" element={<LeaderboardPage />} />
-            <Route path="/quizcreatepage" element={<QuizCreatePage/>} />
+            <Route path="/quiz-create-page" element={<QuizCreatePage/>} />
           </Routes>
           <Footer/>
         </>

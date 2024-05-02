@@ -19,6 +19,7 @@ const CreateAndPlay = () => {
             Authorization: `Bearer ${localStorage.getItem("token")}`, // Assuming 'token' is the key for the JWT token in local storage
           },
         });
+
         const data = await response.json();
         setCreatedQuizzes(data);
       } catch (error) {
@@ -40,13 +41,13 @@ const CreateAndPlay = () => {
   };
 
   const handleJoinQuiz = (gamePin) => {
-    console.log("Game Pin:", gamePin); // Log the game pin
+    console.log("Game Pin: ", gamePin); // Log the game pin
     // Fetch session details using the gamePin (session ID)
     fetchSessionDetails(gamePin);
   };
 
   const fetchSessionDetails = async (gamePin) => {
-    console.log("Fetching session details for game pin:", gamePin); // Log before fetching session details
+    console.log("Fetching Session Details for Game Pin: ", gamePin); // Log before fetching session details
     try {
       const response = await fetch(`http://localhost:8000/sessions/${gamePin}`);
       if (!response.ok) {
