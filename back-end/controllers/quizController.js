@@ -1,30 +1,26 @@
-const Quiz = require('../models/quizModel');
+const mongoose = require("mongoose");
 
-const quizController = {
-  getAllQuizzes: async (req, res) => {
-    try {
-      const quizzes = await Quiz.find();
-      res.json(quizzes);
-    } catch (error) {
-      res.status(500).json({ error: 'Internal Server Error' });
-    }
+const quizSchema = new mongoose.Schema({
+  title: String,
+  category: String, 
+  questions: [
+    {
+      question: String,
+      answers: [String],
+      correct: String,
+    },
+  ],
+  timeLimit: {
+    minutes: Number,
+    seconds: Number,
   },
-
-  createQuiz: async (req, res) => {
-    const { questions, timeLimit } = req.body;
-
-    try {
-      const newQuiz = new Quiz({
-        questions,
-        timeLimit,
-      });
-
-      const savedQuiz = await newQuiz.save();
-      res.json(savedQuiz);
-    } catch (error) {
-      res.status(500).json({ error: 'Internal Server Error' });
-    }
+  createdBy: {
+    // New field to store the user ID
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User", // Reference to the User model
   },
-};
+});
 
-module.exports = quizController;
+const Quiz = mongoose.model("Quiz", quizSchema);
+
+module.exports = Quiz;

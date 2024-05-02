@@ -1,7 +1,7 @@
 .App {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(225deg,#011163,#6f00ff,#fc466b);
+  background: linear-gradient(90deg,#0003b4,#6f00ff,#fa0f3e);
   background-size: 180% 180%;
   animation: App 18s ease infinite;
   background: rgba( transparent );

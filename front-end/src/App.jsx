@@ -17,7 +17,7 @@ import Help from "./pages/Help";
 import Help2 from "./pages/Help2";
 import Maintaince from "./pages/Maintaince";
 import Contact from "./pages/Contact";
-import Contact2 from "./pages/Help2"
+import Contact2 from "./pages/Contact2"
 import LeaderboardPage from './pages/LeaderboardPage'
 import Library from "./pages/Library";
 import CreateAndPlay from "./pages/CreateAndPlay";
