@@ -5,16 +5,19 @@ const sessionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+
   hostedQuizId: {
     type: String,
     ref: "Quiz",
     required: true,
   },
+
   joinedPlayers: [
     {
       type: String,
     },
   ],
+
   playerScores: [
     {
       playerId: {
@@ -26,6 +29,7 @@ const sessionSchema = new mongoose.Schema({
       },
     },
   ],
+  
   sessionData: {
     type: Object, // You can define the structure as per your requirement
   },

@@ -7,7 +7,7 @@ import axios from "axios";
 import "./App.css";
 
 import Slidebar from "./component/Slidebar";
-
+import Analytics from "./pages/Analytics";
 import Welcome from "./pages/Welcome";
 import Register from "./pages/Register";
 import Login from "../src/pages/Login";
@@ -36,7 +36,7 @@ function App() {
   // Navigation Bar Switching Function
   const location = useLocation();
   const isWelcomeIn = [ '/', '/help', '/contact', '/Login', '/Register' ].includes(location.pathname);
-  const isLoggedIn = location.pathname !== '/' && [ '/home', '/profile', '/maintaince', '/library', '/create-and-play', '/host-landing', '/players-landing', '/quiz-page', '/leaderboard', '/quiz-create-page', '/help2', '/contact2' ].includes(location.pathname);
+  const isLoggedIn = location.pathname !== '/' && [ '/home', '/profile', '/maintaince', '/library', '/create-and-play', '/host-landing', '/players-landing', '/quiz-page', '/leaderboard', '/quiz-create-page', '/help2', '/contact2', '/analytics' ].includes(location.pathname);
 
   // Loading Screen Function
   const [loading, setloading] = useState(false);
@@ -87,6 +87,7 @@ function App() {
             <Route path="/quiz-page/:quizId/:gamePin" element={<QuizPage />} />
             <Route path="/leaderboard" element={<LeaderboardPage />} />
             <Route path="/quiz-create-page" element={<QuizCreatePage/>} />
+            <Route path="/analytics" element={<Analytics />} />
           </Routes>
           <Footer/>
         </>

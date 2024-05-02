@@ -10,11 +10,12 @@ const quizSchema = new mongoose.Schema({
       correct: String,
     },
   ],
+  
   timeLimit: {
-    hours: Number,
     minutes: Number,
     seconds: Number,
   },
+
   createBy: {
     // New Field to Store the User ID
     type: mongoose.Schema.Types.ObjectId,
@@ -22,6 +23,6 @@ const quizSchema = new mongoose.Schema({
   }
 });
 
-const Quiz = mongoose.model('Quiz', quizSchema);
+const Quiz = mongoose.model("Quiz", quizSchema);
 
 module.exports = Quiz;

@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const http = require("http");
 const socketIo = require("socket.io");
-const { disconnect } = require('process');
 const app = express();
 
 // Database Connection
@@ -15,7 +14,7 @@ mongoose.connect(process.env.MONGO_URL)
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: "http://localhost:5173" }));
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }))
 

@@ -4,21 +4,25 @@ import Styles from "./CreateAndPlay.module.css";
 
 const CreateAndPlay = () => {
   const [createdQuizzes, setCreatedQuizzes] = useState([]);
+  const [selectedQuiz, setSelectedQuiz] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isPlayModalOpen, setIsPlayModalOpen] = useState(false);
-  const [selectedQuiz, setSelectedQuiz] = useState(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
+    
     const fetchQuizzes = async () => {
       try {
-        const response = await fetch("http://localhost:8000/quizzes", {
+        const response = await fetch("http://localhost:8000/quizzes/user", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`, // Assuming 'token' is the key for the JWT token in local storage
           },
         });
+        if (!response.ok) {
+          throw new Error("Failed to fetch quizzes");
+        } 
         const data = await response.json();
         setCreatedQuizzes(data);
       } catch (error) {
@@ -67,7 +71,7 @@ const CreateAndPlay = () => {
     }
   };
 
-  const handleHostQuiz = async (quizId) => {
+  const handleHostQuiz = (quizId) => {
     const quiz = createdQuizzes.find((q) => q._id === quizId);
     console.log("Quiz:", quiz);
 
@@ -116,7 +120,7 @@ const CreateAndPlay = () => {
 
   // Function to handle navigation to QuizCreatePage
   const navigateToQuizCreatePage = () => {
-    navigate("/quizcreatepage/"); // Path to QuizCreatePage
+    navigate("/quiz-create-page/"); // Path to QuizCreatePage
   };
 
   return (

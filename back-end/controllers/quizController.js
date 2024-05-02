@@ -6,12 +6,28 @@ const quizController = {
       // Extract User ID from Request Object (Provide by Authentication Token Middleware)
       const userId = req.user.id;
       // Fetch Quizzes Created by the Logged-In User
-      const quizzes = await Quiz.find({ createQuiz: userId });
+      const quizzes = await Quiz.find();
       res.json(quizzes);
     } catch (error) {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   },
+
+    // GET all quizzes for logged in user
+    getAllUserQuizzes: async (req, res) => {
+      try {
+        // Extract user ID from request object (provided by authenticateToken middleware)
+        const userId = req.user.id;
+  
+        // Fetch quizzes created by the logged-in user
+        const quizzes = await Quiz.find({ createdBy: userId });
+        console.log(userId);
+        console.log(quizzes);
+        res.json(quizzes);
+      } catch (error) {
+        res.status(500).json({ error: "Internal Server Error" });
+      }
+    },
 
   getQuizById: async (req, res) => {
     try {

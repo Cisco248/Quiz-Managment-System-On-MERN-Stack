@@ -1,0 +1,225 @@
+.Analytics_page {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+}
+
+.Analytics_page_div {
+  background-color: #161a30;
+  min-height: fit-content;
+  width: 100%;
+}
+
+.maintitle_text {
+  color: #f9db24;
+  font-family: Helvetica;
+  font-size: 35px;
+  font-weight: 600;
+  left: 205px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.search_bar {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  padding-top: 140px;
+  padding-bottom: 70px;
+}
+
+.search_section {
+  display: flex;
+  flex-direction: row;
+}
+
+.search_box {
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: #161a30;
+  border: 2px solid #fdd017;
+  width: 300px;
+  height: 39 px;
+}
+
+.search_box::placeholder {
+  color: #cacaca;
+}
+
+.search_button {
+  margin-left: 15px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #161a30;
+  border: 2px solid #fdd017;
+  color: #ffff;
+  cursor: pointer;
+}
+
+.search_button:hover {
+  background-color: #fdd017;
+  color: #000000;
+}
+
+.session_section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.session_section_style {
+  background-color: #31304d;
+  border-radius: 30px;
+  width: 1050px;
+  min-height: fit-content;
+  padding: 30px;
+}
+
+.topic_text {
+  margin-top: 5px;
+  margin-left: 35px;
+  color: #ffff;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.topic_text2 {
+  margin-top: 58px;
+  margin-left: 37px;
+  color: #ffff;
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.session_section_wrap {
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 70px;
+}
+
+.session_box {
+  margin-left: 35px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 980px;
+}
+
+.session_box_bar:hover {
+  background-color: #fdd017;
+  color: #000000;
+}
+
+.session_box_bar {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  width: 980px;
+  background-color: #e9e9e9;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.session_title {
+  margin-left: 25px;
+  position: absolute;
+  font-size: 22px;
+  font-weight: 500;
+  color: #000;
+  top: 10px;
+}
+
+.question_count {
+  margin-left: 25px;
+  position: absolute;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  top: 45px;
+}
+
+/* Modal container */
+.a_modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal content */
+.a_modal_content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  background-color: #f9db24;
+  border-radius: 25px;
+  width: 520px;
+  height: 420px;
+  /* You can set a max-width */
+}
+
+.a_modal_stylediv {
+  align-items: start;
+  margin-top: -320px; /* Add space between paragraph and buttons */ 
+  margin-bottom: 40px;
+  margin-left: 50px;
+
+}
+
+/* Close button */
+.a_modal_button {
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-bottom: 343px;
+  margin-left: 448px;
+  border-radius: 8px;
+  border-width: 1px;
+  background-color: #d7d7d7;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* Modal content paragraphs */
+.a_modal_title {
+  font-weight: bold;
+  font-family: "Poppins", Helvetica;
+  font-size: 22px;
+
+}
+
+.a_modal_para {
+  font-weight: 500;
+  font-family: "Poppins", Helvetica;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-top: 10px; /* Add space between paragraph and buttons */
+}

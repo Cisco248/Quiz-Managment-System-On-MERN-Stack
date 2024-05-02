@@ -15,6 +15,7 @@ const Navibar2 = () => {
             <li className={Styles.link}><NavLink to={"/library"} className={Styles.link_list}>Library</NavLink></li>
             <li className={Styles.link}><NavLink to={"/maintaince"} className={Styles.link_list}>Discover</NavLink></li>
             <li className={Styles.link}><NavLink to={"/leaderboard"} className={Styles.link_list}>Leaderbord</NavLink></li>
+            <li className={Styles.link}><NavLink to={"/analytics"} className={Styles.link_list}>Analytics</NavLink></li>
             <li className={Styles.link}><NavLink to={"/profile"} className={Styles.link_list}>Profile</NavLink></li>
             <li className={Styles.link}><NavLink to={"/help2"} className={Styles.link_list}>Help</NavLink></li>
             <li className={Styles.link}><NavLink to={"/contact2"} className={Styles.link_list}>Contact Us</NavLink></li>
