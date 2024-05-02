@@ -6,7 +6,7 @@ const quizController = {
       // Extract User ID from Request Object (Provide by Authentication Token Middleware)
       const userId = req.user.id;
       // Fetch Quizzes Created by the Logged-In User
-      const quizzes = await Quiz.find();
+      const quizzes = await Quiz.find({createdBy: userId});
       res.json(quizzes);
     } catch (error) {
       res.status(500).json({ error: 'Internal Server Error' });

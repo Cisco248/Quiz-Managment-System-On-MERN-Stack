@@ -55,40 +55,45 @@ const registerUser = async (req, res) => {
 };
 
 // Login End Point
-const loginUser = async ( req, res ) => {
+const loginUser = async (req, res) => {
     try {
-        const {email, password} = req.body;
+        const { email, password } = req.body;
 
         // Check if the user exists
-        const user = await User.findOne({email})
+        const user = await User.findOne({ email });
         if (!user) {
-            return res.json({
+            return res.status(404).json({
                 error: 'No User Found'
-            })
+            });
         }
 
         // Check password match
-        const match = await comparePassword(password, user.password)
-        if (match) {
-            jwt.sign({ 
-                id: user._id, 
-                email: user.email, 
-                name: user.name
-            }, process.env.JWT_SECRET, {}, (err, token) => {
-                if (err) throw err;
-                res.cookie('token', token).json(user)
-            })
-        }
+        const match = await comparePassword(password, user.password);
         if (!match) {
-            res.json ({
+            return res.status(401).json({
                 error: "Password Does Not Match"
-            })
+            });
         }
-    } catch (error) {
-        console.log(error)
-    }
-}
 
+        // Generate JWT token
+        const token = jwt.sign({ 
+            id: user._id, 
+            email: user.email, 
+            name: user.name
+        }, process.env.JWT_SECRET);
+
+        // Send JWT token as part of the response
+        res.cookie('token', token).json({
+            user,
+            token
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            error: 'Internal Server Error'
+        });
+    }
+};
 module.exports = {
     test,
     registerUser,

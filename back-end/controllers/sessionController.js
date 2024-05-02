@@ -138,3 +138,27 @@ exports.deleteSession = async (req, res) => {
     res.status(500).json({ success: false, error: error.message });
   }
 };
+
+// Controller to get sessions by hostedQuizId
+exports.getSessionsByQuizId = async (req, res) => {
+  try {
+    // Extract quizId from request params
+    const { quizId } = req.params;
+    console.log("Quiz Ids: ", quizId);
+
+    // Find sessions by hostedQuizId
+    const sessions = await Session.find({ hostedQuizId: quizId });
+
+    if (!sessions) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Sessions not found" });
+    }
+
+    res.status(200).json({ success: true, sessions });
+  } catch (error) {
+    console.error("Error fetching sessions:", error); // Log the error
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+

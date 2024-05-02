@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const quizSchema = new mongoose.Schema({
   title: String,
-  category: String,
+  category: String, 
   questions: [
     {
       question: String,
@@ -10,17 +10,15 @@ const quizSchema = new mongoose.Schema({
       correct: String,
     },
   ],
-  
   timeLimit: {
     minutes: Number,
     seconds: Number,
   },
-
-  createBy: {
-    // New Field to Store the User ID
+  createdBy: {
+    // New field to store the user ID
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User", // Reference to the User Model
-  }
+    ref: "User", // Reference to the User model
+  },
 });
 
 const Quiz = mongoose.model("Quiz", quizSchema);
