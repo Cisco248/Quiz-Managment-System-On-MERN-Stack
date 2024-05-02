@@ -14,8 +14,10 @@ import Login from "../src/pages/Login";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Help from "./pages/Help";
+import Help2 from "./pages/Help2";
 import Maintaince from "./pages/Maintaince";
 import Contact from "./pages/Contact";
+import Contact2 from "./pages/Help2"
 import LeaderboardPage from './pages/LeaderboardPage'
 import Library from "./pages/Library";
 import CreateAndPlay from "./pages/CreateAndPlay";
@@ -34,7 +36,7 @@ function App() {
   // Navigation Bar Switching Function
   const location = useLocation();
   const isWelcomeIn = [ '/', '/help', '/contact', '/Login', '/Register' ].includes(location.pathname);
-  const isLoggedIn = location.pathname !== '/' && [ '/home', '/profile', '/maintaince', '/library', '/createandplay', '/hostlanding', '/playerslanding', '/quizpage', '/leaderboard', '/quizcreatepage' ].includes(location.pathname);
+  const isLoggedIn = location.pathname !== '/' && [ '/home', '/profile', '/maintaince', '/library', '/createandplay', '/hostlanding', '/playerslanding', '/quizpage', '/leaderboard', '/quizcreatepage', '/help2', '/contact2' ].includes(location.pathname);
 
   // Loading Screen Function
   const [loading, setloading] = useState(false);
@@ -67,7 +69,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Welcome />}  />
             <Route path="/help" element={<Help />} />
+            <Route path="/help2" element={<Help2 />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/contact2" element={<Contact2/>} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />}  />

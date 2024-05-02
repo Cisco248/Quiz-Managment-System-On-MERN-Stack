@@ -17,8 +17,8 @@ const Navibar2 = () => {
             <li className={Styles.link}><NavLink to={"/leaderboard"} className={Styles.link_list}>Leaderbord</NavLink></li>
             <li className={Styles.link}><NavLink to={"/maintaince"} className={Styles.link_list}>Notifications</NavLink></li>
             <li className={Styles.link}><NavLink to={"/profile"} className={Styles.link_list}>Profile</NavLink></li>
-            <li className={Styles.link}><NavLink to={"/help"} className={Styles.link_list}>Help</NavLink></li>
-            <li className={Styles.link}><NavLink to={"/contact"} className={Styles.link_list}>Contact Us</NavLink></li>
+            <li className={Styles.link}><NavLink to={"/help2"} className={Styles.link_list}>Help</NavLink></li>
+            <li className={Styles.link}><NavLink to={"/contact2"} className={Styles.link_list}>Contact Us</NavLink></li>
           </ul>
         </div>
       </div>
