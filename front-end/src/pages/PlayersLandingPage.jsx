@@ -199,12 +199,6 @@ const PlayersLandingPage = () => {
               </div>
             </div>
           )}
-
-          <div className="copyright">
-            <p className="quizzify-quiz-system">
-              Quizzify - Quiz System Project © 2023. Design by Team 56
-            </p>
-          </div>
         </div>
       </div>
     </div>

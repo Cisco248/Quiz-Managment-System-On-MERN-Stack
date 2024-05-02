@@ -161,7 +161,7 @@ const HostLandingPage = () => {
             </div>
 
             <div className={Styles.quiz_title_div}>
-              <div className={Styles.quiz_title_text}>{quiz?.title}</div>
+              <div className={Styles.quiz_title_text}>Quiz Title: {quiz?.title}</div>
             </div>
             <div className={Styles.no_questions_container}>
               <div className={Styles.no_questions_div}>

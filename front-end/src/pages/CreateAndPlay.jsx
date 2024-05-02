@@ -120,7 +120,7 @@ const CreateAndPlay = () => {
 
   // Function to handle navigation to QuizCreatePage
   const navigateToQuizCreatePage = () => {
-    navigate("/quiz-create-page/"); // Path to QuizCreatePage
+    navigate("/quizcreatepage/"); // Path to QuizCreatePage
   };
 
   return (

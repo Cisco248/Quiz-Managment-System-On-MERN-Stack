@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "./QuizPage.css";
+import Style from"./QuizPage.module.css";
 
 const QuizPage = () => {
   const { quizId, gamePin } = useParams();
@@ -156,47 +156,30 @@ const QuizPage = () => {
   };
 
   return (
-    <div className="main-div">
-      <div className="div">
-        <div className="quiz-page-div">
-          <div className="question-box-div">
-            <div className="question-box-background">
-              <div className="topics-div">
-                <div className="question-count">
-                  Question {currentQuestionIndex + 1} of {quiz.questions.length}
-                </div>
-                <div className="score-text">Score: {Math.round(score)}</div>
-                <div className="time-left-text">
-                  Time Left: {Math.floor(timeLeft / 60)} Min {timeLeft % 60} Sec
-                </div>
-                <div className="quiz-title-text">{quiz.title}</div>
-              </div>
-              <p className="question-text">{currentQuestion.question}</p>
-
-              {currentQuestion.answers.map((answer, index) => (
-                <div
-                  key={index}
-                  className={`answer-box-${index} ${
-                    `Answer${index}` === selectedAnswer
-                      ? `Answer${index}` === correctAnswer
-                        ? "correct"
-                        : "incorrect"
-                      : `Answer${index}` === correctAnswer
-                      ? "correct"
-                      : ""
-                  }`}
-                  onClick={
-                    !isAnswerSelected ? () => handleAnswerClick(index) : null
-                  }
-                >
-                  <div className="answer-tag">{index}.</div>
-                  <div className="answer-tab">
-                    <div className="answer-text">{answer}</div>
+    <div className={Style.quiz_page}>
+      <div className={Style.quiz_page_aligment}>
+        <div className={Style.quiz_title_text}>{quiz.title}</div>
+          <div className={Style.question_count}>Question {currentQuestionIndex + 1} of {quiz.questions.length}</div>
+              <div className={Style.score_text}>Score: {Math.round(score)}</div>
+                <div className={Style.time_left_text}>Time Left: {Math.floor(timeLeft / 60)} Min {timeLeft % 60} Sec</div>
+      </div>
+      <div className={Style.question_section}>
+        <div className={Style.question_section_aligment}>
+          <div className={Style.question_text_aligment}>
+            <h1 className={Style.question_text}>{currentQuestion.question}</h1>
+          </div>
+          {currentQuestion.answers.map((answer, index) => (
+                <div key={index} className={`answer-box-${index} ${`Answer${index}` === selectedAnswer ? `Answer${index}` === correctAnswer ? "correct" : "incorrect" : `Answer${index}` === correctAnswer ? "correct" : ""}`} onClick={!isAnswerSelected ? () => handleAnswerClick(index) : null}>
+                  <div className={Style.answer_section_aligment}>
+                    <div className={Style.answer_tab}>
+                      <div className={Style.answer_tag_num}>
+                        <p className={Style.answer_tag}>{index}.</p>
+                        <p className={Style.answer_text}>{answer}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
         </div>
       </div>
     </div>

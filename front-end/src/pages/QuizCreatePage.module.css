@@ -1,24 +1,104 @@
-* {
-    font-family: "Poppins";
-}
-
 .quiz_create_page {
     background: rgba( 60, 60, 60, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 80px );
     -webkit-backdrop-filter: blur( 80px );
     display: flex;
-    width: 100dvw;
-    height: 87dvh;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
 }
 
 .quiz_page_align {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 400px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.category_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
+}
+
+.category_text {
+    font-style: bold;
+    letter-spacing: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.drop_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background-color: transparent;
+}
+
+.drop_menu_item {
+    color: #000;
+    background-color: transparent;
+}
+
+.quiz_title_area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quiz_title {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.quiz_title_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 250px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background-color: transparent;
+}
+
+.quiz_title_box::placeholder {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.question_area {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.question_area_title_text {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    padding-bottom: 20px;
 }
 
 .question_section {
@@ -28,20 +108,73 @@
     gap: 10px;
 }
 
-.question_box {
-    height: 50px;
-    width: 200px;
-    background-color: #2a3157;
-    border-radius: 25px;
-    border: none;
-}
-
-.button_container1 {
+.answer_area {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    padding: 10px;
+    justify-content: center;
+}
+
+.answer_list_aligment {
+    display: flex;
+    flex-direction: column;
+}
+
+.question_number {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.q_box {
+    padding-left: 30px;
+    height: 100px;
+    width: 50rem;
+    border-radius: 30px;
+    border: none;
+}
+
+.answer_area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.answer_section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.check_boxes_list_aligment {
+    display: flex;
+    flex-direction: row;
+}
+
+.check_boxes {
+    border: 2px solid #fff;
+    background-color: transparent;
+
+}
+
+.answer_box {
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.answer_box::placeholder {
+    color: #fff;
+    text-align: center;
+}
+
+.button_container2 {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .add_button {
@@ -55,152 +188,97 @@
 }
 
 .add_button:hover {
-    background-color: #e40c0c;
-    border: 2px solid #e40c0c;
+    background-color: #979797;
+    border: 2px solid #979797;
 }
 
-.delete_button1 {
-    width: 100px;
-    height: 30px;
-    text-align: center;
-    border-radius: 20px;
-    border: 2px solid #ffc107;
-    background-color: #ffc107;
-    cursor: pointer;
-}
-
-.delete_button1:hover {
-    background-color: #ffff;
-    border: 2px solid #ffff;
-}
-
-.create_quiz_section {
+.down_section {
     display: flex;
     flex-direction: column;
-}
-
-.create_quiz_title {
-    padding: 50px 50px 0px 50px;
-    font-size: 40px;
-    text-align: center;
-    font-weight: 600;
-    color: #ffc107;
-}
-
-.create_quiz_minititle {
-    padding: 10px 50px 50px 50px;
-    font-size: 25px;
-    text-align: center;
-    font-weight: 400;
-    color: #ffc107;
-}
-
-.question_number {
-    padding: 10px;
-    text-align: center;
-    font-size: 22px;
-    color: #ffff;
-}
-
-.image_tab {
-    height: 100px;
-    width: 200px;
-    border-radius: 30px;
-}
-
-.question_area {
-    align-items: center;
-}
-
-.q_box {
-    padding-left: 30px;
-    height: 100px;
-    width: 50rem;
-    border-radius: 30px;
-    border: none;
-}
-
-.button_container2 {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    align-items: center;
-}
-
-.answer_area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
-.answer_section {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    padding-bottom: 50px;
-}
-
-.text_box {
-    display: flex;
-    flex-direction: column;
-    height: 40px;
-    width: 500px;
-    border-radius: 10px;
-    border: none;
-}
-
-.text_box::placeholder {
-    padding: 10px;
-}
-
-.check_boxes {
-    height: 10px;
-    width: auto;
-}
-
-.right_section {
-    display: flex;
-    flex-direction: column;
-}
-
 .time_set_section {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
-    padding-top: 50px;
+    gap: 10px;
+    padding: 50px;
 }
 
 .info {
-    font-size: 24px;
-    font-weight: 500;
+    padding: 10px 100px;
+    font-size: 22px;
+    font-weight: bold;
     color: #fff;
+    border: 2px solid #fff;
+}
+
+.min_section {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.time_text_min {
+    font-size: 20px;
+    color: #fff;
+}
+
+.sec_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .time_box {
-    height: 10px;
+    padding: 5px;
     width: 50px;
-    padding: 5px 10px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 10px;
 }
 
-.time_text {
-    font-size: 18px;
-    font-weight: 400;
-    color: #ffff;
-}
-
-.question_section {
-    align-items: center;
-}
-
-.no_question {
-    font-size: 22px;
-    font-weight: 500;
+.time_box::placeholder {
     color: #fff;
 }
 
-.qn_style {
-    padding: 5px 10px;
+.num_question_section {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.num_question_text {
+    padding: 10px 100px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.num_question_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 10px;
+    width: 100px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
 }
 
 .save_button {
@@ -216,11 +294,12 @@
 }
 
 .save_button:hover {
-    background-color: #e40c0c;
-    border: 2px solid #e40c0c;
+    background-color: #979797;
+    border: 2px solid #979797;
 }
 
 .deleteIcon {
+    font-weight: bold;
     height: 25px;
     width: auto;
 }
@@ -229,10 +308,11 @@
     width: 100px;
     height: 30px;
     border-radius: 20px;
-    border: 2px solid #0000;
+    border: 2px solid #fff;
     cursor: pointer;
 }
 
 .delete_button:hover {
-    background-color: #e40c0c;
+    background-color: #979797;
+    border: 2px solid #979797;
 }
