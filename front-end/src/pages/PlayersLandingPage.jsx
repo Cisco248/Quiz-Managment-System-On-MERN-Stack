@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import "./PlayersLandingPage.css";
+import Style from "./PlayersLandingPage.module.css";
 import { useNavigate } from "react-router-dom";
 import socket from "./socket";
+import Navibar2 from "../component/Navibar2";
 
 const PlayersLandingPage = () => {
   const navigate = useNavigate();
@@ -114,87 +115,65 @@ const PlayersLandingPage = () => {
 
   return (
     <div>
-      <div className="main-div">
-        <div className="div">
-          <div className="players-joined-div">
-            <div className="players-joined-text">Players Joined</div>
-            <div className="numjoined-players">{numPlayers}</div>
-          </div>
+      <Navibar2 />
+      <div className={Style.player_landing_page}>
+        <div className={Style.player_landing_page_aligment}>
+          <div className={Style.top_item_layout}>
+            <div className={Style.players_joined_div}>
+              <div className={Style.players_joined_text}>Players Joined</div>
+              <div className={Style.num_joined_players}>{numPlayers}</div>
+            </div>
 
-          <div className="game-pin-div">
-            <div className="game-pin-text">Game Pin</div>
-            <div className="game-pin-no-div">
-              <img
-                className="img"
-                alt="Vector"
-                src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/vector-7@2x.png"
-              />
-              <div className="game-pin">{gamePin}</div>
+            <div className={Style.game_pin_div}>
+              <div className={Style.game_pin_text}>Game Pin</div>
+              <div className={Style.game_pin_no_div}>
+                <img className={Style.img} alt="Vector" src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/vector-7@2x.png"/>
+                <div className={Style.game_pin}>{gamePin}</div>
+              </div>
+            </div>
+
+            <div className={Style.time_countdown_div}>
+              <div className={Style.countdown_no_div}>
+                <h2 className={Style.starts_in_text}>Starts In</h2>
+                <div className={Style.time_left_numbers}>{`${minutes} min ${seconds < 10 ? `0${seconds}` : seconds} sec`}</div>
+              </div>
             </div>
           </div>
-
-          <div className="time-countdown-div">
-            <div className="countdown-no-div">
-              <div className="time-left-numbers">{`${minutes} min ${
-                seconds < 10 ? `0${seconds}` : seconds
-              } sec`}</div>
-            </div>
-            <div className="starts-in-text">Starts In</div>
-          </div>
-
-          <div className="p-link-game-pin-div">
-            <div className="p-overlap-2">
-              <div className="p-link-pin-button">
-                <img
-                  className="p-line"
-                  alt="Line"
-                  src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/line-13-1.svg"
-                />
-                <button
-                  className="p-link-copy-button"
-                  onClick={copyGameUrlToClipboard} // Attach the function here
-                >
-                  <img
-                    className="p-link-copy-button-icon"
-                    src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bf591ed422316e119bbcee/img/link-copy-button@2x.png"
-                    alt="Link copy button"
-                  />
+          <div className={Style.p_link_game_pin_div}>
+            <div className={Style.p_overlap_2}>
+              <div className={Style.p_link_pin_button}>
+                <button className={Style.p_link_copy_button} onClick={copyGameUrlToClipboard}>
+                  <img className={Style.p_link_img} src="/copy-link.png" alt="copy button"/>
+                  <p className={Style.p_link} onClick={copyGameUrlToClipboard}>{" "}{gameUrl}</p>
                 </button>
               </div>
-              <button
-                className="p-link-game-pin-button"
-                onClick={copyGameUrlToClipboard}
-              >
-                {" "}
-                {gameUrl}
-              </button>
             </div>
           </div>
-          <div className="quiz-title-div">
-            <div className="quiz-title-text">{session?.hostedQuizId.title}</div>
-          </div>
-          <div className="no-questions-div">
-            <p className="no-of-questions-text">
-              <span className="span">No. of </span>
-              <span className="span">questions</span>
-            </p>
-            <div className="no-questions-number">
-              {session?.hostedQuizId.questions.length}
+          <div className={Style.bottom_layout}>
+            <div className={Style.quiz_title_div}>
+              <div className={Style.quiz_title_text}>{session?.hostedQuizId.title}</div>
+            </div>
+            <div className={Style.no_questions_div}>
+              <div className={Style.no_of_questions_text}>
+                <p className={Style.no_question}>No. of <span className={Style.span}>questions</span></p>
+              </div>
+              <div className={Style.no_questions_number}>{session?.hostedQuizId.questions.length}</div>
+            </div>
+            <div className={Style.start_session_button_container}>
+              <button className={Style.start_session_button}>Start</button>
             </div>
           </div>
 
           {isModalOpen && (
-            <div className="n-modal">
-              <div className="n-modal-content"> 
-                <h2>Ener a Nickname</h2>
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    handleModalSubmit(e.target.elements.nickname.value);
-                  }}
-                >
-                  <input name="nickname" required />
-                  <button type="submit">Enter</button>
+            <div className={Style.popup_modal}>
+              <div className={Style.popup_content}> 
+                <h2 className={Style.popup_text_name}>Ener a Nickname</h2>
+                <form onSubmit={(e) => { e.preventDefault(); 
+                  handleModalSubmit(e.target.elements.nickname.value);}}>
+                  <input className={Style.nickname} placeholder="Name Here..." required />
+                  <div className={Style.enter_button_container}>
+                    <button className={Style.enter_button} type="submit">Enter</button>
+                  </div>
                 </form>
               </div>
             </div>

@@ -4,6 +4,7 @@ import Styles from "./HostLandingPage.module.css";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import socket from "./socket"; // Import the socket instance
+import Navibar2 from "../component/Navibar2";
 
 const HostLandingPage = () => {
   // eslint-disable-next-line no-unused-vars
@@ -129,6 +130,7 @@ const HostLandingPage = () => {
 
   return (
     <div>
+      <Navibar2 />
       <div className={Styles.landing_page}>
         <div className={Styles.landing_page_aligment}>
 

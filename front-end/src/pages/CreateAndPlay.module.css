@@ -72,6 +72,7 @@
   padding: 100px;
   display: flex;
   row-gap: 40px;
+  column-gap: 50px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
