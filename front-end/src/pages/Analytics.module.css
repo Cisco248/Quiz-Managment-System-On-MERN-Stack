@@ -5,29 +5,38 @@
 }
 
 .Analytics_page_div {
-  background-color: #161a30;
-  min-height: fit-content;
+  background: rgba( 60, 60, 60, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 80px );
+  -webkit-backdrop-filter: blur( 80px );
   width: 100%;
+  height: 90dvh;
+}
+
+.page_title {
+  margin: 20px;
+  border: 2px solid #e9e9e9;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .maintitle_text {
-  color: #f9db24;
+  color: #fff;
   font-family: Helvetica;
   font-size: 35px;
   font-weight: 600;
-  left: 205px;
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
 }
 
 .search_bar {
+  padding: 40px;
   display: flex;
   flex-direction: row;
   gap: 20px;
   justify-content: center;
-  padding-top: 140px;
-  padding-bottom: 70px;
 }
 
 .search_section {
@@ -36,35 +45,37 @@
 }
 
 .search_box {
-  padding-right: 10px;
-  padding-left: 10px;
-  color: #ffffff;
-  border-radius: 10px;
-  background-color: #161a30;
-  border: 2px solid #fdd017;
-  width: 300px;
-  height: 39 px;
+  padding: 10px 40px;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 3px solid #fff;
 }
 
 .search_box::placeholder {
-  color: #cacaca;
+  color: #000;
+  text-align: center;
 }
 
 .search_button {
   margin-left: 15px;
-  padding: 9px 10px;
-  border-radius: 10px;
+  padding: 10px 10px;
+  border-radius: 20px;
   font-size: 16px;
-  font-weight: 500;
-  background-color: #161a30;
-  border: 2px solid #fdd017;
-  color: #ffff;
+  font-weight: 600;
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #000;
   cursor: pointer;
 }
 
 .search_button:hover {
-  background-color: #fdd017;
-  color: #000000;
+  background-color: #000;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .session_section {
@@ -74,11 +85,13 @@
 }
 
 .session_section_style {
-  background-color: #31304d;
+  background: rgba( 60, 60, 60, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 80px );
+  -webkit-backdrop-filter: blur( 80px );
   border-radius: 30px;
-  width: 1050px;
-  min-height: fit-content;
-  padding: 30px;
+  padding: 50px 300px;
+  margin-bottom: 50px;
 }
 
 .topic_text {
@@ -117,7 +130,7 @@
 }
 
 .session_box_bar:hover {
-  background-color: #fdd017;
+  background-color: #fff;
   color: #000000;
 }
 
