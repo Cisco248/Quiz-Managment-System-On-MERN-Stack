@@ -1,7 +1,7 @@
 const Session = require("../models/sessionModel");
 
 // Controller to create a new quiz session
-exports.createSession = async (req, res) => {
+const createSession = async (req, res) => {
   try {
     // Extract data from request body
     const { sessionId, hostedQuizId } = req.body;
@@ -24,7 +24,7 @@ exports.createSession = async (req, res) => {
 };
 
 // Controller to update session data
-exports.updateSession = async (req, res) => {
+const updateSession = async (req, res) => {
   console.log("Updating session with request body:", req.body); // Log the request body when updating the session
   try {
     // Extract data from request body
@@ -60,7 +60,7 @@ exports.updateSession = async (req, res) => {
 };
 
 // Controller to update player score data
-exports.updatePlayerScore = async (req, res) => {
+const updatePlayerScore = async (req, res) => {
   console.log("updatePlayerScore exported function called");
   try {
     const { sessionId, playerId, score } = req.body;
@@ -99,13 +99,10 @@ exports.updatePlayerScore = async (req, res) => {
 };
 
 // Controller to get session by sessionId
-exports.getSessionById = async (req, res) => {
+const getSessionById = async (req, res) => {
   try {
-    // Extract sessionId from request params
-    const { sessionId } = req.params;
-
-    // Find session by sessionId
-    const session = await Session.findOne({ sessionId }).populate(
+    const { sessionId } = req.params; // Extract sessionId from request params
+    const session = await Session.findOne({ sessionId }).populate( // Find session by sessionId
       "hostedQuizId joinedPlayers"
     );
 
@@ -123,7 +120,7 @@ exports.getSessionById = async (req, res) => {
 };
 
 // Controller to delete session by sessionId
-exports.deleteSession = async (req, res) => {
+const deleteSession = async (req, res) => {
   try {
     // Extract sessionId from request params
     const { sessionId } = req.params;
@@ -140,7 +137,7 @@ exports.deleteSession = async (req, res) => {
 };
 
 // Controller to get sessions by hostedQuizId
-exports.getSessionsByQuizId = async (req, res) => {
+const getSessionsByQuizId = async (req, res) => {
   try {
     // Extract quizId from request params
     const { quizId } = req.params;
@@ -162,3 +159,11 @@ exports.getSessionsByQuizId = async (req, res) => {
   }
 };
 
+module.exports = {
+  createSession,
+  updateSession,
+  updatePlayerScore,
+  getSessionsByQuizId,
+  getSessionById,
+  deleteSession
+};

@@ -20,5 +20,4 @@ router.delete("/sessions/:sessionId", sessionController.deleteSession);
 // Get sessions by hostedQuizId
 router.get("/sessions/quiz/:quizId", sessionController.getSessionsByQuizId);
 
-
 module.exports = router;

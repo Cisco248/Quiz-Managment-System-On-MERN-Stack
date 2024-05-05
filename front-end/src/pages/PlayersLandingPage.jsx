@@ -32,7 +32,6 @@ const PlayersLandingPage = () => {
         navigate("/"); // Redirect to home or error page
       }
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [navigate]);
 
   const joinQuiz = (gamePin) => {
@@ -61,7 +60,7 @@ const PlayersLandingPage = () => {
 
   const handleModalSubmit = (nickname) => {
     localStorage.setItem("playerId", nickname);
-    setIsModalOpen(false);
+    setIsModalOpen(true);
     checkGamePin(gamePin, nickname);
   };
 
@@ -170,9 +169,8 @@ const PlayersLandingPage = () => {
             <div className={Style.popup_modal}>
               <div className={Style.popup_content}> 
                 <h2 className={Style.popup_text_name}>Ener a Nickname</h2>
-                <form onSubmit={(e) => { e.preventDefault(); 
-                  handleModalSubmit(e.target.elements.nickname.value);}}>
-                  <input className={Style.nickname} placeholder="Name Here..." required />
+                <form onSubmit={handleModalSubmit}>
+                  <input className={Style.nickname} placeholder="Name Here..." required onChange={(e) => { handleModalSubmit(e.target.elements.nickname.value) }}/>
                   <div className={Style.enter_button_container}>
                     <button className={Style.enter_button} type="submit">Enter</button>
                   </div>
