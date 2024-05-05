@@ -67,7 +67,7 @@ const Navibar2 = () => {
             <li style={link}><NavLink to={"/home"} style={link_list}>Home</NavLink></li>
             <li style={link}><NavLink to={"/createandplay"} style={link_list}>Create Quiz</NavLink></li>
             <li style={link}><NavLink to={"/library"} style={link_list}>Library</NavLink></li>
-            <li style={link}><NavLink to={"/maintaince"} style={link_list}>Discover</NavLink></li>
+            {/* <li style={link}><NavLink to={"/maintaince"} style={link_list}>Discover</NavLink></li> */}
             <li style={link}><NavLink to={"/leaderboard"} style={link_list}>Leaderbord</NavLink></li>
             <li style={link}><NavLink to={"/analytics"} style={link_list}>Analytics</NavLink></li>
             <li style={link}><NavLink to={"/profile"} style={link_list}>Profile</NavLink></li>
