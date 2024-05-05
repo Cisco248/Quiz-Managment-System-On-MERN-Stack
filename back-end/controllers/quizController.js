@@ -4,12 +4,20 @@ const quizController = {
   getAllQuizzes: async (req, res) => {
     try {
       // Extract User ID from Request Object (Provide by Authentication Token Middleware)
-      const userId = req.user.id;
-      // Fetch Quizzes Created by the Logged-In User
-      const quizzes = await Quiz.find({createdBy: userId});
+      const userId = req.body.user;
+      const quizzes = await Quiz.find({ userId });
+
+        console.log(userId); 
+        console.log(quizzes);
+
+      if (!quizzes) {
+        res.status(403).json({ error: 'Empty!'})
+        console.log(error);
+      } // Fetch Quizzes Created by the Logged-In User
       res.json(quizzes);
     } catch (error) {
-      res.status(500).json({ error: 'Internal Server Error' });
+      res.status(500).json({ error: 'Internal Server Error -1 ' });
+      console.log({ message: 'Internal Server Error!', error})
     }
   },
 
@@ -17,15 +25,20 @@ const quizController = {
     getAllUserQuizzes: async (req, res) => {
       try {
         // Extract user ID from request object (provided by authenticateToken middleware)
-        const userId = req.user.id;
-  
-        // Fetch quizzes created by the logged-in user
-        const quizzes = await Quiz.find({ createdBy: userId });
-        console.log(userId);
-        console.log(quizzes);
-        res.json(quizzes);
+        const userId = req.body.user;
+        const quizzes = await Quiz.find({ userId });
+
+        console.log(userId); 
+        console.log(quizzes.createdBy);
+
+        if (!quizzes) {
+          res.status(403).json({ error: 'Empty!'})
+          console.log(error);
+        }
+        res.json(quizzes); // Fetch quizzes created by the All User
       } catch (error) {
         res.status(500).json({ error: "Internal Server Error" });
+        console.log({ message: 'Internal Server Error!', error})
       }
     },
 

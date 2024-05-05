@@ -28,6 +28,7 @@ import QuizCreatePage from "./pages/QuizCreatePage";
 import Navibar from "./component/Navibar";
 import Footer from "./component/Footer";
 import Navibar2 from "./component/Navibar2";
+import Discover from "./pages/Discover";
 
 axios.defaults.baseURL = "http://localhost:8000";
 
@@ -36,7 +37,7 @@ function App() {
   // Navigation Bar Switching Function
   const location = useLocation();
   const isWelcomeIn = [ '/', '/help', '/contact', '/Login', '/Register' ].includes(location.pathname);
-  const isLoggedIn = location.pathname !== '/' && [ '/home', '/profile', '/maintaince', '/library', '/createandplay', '/quizpage', '/leaderboard', '/quizcreatepage/', '/help2', '/contact2', '/analytics', '/hostlanding', '/playerslanding' ].includes(location.pathname);
+  const isLoggedIn = location.pathname !== '/' && [ '/home', '/profile', '/maintaince', '/library', '/createandplay', '/quizpage', '/leaderboard', '/quizcreatepage/', '/help2', '/contact2', '/analytics', '/hostlanding', '/playerslanding', '/discover' ].includes(location.pathname);
 
   // Loading Screen Function
   const [loading, setloading] = useState(false);
@@ -76,7 +77,6 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />}  />
             <Route path="/profile" element={<Profile />} />
-            {/* {<Route path="/quiz create" element={<QuizCreatePage />} />} */}
             <Route path="/maintaince" element={<Maintaince />} />
             <Route path="/library" element={<Library />} />
             <Route path="/slidebar" element={<Slidebar />} />
@@ -88,6 +88,7 @@ function App() {
             <Route path="/leaderboard" element={<LeaderboardPage />} />
             <Route path="/quizcreatepage" element={<QuizCreatePage/>} />
             <Route path="/analytics" element={<Analytics />} />
+            <Route path="/discover" element={<Discover />} />
           </Routes>
           <Footer/>
         </>

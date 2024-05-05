@@ -1,10 +1,9 @@
-import Style from './Library.module.css';
+import Style from './Discover.module.css'
 import { useState } from 'react';
-import Quizzes from "../component/Quizzes";
 import SearchQuizzes from "../component/SearchBar";
-import SavedQuizzes from "../component/SavedQuizzes"
+import Quizzes from '../component/Quizzes';
 
-function Library() {
+const Discover = () => {
 
     const [activeComponent, setActiveComponent] = useState("Quizzes");
     const [isSearchActive, setIsSearchActive] = useState(false); // Add this line
@@ -45,7 +44,6 @@ function Library() {
                             <h3 className={Style.search_text}>Click to Save or Play Quizzes</h3>
                             {/* Pass the setIsSearchActive function as a prop */}
                             { !isSearchActive && activeComponent === "Quizzes" && <Quizzes /> }
-                            { !isSearchActive && activeComponent === "SavedQuizzes" && <SavedQuizzes  /> }
                         {/* </div> */}
                     {/* </div> */}
                 {/* </div> */}
@@ -55,4 +53,4 @@ function Library() {
   )
 }
 
-export default Library
+export default Discover

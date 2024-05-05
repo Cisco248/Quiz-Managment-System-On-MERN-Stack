@@ -26,7 +26,7 @@
 .home_page_container_row1 {
     padding: 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 50px;
 }
 
@@ -152,17 +152,40 @@
     background-color: #0007B9;
 }
 
-.quiz_section_style {
+.discover {
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.discover_title {
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 30px;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.quiz_section {
+    display: flex;
+    flex-direction: column;
     background-color: #27272c;
     border-radius: 30px;
     padding: 100px 200px; 
 }
 
-.quiz_section_wrap {
+.quiz_section_style {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-around;
     gap: 80px;
+}
+
+.quiz_card_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 200px;
+    width: 1000px;
 }
 
 .quiz_box_link {
@@ -280,6 +303,154 @@
     color: #bebebe;
     font-weight: 500;
 }
+
+.quiz_card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .quiz_card_img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50px;
+  }
+  
+  .quiz_card_text_bar {
+    padding: 10px 0px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -100px;
+    height: 100px;
+    width: 300px;
+    border-radius: 0px 0px 50px 50px;
+    gap: 5px;
+  }
+  
+  .quiz_card_title {
+    color: #2b2b2b;
+    font-size: 20px;
+    font-weight: normal;
+  }
+  
+  .quiz_card_question_count {
+    color: #6e6e6e;
+    font-size: 16px;
+    font-weight: 550;
+  }
+  
+  .quiz_card_time_set {
+    color: #6e6e6e;
+    font-size: 16px;
+    font-weight: 550;
+  }
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: fixed;
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding: 20px;
+  }
+  
+  .modal_content {
+    background-color: rgba(255, 255, 255, 0.856);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 300px;
+    border-radius: 25px;
+    gap: 30px;
+    /* You can set a max-width */
+  }
+  
+  .popup_close_button1 {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 30px;
+    font-family: "Poppins", Helvetica;
+    font-style: normal;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  
+  .popup_close_button1:hover {
+    background-color: #ff3a3a;
+  }
+  
+  .popup_button {
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border-width: 1px;
+    background-color: #a7a5a5;
+    color: #000000;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .popup_button:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .popup_input {
+    padding: 10px 40px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Helvetica;
+    border: 3px solid #000000;
+    border-radius: 8px;
+  }
+  
+  .popup_input::placeholder {
+    text-align: center;
+  }
+  
+  .popup_close_button2 {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  
+  .popup_close_button2:hover {
+    background-color: #ff3a3a;
+  }
+  
+  .popup_text {
+    text-align: center;
+    font-family: "Poppins", Helvetica;
+    font-size: 30px;
+    margin-top: 15px; /* Add space between heading and buttons */
+  }
+  
 
 /* Screen size 768px
 

@@ -1,9 +1,18 @@
-import SlideBarCSS from "./Slidebar.module.css";
 import { SidebarData } from "./SidebarData";
 
 export default function Slidebar() {
+
+  const sidebar = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    backgroundColor: 'rgb(224, 224, 224)',
+    height: '100vh',
+    width: '200px'
+  }
+
   return (
-    <div className={SlideBarCSS.sidebar}>
+    <div style={sidebar}>
       {SidebarData.map((val, key) => {
         return (
           <li

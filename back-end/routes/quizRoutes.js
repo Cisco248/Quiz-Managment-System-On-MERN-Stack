@@ -8,7 +8,7 @@ const { createQuiz } = require("../controllers/quizController");
 router.get("/quizzes", quizController.getAllQuizzes);
 
 // GET all quizzes for logged in user
-router.get("/quizzes/user", authenticateToken, quizController.getAllUserQuizzes);
+//router.get("/quizzes/user", authenticateToken, quizController.getAllUserQuizzes);
 
 // GET a single quiz by ID
 router.get("/quizzes/:quizId", quizController.getQuizById);

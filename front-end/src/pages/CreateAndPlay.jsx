@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Styles from "./CreateAndPlay.module.css";
+import mathImg from "../../public/maths.png";
+import technologyImg from "../../public/technology.png";
+import scienceImg from "../../public/science.png";
+import historyImg from "../../public/history.png";
+import businessImg from "../../public/business.png";
+import financeImg from "../../public/finance.png";
+import defaultImg from "../../public/maths.png";
 
 const CreateAndPlay = () => {
   const [createdQuizzes, setCreatedQuizzes] = useState([]);
@@ -15,7 +22,7 @@ const CreateAndPlay = () => {
     
     const fetchQuizzes = async () => {
       try {
-        const response = await fetch("http://localhost:8000/quizzes/user", {
+        const response = await fetch("http://localhost:8000/quizzes", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`, // Assuming 'token' is the key for the JWT token in local storage
           },
@@ -123,6 +130,25 @@ const CreateAndPlay = () => {
     navigate("/quizcreatepage/"); // Path to QuizCreatePage
   };
 
+  const getCategoryImage = (category) => {
+    switch (category) {
+      case "Math":
+        return mathImg;
+      case "Information technology":
+        return technologyImg;
+      case "Science":
+        return scienceImg;
+      case "History":
+        return historyImg;
+      case "Business":
+        return businessImg;
+      case "Finance":
+        return financeImg;
+      default:
+        return defaultImg; // Replace 'defaultImg' with the path to your default image
+    }
+  };
+
   return (
     <div>
         <div className={Styles.create_and_play_page}>
@@ -139,7 +165,7 @@ const CreateAndPlay = () => {
             {createdQuizzes.map((quiz) => (
               <div key={quiz._id}>
                 <div className={Styles.quiz_card} onClick={() => handleQuizCardClick(quiz)}>
-                  <img className={Styles.img} alt="Quiz card tab" src="https://cdn.animaapp.com/projects/65b90f0683276fd4dbb2229b/releases/65bb542e83276fd4dbb2291a/img/quiz-card-tab@2x.png"/>
+                  <img className={Styles.img} alt="Quiz card tab" src={getCategoryImage(quiz.category)}/>
                   <div className={Styles.text_bar}>
                     <div className={Styles.title}>{quiz.title}</div>
                     <div className={Styles.questionCount}>{`${quiz.questions.length} Questions`}</div>
