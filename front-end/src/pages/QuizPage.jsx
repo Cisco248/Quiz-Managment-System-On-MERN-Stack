@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Style from"./QuizPage.module.css";
+import Style from"./CSS/QuizPage.module.css";
 
 const QuizPage = () => {
   const { quizId, gamePin } = useParams();

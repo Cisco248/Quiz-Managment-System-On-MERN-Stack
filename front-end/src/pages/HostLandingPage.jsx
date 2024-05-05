@@ -1,6 +1,6 @@
 //HostLandingPage.js
 import { useState, useEffect } from "react";
-import Styles from "./HostLandingPage.module.css";
+import Styles from "./CSS/HostLandingPage.module.css";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import socket from "./socket"; // Import the socket instance

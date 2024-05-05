@@ -1,4 +1,4 @@
-import Style from './Help.module.css'
+import Style from './CSS/Help.module.css'
 
 function Help() {
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Style from "./SearchBar.module.css";
+import Style from "../component/CSS/SearchBar.module.css";
 // import { useNavigate } from "react-router-dom";
 // import mathImg from "../../public/maths.png";
 // import technologyImg from "../../public/technology.png";

@@ -1,39 +1,42 @@
+/* eslint-disable no-unused-vars */
 import Slider from '../component/image_slider/Slider'
-import Style from './Home.module.css'
+import Style from './CSS/Home.module.css'
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-import mathImg from "../../public/maths.png";
-import technologyImg from "../../public/technology.png";
-import scienceImg from "../../public/science.png";
-import historyImg from "../../public/history.png";
-import businessImg from "../../public/business.png";
-import financeImg from "../../public/finance.png";
-import defaultImg from "../../public/maths.png";
 
-const Home = () => {
+// Public Folder Category Images Import
+import mathImg from "/maths.png";
+import technologyImg from "/technology.png";
+import scienceImg from "/science.png";
+import historyImg from "/history.png";
+import businessImg from "/business.png";
+import financeImg from "/finance.png";
+import defaultImg from "/maths.png";
 
-    const [createdQuizzes, setCreatedQuizzes] = useState([]);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isPlayModalOpen, setIsPlayModalOpen] = useState(false);
-    const [selectedQuiz, setSelectedQuiz] = useState(null);
-    const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-    const navigate = useNavigate();
+function Home() {
 
-    // eslint-disable-next-line no-unused-vars
+    const [ createdQuizzes, setCreatedQuizzes ] = useState([]);
+    const [ isModalOpen, setIsModalOpen ] = useState(false);
+    const [ isPlayModalOpen, setIsPlayModalOpen ] = useState(false);
+    const [ selectedQuiz, setSelectedQuiz ] = useState(null);
+    const [ isDeleteModalOpen, setIsDeleteModalOpen ] = useState(false);
+    const [ session, setSession ] = useState(null);
+    const [ users, setUsers ] = useState([]);
     const [ quizzes, setQuizzes ] = useState([]);
+    const navigate = useNavigate();
 
       // Fetch All the Quizzes
     useEffect(() => {
 
-        const token = localStorage.getItem('token');
-        axios.get('/quizzes', {
-        headers: {
-        Authorization: token
-        }
-        })
-        .then(response => {
-            setQuizzes(response.data);
+      const token = localStorage.getItem('token');
+      axios.get('/quizzes', {
+      headers: {
+      Authorization: token
+      }
+      })
+      .then(response => {
+          setQuizzes(response.data);
         })
         .catch(error => {
         console.error('Error Fetching Profile: ', error)
@@ -52,9 +55,42 @@ const Home = () => {
               console.error("Error fetching quizzes:", error.message);
             }
           };
-      
-          fetchQuizzes();
 
+          const fetchUsers = async () => {
+            try {
+              const response = await axios.get('/users'); // fetch the user data
+              setUsers(response.data);
+              console.log(response);
+            } catch (error) {
+              console.log( 'Server Not Found!', error)
+            }
+          };
+          fetchUsers();
+          fetchQuizzes();
+    }, []);
+
+    useEffect(() => {
+      const fetchSessionDetails = async () => {
+        try {
+          const response = await fetch(
+            `http://localhost:8000/sessions/${310255}`
+          );
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const data = await response.json();
+          setSession(data.session);
+        } catch (error) {
+          console.error("Error fetching session details:", error.message);
+        }
+      };
+  
+      // Call fetchSessionDetails immediately and then every 5 seconds
+      fetchSessionDetails();
+      const intervalId = setInterval(fetchSessionDetails, 5000);
+  
+      // Clean up the interval on unmount
+      return () => clearInterval(intervalId);
     }, []);
 
     const handleQuizCardClick = (quiz) => {
@@ -93,7 +129,7 @@ const Home = () => {
           console.error("Error fetching session details:", error.message);
           alert("No current quiz session for this Game pin");
         }
-      };
+      }
     
       const handleHostQuiz = async (quizId) => {
         const quiz = createdQuizzes.find((q) => q._id === quizId);
@@ -270,16 +306,12 @@ const Home = () => {
                 </div>
             </div>
             <div className={Style.home_page_container_row2}>
-                <div className={Style.users}>
+                <div className={Style.users} onClick={() => navigate('/connect')}>
                     <div className={Style.user_title_box}>
                         <h2 className={Style.user_title}>Users</h2>
                     </div>
                     <div className={Style.users_name_box}>
-                        <h3 className={Style.users_name}>Eshan Fernando</h3>
-                        <h3 className={Style.users_name}>Naveen Mendis</h3>
-                        <h3 className={Style.users_name}>Pathum Kavinda</h3>
-                        <h3 className={Style.users_name}>Pasindu Kavinda</h3>
-                        <h3 className={Style.users_name}>Adithya Ramanayake</h3>
+                        { users.map((user) => ( <h3 className={Style.users_name} key={user._id}>{ user.name }</h3> ))}
                     </div>
                 </div>
                 <div className={Style.leaderboard}>
@@ -289,11 +321,7 @@ const Home = () => {
                         </a>
                     </div>
                     <div className={Style.user_leaderboard_box}>
-                        <h3 className={Style.user_leaderboard}>Eshan Fernando</h3>
-                        <h3 className={Style.user_leaderboard}>Naveen Mendis</h3>
-                        <h3 className={Style.user_leaderboard}>Pathum Kavinda</h3>
-                        <h3 className={Style.user_leaderboard}>Shehan Perera</h3>
-                        <h3 className={Style.user_leaderboard}>Sahan Tharuka</h3>
+                        { session && session.playerScores.sort((a,b) => b.score - a.score).map((playerScore, index) => ( <div className={Style.user_leaderboard_layout} key={index}><h3 className={Style.user_leaderboard}>{ playerScore.playerId }</h3><p className={ Style.user_score }> Score: { playerScore.score }</p></div>))}
                     </div>
                 </div>
             </div>

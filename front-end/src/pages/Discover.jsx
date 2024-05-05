@@ -1,4 +1,4 @@
-import Style from './Discover.module.css'
+import Style from './CSS/Discover.module.css'
 import { useState } from 'react';
 import SearchQuizzes from "../component/SearchBar";
 import Quizzes from '../component/Quizzes';

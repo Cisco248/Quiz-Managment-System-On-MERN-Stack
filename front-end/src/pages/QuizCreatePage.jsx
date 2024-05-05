@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Style from "./QuizCreatePage.module.css";
+import Style from "./CSS/QuizCreatePage.module.css";
 
 const QuizCreatePage = () => {
   const [questions, setQuestions] = useState([

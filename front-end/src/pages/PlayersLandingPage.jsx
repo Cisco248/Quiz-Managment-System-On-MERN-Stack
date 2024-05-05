@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Style from "./PlayersLandingPage.module.css";
+import Style from "./CSS/PlayersLandingPage.module.css";
 import { useNavigate } from "react-router-dom";
 import socket from "./socket";
 import Navibar2 from "../component/Navibar2";
@@ -32,6 +32,7 @@ const PlayersLandingPage = () => {
         navigate("/"); // Redirect to home or error page
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [navigate]);
 
   const joinQuiz = (gamePin) => {
@@ -95,6 +96,7 @@ const PlayersLandingPage = () => {
 
   useEffect(() => {
     setGameUrl(`${window.location.origin}/playerslanding/${quizId}/${gamePin}`);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gamePin]);
 
   useEffect(() => {

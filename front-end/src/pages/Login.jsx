@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import LoginCSS from './Login.module.css';
+import LoginCSS from './CSS/Login.module.css';
 
 export default function Login() {
 

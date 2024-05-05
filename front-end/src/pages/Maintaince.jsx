@@ -1,4 +1,4 @@
-import Style from './Maintaince.module.css'
+import Style from './CSS/Maintaince.module.css'
 
 function Mantaince() {
   return (

@@ -1,4 +1,4 @@
-import Style from './Profile.module.css'
+import Style from './CSS/Profile.module.css'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 

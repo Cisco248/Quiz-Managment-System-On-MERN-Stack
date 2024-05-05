@@ -2,7 +2,7 @@ import axios from 'axios'
 import {useState} from 'react'
 import { toast } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
-import RegisterCSS from './Register.module.css'
+import RegisterCSS from './CSS/Register.module.css'
 
 export default function Register() {
 

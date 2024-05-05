@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 //Analytics.jsx
-import Style from "./Analytics.module.css";
+import Style from "./CSS/Analytics.module.css";
 import { useState, useEffect } from "react";
 
 function Analytics() {

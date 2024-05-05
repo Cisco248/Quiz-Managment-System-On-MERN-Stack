@@ -1,4 +1,4 @@
-import Style from './Library.module.css';
+import Style from './CSS/Library.module.css';
 import { useState } from 'react';
 import Quizzes from "../component/Quizzes";
 import SearchQuizzes from "../component/SearchBar";

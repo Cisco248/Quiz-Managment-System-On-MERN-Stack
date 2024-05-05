@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import MainCSS from "./Welcome.module.css";
+import MainCSS from "./CSS/Welcome.module.css";
 
 export default function Welcome() {
   return (

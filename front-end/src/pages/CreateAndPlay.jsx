@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Styles from "./CreateAndPlay.module.css";
-import mathImg from "../../public/maths.png";
-import technologyImg from "../../public/technology.png";
-import scienceImg from "../../public/science.png";
-import historyImg from "../../public/history.png";
-import businessImg from "../../public/business.png";
-import financeImg from "../../public/finance.png";
-import defaultImg from "../../public/maths.png";
+import Styles from "./CSS/CreateAndPlay.module.css";
+import mathImg from "/maths.png";
+import technologyImg from "/technology.png";
+import scienceImg from "/science.png";
+import historyImg from "/history.png";
+import businessImg from "/business.png";
+import financeImg from "/finance.png";
+import defaultImg from "/maths.png";
 
 const CreateAndPlay = () => {
   const [createdQuizzes, setCreatedQuizzes] = useState([]);
