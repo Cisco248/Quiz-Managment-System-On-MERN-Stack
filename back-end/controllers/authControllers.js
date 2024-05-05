@@ -71,9 +71,8 @@ const loginUser = async (req, res) => {
         // Check password match
         const match = await comparePassword(password, user.password);
         if (!match) {
-            return res.status(401).json({
-                error: "Password Does Not Match"
-            });
+            res.status(500).json({ error: 'Internal Server Error!'});
+            console.log({ message: 'Internal Server Error!', error});
         }
 
         // Generate JWT token
@@ -91,9 +90,8 @@ const loginUser = async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        res.status(500).json({
-            error: 'Internal Server Error'
-        });
+        res.status(500).json({ error: 'Internal Server Error!'});
+        console.log({ message: 'Internal Server Error!', error});
     }
 };
 
