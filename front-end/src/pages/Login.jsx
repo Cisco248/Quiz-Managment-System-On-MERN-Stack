@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import { toast } from 'react-hot-toast'
-import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
-import LoginCSS from './Login.module.css'
+import { useState } from 'react';
+import { toast } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import LoginCSS from './Login.module.css';
 
 export default function Login() {
 
@@ -17,10 +17,8 @@ export default function Login() {
     e.preventDefault()
     const { email, password } = data
     try {
-      const {data} = await axios.post('/login', {
-        email,
-        password,
-    });
+      const {data} = await axios.post('/login', { email, password });
+    
     if (data.error) {
       toast.error(data.error)
     } else {

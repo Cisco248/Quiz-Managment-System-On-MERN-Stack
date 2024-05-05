@@ -1,0 +1,418 @@
+.main-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-div .c-div-2 {
+  background-color: #31304d;
+  position: relative;
+}
+
+.main-div .created-quizzes {
+  align-items: center;
+  display: inline-flex;
+  gap: 50px;
+  left: 238px;
+  position: absolute;
+  top: 292px;
+}
+
+.main-div .play-button-container {
+  height: 560px;
+  left: 160px;
+  position: absolute;
+  top: 220px;
+  width: 1114px;
+}
+
+.main-div .play-button {
+  all: unset;
+  background-color: #f9db24;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px #00000040;
+  box-sizing: border-box;
+  height: 50px;
+  overflow: hidden;
+  position: absolute;
+  top: -170px;
+  width: 150px;
+}
+
+.main-div .play-button-text {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 25px;
+  font-weight: bold;
+  left: 49px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 12px;
+}
+
+.main-div .create-button-container {
+  height: 560px;
+  left: 160px;
+  position: absolute;
+  top: 220px;
+  width: 1114px;
+}
+
+.main-div .create-button {
+  all: unset;
+  background-color: #f9db24;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px #00000040;
+  box-sizing: border-box;
+  height: 50px;
+  left: 190px;
+  overflow: hidden;
+  position: absolute;
+  top: -170px;
+  width: 150px;
+}
+
+.main-div .create-text {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 25px;
+  font-weight: bold;
+  left: 38px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 12px;
+}
+
+.main-div .created-quizzes-text {
+  color: #ffffff;
+  font-family: "Public Sans", Helvetica;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -250px;
+  position: absolute;
+  white-space: nowrap;
+  right: -145px;
+  width: fit-content;
+}
+
+.main-div .c-quiz-card-container {
+  width: 1060px;
+  background-color: #31304d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -5px;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  flex-direction: row;
+  position: relative;
+  z-index: 1;
+}
+
+.main-div .quiz-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 30px 30px 30px 30px;
+  height: 300px;
+  position: relative;
+  width: 300px;
+  z-index: 1;
+}
+
+.main-div .quiz-card .img {
+  height: 270px;
+  left: 0;
+  border-radius: 30px 30px 30px 30px;
+  position: absolute;
+  top: 0;
+  width: 300px;
+}
+
+.main-div .text-bar {
+  background-color: #d9d9d9;
+  border-radius: 0px 0px 30px 30px;
+  height: 100px;
+  left: 0;
+  position: relative;
+  top: 200px;
+  width: 300px;
+}
+
+.main-div .text-bar:hover {
+  background-color: #bcbcbc;
+}
+
+.main-div .title {
+  color: #000000;
+  font-weight: 500;
+  font-family: Helvetica;
+  font-size: 22px;
+  left: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 15px;
+  white-space: nowrap;
+  overflow: hidden; /* Add this line */
+  text-overflow: ellipsis; /* Add this line */
+  width: 90%; /* Add this line */
+}
+
+.main-div .questionCount {
+  color: #000000;
+  font-family: Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  left: 17px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 55px;
+  white-space: nowrap;
+  width: 130px;
+}
+
+.main-div .timeSet {
+  color: #000000;
+  font-family: "Public Sans", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  left: 165px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 55px;
+  width: 130px;
+}
+
+.main-div .copyright {
+  align-items: flex-start;
+  background-color: #31304d;
+  box-shadow: inset 0px 1px 0px #3c3c3c;
+  display: flex;
+  gap: 10px;
+  height: 42px;
+  justify-content: space-around;
+  left: 0;
+  padding: 24px 0px;
+  position: absolute;
+  top: 1296px;
+  width: 1440px;
+}
+
+.main-div .quizzify-quiz-system {
+  color: var(--gray-300);
+  font-family: "Public Sans", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.1px;
+  margin-bottom: -6px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: 1320px;
+}
+
+.main-div .nav-bar-instance {
+  left: 0 !important;
+  position: relative !important;
+  top: 0 !important;
+}
+
+.c-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Change from 'fixed' to 'absolute' */
+  z-index: 1;
+  left: 0;
+  top: 0; /* This will be updated dynamically */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9db24;
+  margin: auto;
+  padding: 40px;
+  border-radius: 25px;
+  width: 450px;
+  height: 320px;
+  /* You can set a max-width */
+}
+
+.modal-content h2 {
+  text-align: center;
+  font-family: "Poppins", Helvetica;
+  font-size: 27px;
+  margin-bottom: 30px; /* Add space between heading and buttons */
+}
+
+.modal-content p {
+  font-weight: bold;
+  font-family: "Poppins", Helvetica;
+  font-size: 18px;
+  margin-bottom: 70px;
+  margin-top: -20px; /* Add space between paragraph and buttons */
+}
+
+.modal-content button {
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-bottom: 95px;
+  border-radius: 8px;
+  border-width: 1px;
+  background-color: #d7d7d7;
+  color: #000000;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.modal-content button1 {
+  font-family: sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 8px 12px;
+  position: relative;
+  top: 0;
+  right: 0;
+  margin-left: 470px;
+  margin-right: 15px; /* Add space between h2 and button1 */
+  margin-top: -25px;
+  border-radius: 8px;
+  border-width: 1px;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+}
+
+.modal-content button1:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.modal-content input {
+  margin-bottom: 35px;
+  height: 32px;
+  padding-left: 8px;
+  font-size: 20px;
+  font-family: Helvetica;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.p-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Change from 'fixed' to 'absolute' */
+  z-index: 1;
+  left: 0;
+  top: 0; /* This will be updated dynamically */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+}
+
+.p-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9db24;
+  margin: auto;
+  padding: 40px;
+  border-radius: 25px;
+  width: 450px;
+  height: 320px;
+  /* You can set a max-width */
+}
+
+.p-modal-content h2 {
+  text-align: center;
+  font-family: "Poppins", Helvetica;
+  font-size: 27px;
+  margin-top: 15px; /* Add space between heading and buttons */
+}
+
+.p-modal-content p {
+  font-family: "Poppins", Helvetica;
+  font-size: 18px;
+  margin-bottom: 20px; /* Add space between paragraph and buttons */
+}
+
+.p-modal-content button {
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border-width: 1px;
+  background-color: #d7d7d7;
+  color: #000000;
+  cursor: pointer;
+}
+
+.p-modal-content button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.p-modal-content button1 {
+  font-family: sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 8px 12px;
+  position: absolute;
+  margin-left: 470px;
+  margin-right: 15px; /* Add space between h2 and button1 */
+  margin-top: -325px;
+  border-radius: 8px;
+  border-width: 1px;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+}
+
+.p-modal-content button1:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.p-modal-content input {
+  margin-top: 90px;
+  margin-bottom: 25px;
+  height: 32px;
+  padding-left: 8px;
+  font-size: 20px;
+  font-family: Helvetica;
+  border-radius: 8px;
+}

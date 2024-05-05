@@ -1,8 +1,6 @@
 .profile_page {
-    margin: 0;
-    padding: 0;
     font-family: "Poppins";
-    height: 100dvh;
+    height: 87.4dvh;
     width: 100dvw;
     background: rgba( 60, 60, 60, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -14,6 +12,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 
 .page_name_text {
@@ -66,21 +65,22 @@
 }
 
 .input_box {
-    height: 30px;
-    width: 300px;
+    padding: 10px 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     border-radius: 10px;
     border: 2px solid #ffffff;
     color: #fff;
-    left: 2rem;
     background-color: transparent;
 }
 
-.input_box::placeholder {
-    padding: 0px 10px;
-    color: #ffffff;
-    background-color: transparent;
-    font-size: 14px;
-    font-weight: 600;
+.input {
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    justify-content: center;
 }
 
 .button_container {
@@ -96,13 +96,25 @@
 .edit_button {
     padding: 5px 30px;
     border-radius: 20px;
-    border: 2px solid #F9DB24;
-    background-color: #F9DB24;
+    border: 2px solid #fff;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.edit_button:hover {
+    background-color: black;
+    color: #fff;
 }
 
 .delete_button {
     padding: 5px 20px;
     border-radius: 20px;
-    border: 2px solid #F9DB24;
-    background-color: #F9DB24;
+    border: 2px solid #fff;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.delete_button:hover {
+    background-color: black;
+    color: white;
 }

@@ -1,6 +1,14 @@
-import Style from './Library.module.css'
+import Style from './Library.module.css';
+import { useState } from 'react';
+import Quizzes from "../component/Quizzes";
+import SearchQuizzes from "../component/SearchQuizzes";
+import SavedQuizzes from "../component/SavedQuizzes"
 
 function Library() {
+
+    const [activeComponent, setActiveComponent] = useState("Quizzes");
+    const [isSearchActive, setIsSearchActive] = useState(false); // Add this line
+
   return (
     <div>
         <div className={Style.library_page}>
@@ -27,51 +35,29 @@ function Library() {
                 <div className={Style.title}>
                     <h3 className={Style.title_style}>Quiz Selections</h3>
                 </div>
+
+                <div className={Style.discover}>
+                    <button className={Style.discover_button} onClick={() => { 
+                    setActiveComponent("Quizzes"); 
+                    setIsSearchActive(false);
+                    }}> Discover </button>
+                </div>
+
+                <div className={Style.saved}>
+                    <button className={Style.saved_button} onClick={() => {
+                    setActiveComponent("SavedQuizzes");
+                    setIsSearchActive(false);
+                    }}>Saved Quizzes</button>
+                </div>
+
                 <div className={Style.quiz_section}>
                     <div className={Style.quiz_section_style}>
                         <div className={Style.quiz_section_wrap}>
-                            <div className={Style.quiz_box}>
-                                <img className={Style.quiz_img} src="/maths.png" alt="" />
-                                <div className={Style.quiz_box_text}>
-                                    <h4 className={Style.quiz_title}>Maths</h4>
-                                    <h6 className={Style.quiz_creator}>Create by : Adithya</h6>
-                                </div>
-                            </div>
-                            <div className={Style.quiz_box}>
-                                <img className={Style.quiz_img} src="/biology.png" alt="" />
-                                <div className={Style.quiz_box_text}>
-                                    <h4 className={Style.quiz_title}>Biology</h4>
-                                    <h6 className={Style.quiz_creator}>Create by : Pasindu</h6>
-                                </div>
-                            </div>
-                            <div className={Style.quiz_box}>
-                                <img className={Style.quiz_img} src="/technology.png" alt="" />
-                                <div className={Style.quiz_box_text}>
-                                    <h4 className={Style.quiz_title}>Malware</h4>
-                                    <h6 className={Style.quiz_creator}>Create by : Ishita</h6>
-                                </div>
-                            </div>
-                            <div className={Style.quiz_box}>
-                                <img className={Style.quiz_img} src="/music.png" alt="" />
-                                <div className={Style.quiz_box_text}>
-                                    <h4 className={Style.quiz_title}>Music</h4>
-                                    <h6 className={Style.quiz_creator}>Create by : Lahiru</h6>
-                                </div>
-                            </div>
-                            <div className={Style.quiz_box}>
-                                <img className={Style.quiz_img} src="/science.png" alt="" />
-                                <div className={Style.quiz_box_text}>
-                                    <h4 className={Style.quiz_title}>Animals</h4>
-                                    <h6 className={Style.quiz_creator}>Create by : Lakshan</h6>
-                                </div>
-                            </div>
-                            <div className={Style.quiz_box}>
-                                <img className={Style.quiz_img} src="/economic.png" alt="" />
-                                <div className={Style.quiz_box_text}>
-                                    <h4 className={Style.quiz_title}>Trade Center</h4>
-                                    <h6 className={Style.quiz_creator}>Create by : xlk</h6>
-                                </div>
-                            </div>
+                            <h3 className={Style.search_text}>Click to Save or Play Quizzes</h3>
+                            <SearchQuizzes onSearch={() => setIsSearchActive(true)} />{" "}
+                            {/* Pass the setIsSearchActive function as a prop */}
+                            {!isSearchActive && activeComponent === "Quizzes" && <Quizzes />}
+                            {!isSearchActive && activeComponent === "SavedQuizzes" && <SavedQuizzes />}
                         </div>
                     </div>
                 </div>

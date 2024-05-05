@@ -1,3 +1,4 @@
+require('dotenv').config();
 const User = require('../models/user');
 const { hashPassword, comparePassword } = require('../middleware/passwordEncrypt');
 const jwt = require('jsonwebtoken');
@@ -76,17 +77,18 @@ const loginUser = async (req, res) => {
         }
 
         // Generate JWT token
-        const token = jwt.sign({ 
-            id: user._id, 
-            email: user.email, 
-            name: user.name
-        }, process.env.JWT_SECRET);
-
+        const accessToken = jwt.sign({ id: user._id, email: user.email, name: user.name }, process.env.JWT_SECRET);
+        // const refreshToken = jwt.sign({ id: user._id, email: user.email, name: user.name }, process.env.JWT_REFRESH_TOKEN);
+        // const accessTokenSave = sessionStorage.setItem('Token', accessToken)
+        // accessTokenSave();
         // Send JWT token as part of the response
-        res.cookie('token', token).json({
-            user,
-            token
-        });
+        console.log('User: ', user._id, user.name);
+        console.log('Token: ', accessToken);
+        res.json({ accessToken : accessToken})
+
+        res.cookie('ACCESS_TOKEN', accessToken, {maxAge: 60000})
+        // res.cookie('REFRESH_TOKEN', refreshToken, {maxAge: 300000, httpOnly: true, secure: true, sameSite: 'strict'})
+
     } catch (error) {
         console.log(error);
         res.status(500).json({
@@ -94,8 +96,9 @@ const loginUser = async (req, res) => {
         });
     }
 };
+
 module.exports = {
     test,
     registerUser,
-    loginUser
+    loginUser,
 };

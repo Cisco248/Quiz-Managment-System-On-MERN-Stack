@@ -2,7 +2,7 @@
 const SavedQuiz = require("../models/SavedQuiz");
 
 // Controller to create a new saved quiz
-exports.createSavedQuiz = async (req, res) => {
+const createSavedQuiz = async (req, res) => {
   try {
     // Extract the user ID from req.user
     const saverId = req.user.id;
@@ -39,7 +39,7 @@ exports.createSavedQuiz = async (req, res) => {
 };
 
 // Controller to get saved quizzes by saverId
-exports.getSavedQuizzesBySaverId = async (req, res) => {
+const getSavedQuizzesBySaverId = async (req, res) => {
   try {
     // Extract the user ID from req.user
     const saverId = req.user.id; // Extract the user ID from req.user
@@ -61,4 +61,80 @@ exports.getSavedQuizzesBySaverId = async (req, res) => {
     console.error("Error fetching saved quizzes:", error.message);
     res.status(500).json({ success: false, error: error.message });
   }
+};
+
+// Controller to delete a quiz from saved quizzes
+const deleteQuizFromSavedQuizzes = async (req, res) => {
+  try {
+    // Extract the user ID from req.user
+    const saverId = req.user.id;
+    const { quizId } = req.params;
+
+    // Find savedQuiz by saverId
+    let savedQuiz = await SavedQuiz.findOne({ saverId });
+
+    // If savedQuiz does not exist, send a 404 response
+    if (!savedQuiz) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Saved quizzes not found" });
+    }
+
+    // Remove the quizId from the quizIds array
+    savedQuiz.quizIds = savedQuiz.quizIds.filter((id) => id !== quizId);
+
+    // Save savedQuiz to database
+    await savedQuiz.save();
+
+    res
+      .status(200)
+      .json({ success: true, message: "Quiz deleted from saved quizzes" });
+  } catch (error) {
+    console.error("Error deleting quiz from saved quizzes:", error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
+// Controller to delete all quizzes from saved quizzes
+const deleteAllQuizzesFromSavedQuizzes = async (req, res) => {
+  try {
+    // Extract the user ID from req.user
+    const saverId = req.user.id;
+
+    // Find savedQuiz by saverId
+    let savedQuiz = await SavedQuiz.findOne({ saverId });
+
+    // If savedQuiz does not exist, send a 404 response
+    if (!savedQuiz) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Saved quizzes not found" });
+    }
+
+    // Remove all quizIds from the quizIds array
+    savedQuiz.quizIds = [];
+
+    // Save savedQuiz to database
+    await savedQuiz.save();
+
+    res
+      .status(200)
+      .json({
+        success: true,
+        message: "All quizzes deleted from saved quizzes",
+      });
+  } catch (error) {
+    console.error(
+      "Error deleting all quizzes from saved quizzes:",
+      error.message
+    );
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
+module.exports = {
+  createSavedQuiz,
+  getSavedQuizzesBySaverId,
+  deleteQuizFromSavedQuizzes,
+  deleteAllQuizzesFromSavedQuizzes
 };

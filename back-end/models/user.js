@@ -17,6 +17,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    id_no: {
+        // New field to store the user ID
+        type: mongoose.Schema.Types.ObjectId,
+    },
 });
 
 const UserModel = mongoose.model('User', userSchema)

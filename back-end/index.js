@@ -26,8 +26,9 @@ app.use("/", require("./routes/authRoutes"));
 app.use("/", require("./routes/quizRoutes"));
 app.use("/", require("./routes/sessionRoutes")); // Include session routes
 app.use("/", require("./routes/savedquizRoutes")); // Include session routes
+app.use("/", require("./routes/profileRoutes"))
 
-const PORT = process.env.PORT || 8000; // Use process.env.PORT for dynamic port binding
+const PORT = process.env.PORT; // Use process.env.PORT for dynamic port binding
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {

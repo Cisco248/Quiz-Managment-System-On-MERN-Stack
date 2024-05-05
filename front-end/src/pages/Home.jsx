@@ -1,7 +1,31 @@
 import Slider from '../component/image_slider/Slider'
 import Style from './Home.module.css'
+import { useState, useEffect } from "react";
+import Quizzes from "../component/Quizzes";
 
 function Home() {
+
+    // eslint-disable-next-line no-unused-vars
+    const [ quizzes, setQuizzes ] = useState([]);
+
+      // Fetch All the Quizzes
+    useEffect(() => {
+        const fetchUserQuizzes = async () => {
+        try {
+            const response = await fetch("http://localhost:8000/quizzes");
+            if (!response.ok) {
+            throw new Error("Failed to fetch quizzes");
+            }
+            const quizzesData = await response.json();
+            setQuizzes(quizzesData);
+        } catch (error) {
+            console.error("Error fetching quizzes:", error.message);
+        }
+        };
+
+        fetchUserQuizzes();
+    }, []);
+
   return (
     <div>
       <div className={Style.home_page}>
@@ -20,65 +44,13 @@ function Home() {
         <div className={Style.home_page_container}>
             <div className={Style.home_page_container_row1}>
                 <div className={Style.discover}>
-                    <div className={Style.quiz_section_style}>
-                        <div className={Style.quiz_section_wrap}>
-                            <a className={Style.quiz_box_link} href="/maintaince">
-                                <div className={Style.quiz_box}>
-                                    <img className={Style.quiz_img} src="/maths.png" alt="" />
-                                    <div className={Style.quiz_box_text}>
-                                        <h4 className={Style.quiz_title}>Maths</h4>
-                                        <h6 className={Style.quiz_creator}>Create by : Adithya</h6>
-                                    </div>
-                                </div>
-                            </a>
-                            <a className={Style.quiz_box_link} href="/maintaince">
-                                <div className={Style.quiz_box}>
-                                    <img className={Style.quiz_img} src="/biology.png" alt="" />
-                                    <div className={Style.quiz_box_text}>
-                                        <h4 className={Style.quiz_title}>Biology</h4>
-                                        <h6 className={Style.quiz_creator}>Create by : Pasindu</h6>
-                                    </div>
-                                </div>
-                            </a>
-                            <a className={Style.quiz_box_link} href="/maintaince">
-                                <div className={Style.quiz_box}>
-                                    <img className={Style.quiz_img} src="/technology.png" alt="" />
-                                    <div className={Style.quiz_box_text}>
-                                        <h4 className={Style.quiz_title}>Malware</h4>
-                                        <h6 className={Style.quiz_creator}>Create by : Ishita</h6>
-                                    </div>
-                                </div>
-                            </a>
-                            <a className={Style.quiz_box_link} href="/maintaince">
-                                <div className={Style.quiz_box}>
-                                    <img className={Style.quiz_img} src="/music.png" alt="" />
-                                    <div className={Style.quiz_box_text}>
-                                        <h4 className={Style.quiz_title}>Music</h4>
-                                        <h6 className={Style.quiz_creator}>Create by : Lahiru</h6>
-                                    </div>
-                                </div>
-                            </a>
-                            <a className={Style.quiz_box_link} href="/maintaince">
-                                <div className={Style.quiz_box}>
-                                    <img className={Style.quiz_img} src="/science.png" alt="" />
-                                    <div className={Style.quiz_box_text}>
-                                        <h4 className={Style.quiz_title}>Animals</h4>
-                                        <h6 className={Style.quiz_creator}>Create by : Lakshan</h6>
-                                    </div>
-                                </div>
-                            </a>
-                            <a className={Style.quiz_box_link} href="/maintaince">
-                                <div className={Style.quiz_box}>
-                                    <img className={Style.quiz_img} src="/economic.png" alt="" />
-                                    <div className={Style.quiz_box_text}>
-                                        <h4 className={Style.quiz_title}>Trade Center</h4>
-                                        <h6 className={Style.quiz_creator}>Create by : xlk</h6>
-                                    </div>
-                                </div>
-                            </a>
+                    <h3 className={Style.discover_title}> Discover </h3>{" "}
+                </div>
+                    <div className={Style.quiz_section}>
+                        <div className={Style.quiz_section_style}>
+                            <Quizzes />
                         </div>
                     </div>
-                </div>
             </div>
             <div className={Style.home_page_container_row2}>
                 <div className={Style.users}>
