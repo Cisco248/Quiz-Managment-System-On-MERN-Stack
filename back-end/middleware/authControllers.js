@@ -76,16 +76,16 @@ const loginUser = async (req, res) => {
         }
 
         // Generate JWT token
-        const accessToken = jwt.sign({ id: user._id, email: user.email, name: user.name }, process.env.JWT_SECRET);
+        const token = jwt.sign({ id: user._id, email: user.email, name: user.name }, process.env.JWT_SECRET);
         // const refreshToken = jwt.sign({ id: user._id, email: user.email, name: user.name }, process.env.JWT_REFRESH_TOKEN);
         // const accessTokenSave = sessionStorage.setItem('Token', accessToken)
         // accessTokenSave();
         // Send JWT token as part of the response
         console.log('User: ', user._id, user.name);
-        console.log('Token: ', accessToken);
-        res.json({ accessToken : accessToken})
+        console.log('Token: ', token);
+        res.json({ token : token})
 
-        res.cookie('ACCESS_TOKEN', accessToken, {maxAge: 60000})
+        res.cookie('ACCESS_TOKEN', token, {maxAge: 60000})
         // res.cookie('REFRESH_TOKEN', refreshToken, {maxAge: 300000, httpOnly: true, secure: true, sameSite: 'strict'})
 
     } catch (error) {
