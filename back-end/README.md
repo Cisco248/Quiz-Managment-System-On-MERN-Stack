@@ -6,6 +6,8 @@
 
 ## 3 - After you have to install the React, Express, Cors, React-router-dom, Axios
 
+``` npm i axios, bcrypt, cookie-parser, cors, dotenv, express, jsonwebtoken, mongoose, nodemon, punycode, react-redux, redux ,socket.io ,socket.io-client, uuid  ```
+
 ## 4 - Download this project on following this link
 
 ## 5 - Extract this folder in Desktop
