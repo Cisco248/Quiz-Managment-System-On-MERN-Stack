@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8000
 
 # Start the application
-CMD ["nodemon", "run", "start"]
+CMD ["npm", "run", "start"]
