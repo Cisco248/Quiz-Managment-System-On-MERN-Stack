@@ -1,37 +1,39 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { auth, db } from "./firebase";
-import { doc, getDoc } from "firebase/firestore";
+import { getFirestore,  getDocs, collection } from "firebase/firestore";
 
 const Navibar = () => {
   const [userDetails, setUserDetails] = useState(null);
 
-  const fetchUserData = async () => {
-    auth.onAuthStateChanged(async (user) => {
-      const docRef = doc(db, "Users", user.uid);
-      const docSnap = await getDoc(docRef);
-
-      if (docSnap.exists()) {
-        setUserDetails(docSnap.data());
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        try {
+          const userCollection = collection(db, `Users${user.uid}`);
+          const userSnapshot = await getDocs(userCollection);
+          const userData = userSnapshot.docs.map((doc) => doc.data());
+          setUserDetails(userData[0] || { uid: "Guest" });
+        } catch (error) {
+          console.log("Error fetching user data:", error);
+        }
       } else {
-        console.log("User Is Not Find");
+        setUserDetails(null);
       }
     });
-  };
 
-  useEffect(() => {
-    fetchUserData();
+    return () => unsubscribe(); // Cleanup on unmount
   }, []);
 
-  async function handleLogout() {
+  const handleLogout = async () => {
     try {
       await auth.signOut();
       window.location.href = "/";
       console.log("User Logged Out");
     } catch (error) {
-      console.log("Error logging out: ", error.message);
+      console.error("Error logging out:", error.message);
     }
-  }
+  };
 
   return (
     <div className="div py-3 shadow-lg bg-indigo-400">
@@ -55,20 +57,18 @@ const Navibar = () => {
               />
             </g>
           </svg>
-
-          <h1 className="text-2xl text-white font-bold font-roboto font">
+          <h1 className="text-2xl text-white font-bold font-roboto">
             QUIZZIFY
           </h1>
         </div>
         <div className="flex justify-center items-center gap-5">
           <h1 className="text-lg font-bold text-white font-sans">
-            Welcome, {userDetails && userDetails.name}
+            Welcome, {userDetails ? userDetails.uid : "Guest"}
           </h1>
           <button
             className="bg-white border-white text-indigo-400 border-2 text-md font-semibold px-2 py-1 rounded-full hover:border-white hover:bg-indigo-400 hover:text-white"
             onClick={handleLogout}
-          >
-            LOGOUT
+          >{userDetails ? "Log Out" : "Sign In"}
           </button>
         </div>
       </div>

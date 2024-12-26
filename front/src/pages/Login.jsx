@@ -54,7 +54,7 @@ export default function Login() {
           >
             <div className="pt-8 bg-transparent">
               <input
-                className="w-64 px-5 py-2 focus:ring-2 outline-indigo-400 rounded-full Laptop:max-w-48"
+                className="w-80 px-5 py-2 focus:ring-2 outline-indigo-400 rounded-full"
                 type="text"
                 placeholder="Email >>>"
                 value={email}
@@ -63,7 +63,7 @@ export default function Login() {
             </div>
             <div className="pt-6 bg-transparent">
               <input
-                className="w-64 px-5 py-2 focus:ring-2 outline-indigo-400 rounded-full Laptop:max-w-48"
+                className="w-80 px-5 py-2 focus:ring-2 outline-indigo-400 rounded-full"
                 type="password"
                 placeholder="Password >>>"
                 value={password}
